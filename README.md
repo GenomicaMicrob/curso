@@ -5,6 +5,6 @@ Estas instrucciones están dirigidos a realizarse con la imágen virtual **MGlin
 Los análisis que tenemos descritos son:
 
 - [Ensamble de un genoma de SARS-CoV2](SARS-CoV_analysis.md)
--
+- [Análisis metagenómico con Anvio](Shotgun_analysis.md)
 
 Bruno Gómez-Gil
