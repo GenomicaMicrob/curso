@@ -45,16 +45,16 @@ El script limpiará las secuencias para eliminar las de baja calidad, inferior a
 
 A las secuencias limpias y ensambladas habrá que eliminarle las secuencias quiméricas generadas probablemente durante la PCR, para esto tenemos otro script basado en [VSEARCH](https://github.com/torognes/vsearch) que utiliza un base de datos para este fin.
 
-Hay que entrar a la carpeta generada en el paso anterior y que empieza con assembled.fecha_hora y ejecutar el script:
+Hay que entrar a la carpeta generada en el paso anterior y que empieza con `assembled.fecha_hora` y ejecutar el script:
 
 ```bash
 chimera_detector *.fna
 ```
 
-Después de varios minutos (15 a 20), se creará una nueva subcarpeta llamada chimera_detector.fecha_hora con las secuencias libre de quimeras con terminación *.fasta
+Después de varios minutos (15 a 20), se creará una nueva subcarpeta llamada `chimera_detector.fecha_hora` con las secuencias libre de quimeras con terminación `.fasta`
 
 ### Clasificación de secuencias
-Por último paso, tenemos que clasificar las secuencias para asignarles una taxonomía, esto lo haremos con el script mg_classifier:
+Por último paso, tenemos que clasificar las secuencias para asignarles una taxonomía, esto lo haremos con el script `mg_classifier`:
 
 ```bash
 mg_classifier *.fasta
@@ -74,3 +74,4 @@ Select a database:
 ```
 
 En la imagen virtual **MGlinux18.2**, por cuestiones de espacio, no tenemos todas las bases de datos, elijamos la **número 1**. Después de pocos minutos, tendremos una nueva subcarpeta con los resultados. El documento principal es una tabla de OTUs en la que está cuantas secuencias de cada OTU (líneas) se asignaron a cada muestra (columnas) analizada.
+***

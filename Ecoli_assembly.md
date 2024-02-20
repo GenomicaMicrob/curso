@@ -3,7 +3,7 @@
 Se tienen lecturas WGS de la cepa K12 de *E. coli* secuenciada con la plataforma Illumina (2x150 pb, 388,895 secuencias), estas lecturas se tienen que limpiar y realizar un ensamble con ellas.
 ***
 #### Archivos y programas
-Los programas ya se encuentran instalados en la imagen virtual **MGlinux18.2**.
+Los programas y set de datos ya se encuentran instalados en la imagen virtual **MGlinux18.2**.
 - [ecoli-K12_Illumina.tar.gz](https://drive.google.com/file/d/1NOcflmwa6ioLDOjFVhhl5TdhJbIgpBO1/view?usp=sharing)
 - [SPAdes](https://cab.spbu.ru/software/spades/)
 - [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
@@ -13,28 +13,38 @@ Los programas ya se encuentran instalados en la imagen virtual **MGlinux18.2**.
 ### Procedimiento
 - Limpieza de lecturas
 - Ensamble denovo con SPAdes
-- Realizar un scaffolding
 - Validación
 
 Los datos para estos análisis de pueden bajar de aquí: [ecoli-K12_Illumina.tar.gz](https://drive.google.com/file/d/1NOcflmwa6ioLDOjFVhhl5TdhJbIgpBO1/view?usp=sharing) este archivo comprimido tiene tres archivos, `SSR6436961_1.fastq`, `SSR6436961_2.fastq` y `metadata.txt`.
+***
 
 ### Limpieza
 Revisar la calidad de las secuencias con `FastQC` como se muestra en la página de limpieza de secuencias Illumina
 
-Con los datos obtenidos del análisis con `FastQC`, hacer es limpiar las secuencias con `cutadapt`:
+Con los datos obtenidos del análisis con `FastQC`, hacer es limpiar las secuencias con [cutadapt](https://cutadapt.readthedocs.io/en/stable/guide.html#):
 
 ```bash
-cutadapt -u 15 -U 15 -a CAAGCAGAAGACGGCATACGAGAT -a CTGTCTCTTATACACATCT -A AATGATACGGCGACCACCGAGATCTACAC -A CTGTCTCTTATACACATCT --times 2 -q 30,30 --trim-n -o ecoli.R1.fastq -p ecoli.R2.fastq SRR6436961_1.fastq SRR6436961_2.fastq
+cutadapt -u 15 -U 15 -a CAAGCAGAAGACGGCATACGAGAT -a CTGTCTCTTATACACATCT -A AATGATACGGCGACCACCGAGATCTACAC -A CTGTCTCTTATACACATCT --times 2 -q 30,30 --trim-n -o ecoli.R1.fastq -p ecoli.R2.fastq --json=ecoli.cutadapt.json SRR6436961_1.fastq SRR6436961_2.fastq
 ```
-Este proceso genera dos archivos ya limpios (`ecoli.R1.fastq` y `ecoli.R2.fastq`), podemos volver a correr `FastQC` para verificar la calidad de las secuencias.
+Qué le estamos pidiendo a `cutadapt` que haga? Veamos:
+- `-u 15` le decimos que corte 15 bases al principio de cada secuencia.
+- `-U 15` ahora que elimine 15 bases al final de cada secuencia.
+- Con `-a -A` le pedimos que busque los adaptadores (secuencias) y los borre o parte de ellos. `-a` es para el archivo R1 y `-A` para el R2.
+- `--times 2` busque los adaptadores dos veces para asegurarnos eliminarlos.
+- `-q 30,30` Eliminar las bases al final y principio de la secuencia que tengan una calidad inferior a Q30 (1/1,000).
+- `--trim-n` Elimnar las bases N.
+- `-o`y `-p` son los nombres con los que queremos llamar a los archivos de salida.
+- `--json` creación de un reporte en formato `.json` que puede ser leído por `MultiQC`.
+- Y por último, se ponen los archivos de entrada, los que queremos limpiar.
 
+Este proceso genera dos archivos ya limpios (`ecoli.R1.fastq` y `ecoli.R2.fastq`), podemos volver a correr `FastQC` para verificar la calidad de las secuencias.
+***
 ### Ensamble de las secuencias
 Existen varios programas para ensamblar secuencias en contigs, algunos son más adecuados para cierto tipo de plataforma de secuenciación y otros se pueden adaptar a casi cualquier tipo. Dos cosas son importantes para una buena cobertura, **suficiente cantidad de lecturas** (secuencias) y que sean de **buena calidad**. La primera nos la da generalmente el equipo de secuenciación pero la segunda no siempre.
 
 #### Spades
-Probaremos también ensamblar el mismo archivo con SPADES para comparar los resultados, link al manual de SPADES. Debido a que este programa consume muchos recursos y tarda tiempo en ejecutarse se puede correr en el servidor Biobacter o bien en la imagen virtual **MGlinux18.2** pero obviamente tardará más.
+Probaremos ensamblar los archivos limpios con [SPAdes](https://cab.spbu.ru/software/spades/). Debido a que este programa consume muchos recursos y tarda tiempo en ejecutarse se puede correr en el servidor Biobacter o bien en la imagen virtual **MGlinux18.2** pero obviamente tardará más.
 
-Para este programa solo necesitamos el archivo tipo fastq y ejecutar el siguiente comando:
 ```bash
 spades -k 21,33,55,77 --careful -1 ecoli.R1.fastq -2 ecoli.R2.fastq -o spades
 ```
@@ -44,13 +54,17 @@ Veamos un resumen de estos archivos; entremos al directorio donde `spades` creó
 ```bash
 cd spades
 ```
-y veamos un resumen y estadísticas de los contigs:
+y veamos un resumen y estadísticas de los contigs con el script `basic-stats`:
 ```bash
 basic-stats contigs.fasta
 ```
+Veamos ahora el scaffolding:
+```bash
+basic-stats scaffolds.fasta
+```
 ***
 ### Validación del ensamble
-El o los ensambles obtenidos podemos compararlos y evaluarlos con `Quast`;
+El o los ensambles obtenidos podemos compararlos y evaluarlos con [Quast](https://cab.spbu.ru/software/quast/);
 hagamos la evaluación:
 ```bash
 quast contigs.fasta scaffolds.fasta

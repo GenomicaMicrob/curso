@@ -1,8 +1,8 @@
 # Pangenoma con Anvi'o
 
-Anvi'o también puede realizar filogenómica y pangenomas de una manera sencilla pero muy potente. Una descripción más detallada se encuentra en [Phylogenomics](https://merenlab.org/2017/06/07/phylogenomics/).
+[Anvi'o](https://anvio.org/) también puede realizar filogenómica y pangenomas de una manera sencilla pero muy potente. Una descripción más detallada se encuentra en [Phylogenomics](https://merenlab.org/2017/06/07/phylogenomics/).
 
-Primero tenemos que tener obviamente los genomas a analizar en formato fasta, usaremos el set de datos que contiene tres genomas de *E. coli*; los cuales los podemos decargar de [aquí](https://drive.google.com/file/d/1OSoJIfb7kkdGx4rJrfHHKYqy-d_Ucejw/view?usp=share_link), descomprimir y usar los archivos `.fasta`.
+Primero tenemos que tener obviamente los genomas a analizar en formato `fasta`, usaremos el set de datos que contiene tres genomas de *E. coli*; los cuales los podemos decargar de [aquí](https://drive.google.com/file/d/1OSoJIfb7kkdGx4rJrfHHKYqy-d_Ucejw/view?usp=share_link), descomprimir y usar los archivos `.fasta`.
 
 ### Preparación de archivos
 Es importante que los archivos fasta cumplan los siguientes requisitos:
@@ -17,7 +17,7 @@ Generar una base de datos para cada genoma, como tenemos varios genomas a proces
 
 Este proceso puede durar horas y por lo tanto no sería raro que la terminal se desconectara antes de terminar, para evitar esto hay varias opciones, una buena es usar el comando de linux `screen`.
 
-Primero hay que crear una nueva "sesión" con screen que la llamaremos `contigs2dbs`, pero puede ser cualquier nombre útil:
+Primero hay que crear una nueva "sesión" con `screen` que la llamaremos `contigs2dbs`, pero puede ser cualquier nombre útil:
 
 ```bash
 screen -S contigs2dbs
