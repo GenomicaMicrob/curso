@@ -19,7 +19,7 @@ Los datos para estos análisis de pueden bajar de aquí: [ecoli-K12_Illumina.tar
 ***
 
 ### Limpieza
-Revisar la calidad de las secuencias con `FastQC` como se muestra en la página de limpieza de secuencias Illumina
+Revisar la calidad de las secuencias con `FastQC` como se muestra en la página de [limpieza de secuencias Illumina](https://bioinformatica.ciad.mx/home/preparaci%C3%B3n-secuencias/limpieza-de-lecturas/illumina)
 
 Con los datos obtenidos del análisis con `FastQC`, hacer es limpiar las secuencias con [cutadapt](https://cutadapt.readthedocs.io/en/stable/guide.html#):
 
@@ -32,8 +32,8 @@ Qué le estamos pidiendo a `cutadapt` que haga? Veamos:
 - Con `-a -A` le pedimos que busque los adaptadores (secuencias) y los borre o parte de ellos. `-a` es para el archivo R1 y `-A` para el R2.
 - `--times 2` busque los adaptadores dos veces para asegurarnos eliminarlos.
 - `-q 30,30` Eliminar las bases al final y principio de la secuencia que tengan una calidad inferior a Q30 (1/1,000).
-- `--trim-n` Elimnar las bases N.
-- `-o`y `-p` son los nombres con los que queremos llamar a los archivos de salida.
+- `--trim-n` Eliminar las bases ambiguas: N.
+- `-o`y `-p` son los nombres con los que queremos nombrar a los archivos de salida.
 - `--json` creación de un reporte en formato `.json` que puede ser leído por `MultiQC`.
 - Y por último, se ponen los archivos de entrada, los que queremos limpiar.
 
@@ -69,5 +69,5 @@ hagamos la evaluación:
 ```bash
 quast contigs.fasta scaffolds.fasta
 ```
-Quast genera los resultados de la evaluación en un nuevo directorio (`quast_results`) y dentro del cual hay un archivo html para ser visualizado por cualquier navegador.
+Quast genera los resultados de la evaluación en un nuevo directorio (`quast_results`) y dentro del cual hay un archivo `html` para ser visualizado por cualquier navegador.
 ***
