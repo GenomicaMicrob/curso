@@ -90,7 +90,11 @@ Entrar al servidor *biobacter*:
 ssh usuario@187.141.151.196
 ```
 
-Ya en el servidor *Biobacter* podremos correr PROKKA:
+Ya en el servidor *Biobacter* podremos correr PROKKA pero antes debemos activar el ambiente `conda` apropiado:
+```bash
+conda activate prokka
+```
+
 ```bash
 prokka --genus Escherichia --species coli --strain K12 --cpus 4 K12.fasta
 ```
