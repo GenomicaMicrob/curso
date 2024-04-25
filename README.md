@@ -12,7 +12,7 @@ Los análisis que tenemos descritos aquí son y próximamente se agregarán nuev
 #### Genómica
 - [Ensamble de un genoma de SARS-CoV2](SARS-CoV_analysis.md)
 - [Ensamble de un genoma de *E. coli*](Ecoli_assembly.md)
-- [Pangenoma de *Francisella tularensis*](Pangenoma.md)
+- [Pangenoma de *E.coli*](Pangenoma_Ecoli.md)
 
 #### Metagenómica
 - [Análisis metagenómico con Anvio](Shotgun_analysis.md)
@@ -35,6 +35,6 @@ Los **set de datos** comprimidos también se pueden descargar de los siguientes 
 
 GDrive = Google Drive
 
-Los set de datos también se pueden descargar desde el servidor bioinfotmático **Biobacter** del CIAD; se encuentran en la siguiente ruta:
+Los set de datos también se pueden descargar desde el servidor bioinformático **Biobacter** del CIAD; se encuentran en la siguiente ruta:
 `/raid1/datasets/`
 ***
