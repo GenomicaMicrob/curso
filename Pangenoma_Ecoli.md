@@ -4,6 +4,11 @@
 
 Primero tenemos que tener obviamente los genomas a analizar en formato `fasta`, usaremos el set de datos que contiene tres genomas de *E. coli*; los cuales los podemos decargar de [aquí](https://drive.google.com/file/d/1OSoJIfb7kkdGx4rJrfHHKYqy-d_Ucejw/view?usp=share_link), descomprimir y usar los archivos `.fasta`.
 
+Tenemos tres genomas:
+- DH10B.fasta
+- DH1.fasta
+- Ec0157.fasta
+***
 ### Preparación de archivos
 Es importante que los archivos fasta cumplan los siguientes requisitos:
 - La terminación del archivo **debe ser** `.fa`.
@@ -12,38 +17,38 @@ Es importante que los archivos fasta cumplan los siguientes requisitos:
 - Los nombres de las secuencias deben ser cortos, sin espacios y solo con caracteres alfanuméricos y cuando mucho guión bajo.
 - Las bases en las secuencias **solo pueden ser A, C, G, T y N**.
 
-### Análisis
-Generar una base de datos para cada genoma, como tenemos varios genomas a procesar podemos hacer un `for loop`. El script `anvi-script-FASTA-to-contigs-db` checa los archivos fasta para ver si cumplen las características antes señaladas y si no los reformatea (`anvi-script-reformat-fasta`), crea la base de datos (`anvi-gen-contigs-database`) y busca genes housekeeping (`anvi-run-hmms`).
-
-Este proceso puede durar horas y por lo tanto no sería raro que la terminal se desconectara antes de terminar, para evitar esto hay varias opciones, una buena es usar el comando de linux `screen`.
-
-Primero hay que crear una nueva "sesión" con `screen` que la llamaremos `contigs2dbs`, pero puede ser cualquier nombre útil:
-
-```bash
-screen -S contigs2dbs
-```
-
-Una vez que se activa esta sesión podemos ya ejecutar el comando anterior pero teniendo cuidado de activar anvio primero:
+#### Limpieza de archivos
+Lo primero que haremos es activar el ambiente conda de anvio:
 
 ```bash
 conda activate anvio-8
 ```
-#### Creación base de datos
+Para asegurarnos que los genomas tienen las características deseadas por anvio, debemos correr un script de anvio para reformatear los genomas:
 
 ```bash
-for f in *.fa; do anvi-script-FASTA-to-contigs-db $f; done
+anvi-script-reformat-fasta DH10B.fasta --seq-type NT --simplify-names -o DH10B.fa
 ```
-Una vez corriendo podemos "desconectarnos" de la sesión de **screen** y volver a la sesión de terminal anterior presionando al mismo tiempo las teclas `Ctrl a d` :
+Ahora hagamos lo mismo para los demás genomas:
+```bash
+anvi-script-reformat-fasta DH1.fasta --seq-type NT --simplify-names -o DH1.fa
+```
+```bash
+anvi-script-reformat-fasta Ec0157.fasta --seq-type NT --simplify-names -o Ec0157.fa
+```
+***
+### Análisis
+#### Creación de bases de datos
+Ya que tenemos los archivos limpios y con terminación .fa, podemos crear una base de datos para cada genoma:
 
 ```bash
-Ctrl a d
+anvi-gen-contigs-databse -f DH1.fa -o DH1.db
 ```
-Para volverse a conectar a la sesión y ver como va el análisis:
-
 ```bash
-screen -r contigs2dbs
+anvi-gen-contigs-databse -f DH10B.fa -o DH10B.db
 ```
-Si solo hemos hecho una sesión entonces no hace falta poner el nombre de la sesión, solo `screen -r`.
+```bash
+anvi-gen-contigs-databse -f Ec0157.fa -o Ec0157.db
+```
 
 Al terminar el paso anterior, que puede durar horas, habrá que generar un listado de los genomas para usar con los siguientes pasos de anvio.
 ***
@@ -81,16 +86,25 @@ El archivo de salida (`genome.list`) debe tener la siguiente estructura:
 La primer columna (`name`) podemos cambiarla al nombre que deseemos, pero la segunda columna no pues es la ruta al archivo. Para los nombres de la primer columna **NO usar nombres que empiecen con número!** La separación entre columnas es con tabuladores.
 ***
 #### Funciones
-**Nota.** Esta opción solo esta disponible en el servidor **Biobacter** y no en la imagen virtual **MGlinux18.2**
+Podemos añadirle funciones a los genes de cada genoma, para lo cual usamos la base de datos COGS de NCBI, además de otras anotaciones.
 
-Opcionalmente podemos añadirle funciones a los genes de cada genoma, para lo cual usamos la base de datos COGS de NCBI, además de otras anotaciones.
+**Nota.** Esta opción solo esta disponible en el servidor **Biobacter** y no en la imagen virtual **MGlinux18.2** ya que no están instaladas las bases de datos necesarias.
 
 ```bash
+anvi-run-hmms -c DH1.db --num-threads 4 --also-scan-trnas
+```
+```bash
+anvi-run-ncbi-cogs -c DH1.db --num-threads 4
+```
+```bash
+anvi-run-scg-taxonomy -c DH1.db --num-threads 4
+```
+Podríamos correr todas las bases de datos en un `for loop` también:
+```bash
 for g in *.db; do \
-anvi-run-hmms -c $g --num-threads 4 \
+anvi-run-hmms -c $g --num-threads 4 --also-scan-trnas \
 anvi-run-ncbi-cogs -c $g --num-threads 4 \
-anvi-scan-trnas -c $g --num-threads 4 \
-anvi-run-scg-taxonomy -c $g --num-threads 4 \
+anvi-run-scg-taxonomy -c $g --num-threads 4;
 done
 ```
 ***
@@ -100,27 +114,30 @@ Obtener los *Single Copy Genes* (SCG) para el análisis filogenético, checar si
 ```bash
 anvi-get-sequences-for-hmm-hits --external-genomes genome.list -o concatenated-proteins.fa --hmm-source Bacteria_71 --return-best-hit --get-aa-sequences --concatenate
 ```
+***
 #### Arbol filogenético
 Crear un árbol filogenético con los SCG
 
 ```bash
 anvi-gen-phylogenomic-tree -f concatenated-proteins.fa -o phylogenomic-tree.txt
 ```
+***
 #### Pangenoma
 Para obtener el pangenoma:
 ```bash
 anvi-gen-genomes-storage -e genome.list -o PANGENOME-GENOMES.db
 ```
 ```bash
-anvi-pan-genome -g PANGENOME-GENOMES.db -n PANGENOME -T 2
+anvi-pan-genome -g PANGENOME-GENOMES.db -n PANGENOME -T 4
 ```
 Si se colaron archivos con nombre no aptos, ver arriba, aquí es donde se botará el proceso con un error. El segundo comando puede tardar bastante en completarse.
 
 Opcionalmente (no disponible en la imagen virtual) podemos hacer un análisis de **Average Nucleotide Identitity** (ANI)
 
 ```bash
-anvi-compute-genome-similarity -e genome.list --program pyANI -o ANI -p PANGENOME/PANGENOME-PAN.db -T 8
+anvi-compute-genome-similarity -e genome.list --program fastANI -o ANI -p PANGENOME/PANGENOME-PAN.db -T 4
 ```
+***
 #### Visualización
 Para visualizar el **árbol filogenético**:
 ```bash
