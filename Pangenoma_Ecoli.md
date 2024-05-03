@@ -41,20 +41,30 @@ anvi-script-reformat-fasta Ec0157.fasta --seq-type NT --simplify-names -o Ec0157
 Ya que tenemos los archivos limpios y con terminación .fa, podemos crear una base de datos para cada genoma:
 
 ```bash
-anvi-gen-contigs-databse -f DH1.fa -o DH1.db
+anvi-gen-contigs-database -f DH1.fa -o DH1.db
 ```
 ```bash
-anvi-gen-contigs-databse -f DH10B.fa -o DH10B.db
+anvi-gen-contigs-database -f DH10B.fa -o DH10B.db
 ```
 ```bash
-anvi-gen-contigs-databse -f Ec0157.fa -o Ec0157.db
+anvi-gen-contigs-database -f Ec0157.fa -o Ec0157.db
 ```
 
-Al terminar el paso anterior, que puede durar horas, habrá que generar un listado de los genomas para usar con los siguientes pasos de anvio.
+Al terminar el paso anterior habrá que generar un listado de los genomas para usar con los siguientes pasos de anvio.
 ***
 #### Listado de genomas
 
-Generar un archivo con los nombres de los genomas y la ruta a los archivos de la base de datos a la que pertenecen
+Generar un archivo con los nombres de los genomas y la ruta a los archivos de la base de datos a la que pertenecen. El archivo de salida (`genome.list`) debe tener la siguiente estructura:
+
+| name | contigs_db_path |
+| --- | --- |
+| CP001368_0157 | CP001368_0157.db |
+| DH10B | DH10B.db |
+| DH1 | DH1.db |
+
+Los datos en la primer columna (`name`) podemos cambiarlos al nombre que deseemos, pero la segunda columna no pues es la ruta a la base de datos creada anteriomente.
+
+Para los nombres de la primer columna **NO usar nombres que empiecen con número!** La separación entre columnas es con tabuladores.
 
 ```bash
 ls -1 *.fa > names.tmp
@@ -75,15 +85,6 @@ sed -i 's/.fa//g' genome.list
 sed -i '1i name\tcontigs_db_path' genome.list
 ```
 
-El archivo de salida (`genome.list`) debe tener la siguiente estructura:
-
-| name | contigs_db_path |
-| --- | --- |
-| CP001368_0157 | CP001368_0157.db |
-| DH10B | DH10B.db |
-| DH1 | DH1.db |
-
-La primer columna (`name`) podemos cambiarla al nombre que deseemos, pero la segunda columna no pues es la ruta al archivo. Para los nombres de la primer columna **NO usar nombres que empiecen con número!** La separación entre columnas es con tabuladores.
 ***
 #### Funciones
 Podemos añadirle funciones a los genes de cada genoma, para lo cual usamos la base de datos COGS de NCBI, además de otras anotaciones.
