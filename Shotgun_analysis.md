@@ -1,6 +1,6 @@
 # Metagenómica shotgun con Anvi'o
 
-Haremos un análisis metageómico completo de unas muestras de heces de camarón con la plataforma [Anvi'o](https://anvio.org/).
+Haremos un análisis metagenómico completo de unas muestras de heces de camarón con la plataforma [Anvi'o](https://anvio.org/).
 ***
 #### Datos y programas
 - [dietas.v2.tar.gz](https://figshare.com/s/4e700c8c9ce853e74827). Set de datos.
