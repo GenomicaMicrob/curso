@@ -82,4 +82,5 @@ rm *.sam *.bam *.bai
 ```
 
 #### Hagamos lo mismo para cada una de las muestras.
+
 ***

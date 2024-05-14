@@ -19,6 +19,8 @@ Los análisis que tenemos descritos aquí son y próximamente se agregarán nuev
 - [Análisis de amplicones 16-V4](16S-V4_analysis.md)
 - [Clasificación taxonómica de metagenomas](Taxonomic_metaclassification.md)
 
+#### Transcriptómica
+- [Análisis transcriptómico de *Vibrio parahaemolyticus*](Transcriptomica.md)
 ***
 
 ### Datasets
@@ -32,6 +34,7 @@ Los **set de datos** comprimidos también se pueden descargar de los siguientes 
 | ecoli-K12_Illumina.tar.gz | 81.5 | [GDrive](https://drive.google.com/file/d/1NOcflmwa6ioLDOjFVhhl5TdhJbIgpBO1/view?usp=sharing) | Secuencias pareadas de *E. coli* K12. |
 | Francisella_pan.tar.gz | 3.1 | [Figshare](https://figshare.com/ndownloader/files/42746980) [GDrive](https://drive.google.com/file/d/1pBQLuCk5O9m2wfG8QdJ6EoLKd0Yc-03X/view?usp=drive_link) | Seis genomas de *Francisella tularensis* para realizar un análisis de pangenoma de la especie. |
 | ecoli.tar.gz | 149.5 | [GDrive](https://drive.google.com/file/d/1OSoJIfb7kkdGx4rJrfHHKYqy-d_Ucejw/view?usp=drive_link) | Tres genomas de *E. coli* análisis pangenómicos y secuencias Illumina y Ion Torrent para ensamble. |
+| transcritos.tar.gz | 176.3 | [GDrive](https://drive.google.com/file/d/1hHg_qHgwy7fPg5aPLimKPfNfZpRiBG85/view?usp=sharing) | Seis secuencias de transcritos de *Vibrio parahaemolyticus* crecido en dos medios de cultivo.
 
 GDrive = Google Drive
 
