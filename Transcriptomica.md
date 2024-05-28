@@ -35,7 +35,7 @@ Tendremos así varios archivos con terminación `.bt2`.
 ***
 ### Mapeo de muestras a la referencia
 
-Ahora podremos mapear los archivos fasta de cada una de las muestras al genoma con esta base de datos, tenemos que entrar a cada uno de los subdirectorio para mapear cada muestra, por ejemplo, para la muestra `MM9r1`:
+Ahora podremos mapear los archivos fasta de cada una de las muestras al genoma con esta base de datos, tenemos que entrar a cada uno de los subdirectorio para **mapear cada muestra**, por ejemplo, para la muestra `MM9r1`:
 
 ```bash
 cd fastas/MM9r1
@@ -54,11 +54,22 @@ samtools sort --threads 4 MM9r1.bam -o MM9r1.sorted.bam
 ```bash
 samtools index MM9r1.sorted.bam
 ```
+Repetir lo mismo para cada muestra.
+
 ***
 ### Análisis de transcritos
 **Importante!** Si no tenemos instalado FADU, por favor seguir las instrucciones para su instalación [aquí](/Users/bruno/Documents/GitHub/curso/FADU.md).
 ***
-Ahora ya podremos hacer el análisis de los transcritos con FADU:
+Ahora ya podremos hacer el análisis de los transcritos con FADU, para esto necesitamos el archivo GFF que tiene esta estructura; más info del formato [aquí](https://www.biobam.com/differences-between-gtf-and-gff-files-in-genomic-data-analysis/#:~:text=The%20General%20Feature%20Format%20(GFF,Sequence%20Ontology%20Project%20(v3).
+
+```
+M0904_ChII	Geneious	CDS	1151	3121	.	+	0	ID=M0904_ChII-1;Name=DUF3346 domain-containing protein
+M0904_ChII	Geneious	CDS	3410	3877	.	-	0	ID=M0904_ChII-2;Name=hypothetical protein
+M0904_ChII	Geneious	CDS	3410	3877	.	-	0	ID=M0904_ChII-3;Name=transcriptional regulator
+```
+***
+Corramos el análisis con la **primer muestra**:
+
 ```bash
 /opt/FADU-1.9.0/fadu.jl -M -p -g ../../M0904_ChII.gff -b MM9r1.sorted.bam -o ../ -f "CDS" -a "ID"
 ```
@@ -71,11 +82,21 @@ El resultado de `FADU` se encuentra en un archivo delimitado por tabuladores en 
 5. Los transcritos por cada millón de kilobases (tpm)
 
 ```
-featureID	uniq_len	num_alignments	counts	tpm
-M0904_ChII-1	1971	7.0	6.66	407.96
-M0904_ChII-10	210	9.0	5.95	3416.15
-M0904_ChII-100	1137	0.0	0.00	0.00
+featureID       uniq_len num_alignments counts   tpm
+M0904_ChII-1    1971     7.0	          6.66   407.96
+M0904_ChII-10   210      9.0	          5.95   3416.15
+M0904_ChII-100  1137     0.0	          0.00   0.00
 ```
+Para análisis posteriores solo necesitaremos el número de transcritos y los tpm:
+```bash
+cut -f1,4 ../MM9r1.sorted.counts.txt | sed "s/counts/MM9r1/" > ../MM9r1.counts
+cut -f1,5 ../MM9r1.sorted.counts.txt | sed "s/tpm/MM9r1/" > ../MM9r1.tpm
+```
+Ya que el programa para calcular los genes diferencialmente expresados no acepta decimales, redondeemos el archivo `counts`:
+```bash
+sed -i 's/\b0\.0\b/0/g; s/\b0\.00\b/0/g' ../MM9r1.counts
+```
+
 Los archivos intermedios los podemos borrar:
 ```bash
 rm *.sam *.bam *.bai
@@ -83,4 +104,30 @@ rm *.sam *.bam *.bai
 
 #### Hagamos lo mismo para cada una de las muestras.
 
+***
+
+### Compilación de datos
+Teniendo todos los archivos de salida de FADU para cada muestra, podemos unirlos (compilarlos); vayamos a la carpeta superior donde están los archivos `*_counts.tsv`
+
+```bash
+awk_compiler *.counts > counts.temp
+```
+[awk_compiler](awk_compiler.md) es un script para compilar tablas de datos con la misma información pero diferentes datos.
+
+Al terminar de compilar, tendremos probablemente genes con cero transcritos, por lo que debemos borrar las líneas que tengan solo ceros.
+
+```bash
+head -1 counts.temp > header.temp # obtener solo la primer línea del archivos
+```
+```bash
+sed 's/ /_/g' counts.temp | awk 'NR > 1{s=0; for (i=2;i<=NF;i++) s+=$i; if (s!=0)print}' | sed 's/_/ /g' > clean_counts.temp # elimina las lineas que tengan puros ceros
+```
+```bash
+cat header.temp clean_counts.temp | sed 's/\t/,/g' > counts.csv # une los archivos
+```
+Podemos borrar los temporales
+```bash
+rm *.temp
+```
+Podemos ahora proceder a calcular con el archivo `counts.csv` los genes diferencialmente expresados con [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) en RStudio siguiendo [esta guía](DESeq2.md).
 ***

@@ -16,9 +16,11 @@ tar xzf julia-1.10.3-linux-x86_64.tar.gz
 así tendremos una nueva carpeta que la podemos mover al directorio `/opt/`
 
 ```bash
-mv julia-1.10.3/ /opt/
+sudo mv julia-1.10.3/ /opt/
 ```
-borremos el comprimido para hacer espacio
+Recordar que al usar `sudo` nos preguntará el password: `user01`
+
+Borremos el comprimido para hacer espacio
 
 ```bash
 rm julia-1.10.3-linux-x86_64.tar.gz
@@ -26,11 +28,11 @@ rm julia-1.10.3-linux-x86_64.tar.gz
 Ahora es bueno hacer un link virtual al executable de julia para no tener que poner la ruta cada vez que queramos ejecutarlo:
 
 ```bash
-sudo ln -s /opt/julia-1.10.3/bin/julia /user/local/bin/julia
+sudo ln -s /opt/julia-1.10.3/bin/julia /usr/local/bin/julia
 ```
-Recordar que al usar `sudo` nos preguntará el password: `user01`. Para comprobar que todo funciona, cerremos la terminal, abramos una nueva y escribamos `julia` y debe observarse julia.
+Para comprobar que todo funciona, cerremos la terminal, abramos una nueva y escribamos `julia` y debe observarse julia.
 
-Es necesario instalar algunos paquetes para `julia`; una vez ya en el ambiente julia debemos entrar al manejador de paquetes presionando la tecla `]` y veremos que el prompt cambia a `(@v1.10) pkg>` ahora si iremos instalando los paquetes necesarios:
+Es necesario instalar algunos paquetes para `julia`; una vez ya en el ambiente julia debemos entrar al manejador de paquetes presionando la tecla `]` y veremos que el prompt cambia a `(@v1.10) pkg>` ahora si instalaremos los paquetes necesarios en conjunto:
 
 ```bash
 add ArgParse Logging BGZFStreams.jl GenomicFeatures.jl GFF3 Indexes.jl StructArrays.jl XAM.jl BED.jl
