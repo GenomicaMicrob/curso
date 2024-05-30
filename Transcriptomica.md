@@ -38,11 +38,11 @@ Tendremos así varios archivos con terminación `.bt2`.
 Ahora podremos mapear los archivos fasta de cada una de las muestras al genoma con esta base de datos, tenemos que entrar a cada uno de los subdirectorio para **mapear cada muestra**, por ejemplo, para la muestra `MM9r1`:
 
 ```bash
-cd fastas/MM9r1
+cd MM9r1
 ```
 
 ```bash
-bowtie2 --no-unal --threads 4 -x ../../refgenome -f -1 MM9r1.R1.fasta -2 MM9r1.R2.fasta -S MM9r1.sam
+bowtie2 --no-unal --threads 4 -x ../refgenome -f -1 MM9r1.R1.fasta -2 MM9r1.R2.fasta -S MM9r1.sam
 ```
 Ahora debemos hacer unas conversiones de formato con samtools:
 ```bash
@@ -71,7 +71,7 @@ M0904_ChII	Geneious	CDS	3410	3877	.	-	0	ID=M0904_ChII-3;Name=transcriptional reg
 Corramos el análisis con la **primer muestra**:
 
 ```bash
-/opt/FADU-1.9.0/fadu.jl -M -p -g ../../M0904_ChII.gff -b MM9r1.sorted.bam -o ../ -f "CDS" -a "ID"
+/opt/FADU-1.9.0/fadu.jl -M -p -g ../M0904_ChII.gff -b MM9r1.sorted.bam -o ../ -f "CDS" -a "ID"
 ```
 El resultado de `FADU` se encuentra en un archivo delimitado por tabuladores en el directorio superior llamado `MM9r1.sorted.counts.txt` y contiene cinco columnas:
 
@@ -103,7 +103,7 @@ rm *.sam *.bam *.bai
 ```
 
 #### Hagamos lo mismo para cada una de las muestras.
-
+O bien, podemos crear un sencillo script para que entre en cada subdirectorio y correr FADU, ver este ejemplo: **[fadu_script.sh](fadu_script.sh)**.
 ***
 
 ### Compilación de datos
@@ -112,7 +112,7 @@ Teniendo todos los archivos de salida de FADU para cada muestra, podemos unirlos
 ```bash
 awk_compiler *.counts > counts.temp
 ```
-[awk_compiler](awk_compiler.md) es un script para compilar tablas de datos con la misma información pero diferentes datos.
+**[awk_compiler](awk_compiler.md)** es un script para compilar tablas de datos con la misma información pero diferentes datos.
 
 Al terminar de compilar, tendremos probablemente genes con cero transcritos, por lo que debemos borrar las líneas que tengan solo ceros.
 

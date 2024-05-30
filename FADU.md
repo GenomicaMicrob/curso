@@ -56,4 +56,8 @@ Ya descargado y descomprimido, necesitamos cambiar al dueño del paquete para po
 ```bash
 sudo chown -R user /opt/FADU/1.9.0/*
 ```
+Hagámoslo ejecutable
+```bash
+sudo chmod +x /opt/FADU/1.9.0/fadu.jl
+```
 ***
