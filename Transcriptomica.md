@@ -73,6 +73,15 @@ Corramos el análisis con la **primer muestra**:
 ```bash
 /opt/FADU-1.9.0/fadu.jl -M -p -g ../M0904_ChII.gff -b MM9r1.sorted.bam -o ../ -f "CDS" -a "ID"
 ```
+```
+-M, --remove_multimapped If enabled, remove any reads or fragments that
+                        are mapped to multiple regions of the genome
+-p, --keep_only_proper_pairs
+-g, --gff3_file /path/to/annotation.gff3
+-b, --bam_file /path/to/file.bam
+-f, --feature_type FEATURE_TYPE Which GFF3 feature type (column 3)
+-a, --attribute_type ATTRIBUTE_TYPE   Which GFF3 feature type (column 9)
+```
 El resultado de `FADU` se encuentra en un archivo delimitado por tabuladores en el directorio superior llamado `MM9r1.sorted.counts.txt` y contiene cinco columnas:
 
 1. El CDS (featureID)
