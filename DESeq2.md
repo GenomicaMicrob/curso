@@ -25,8 +25,10 @@ Importemos los archivos y creemos las matrices de datos:
 **Data**
 
 ```bash
-count_matrix <- as.matrix(read.csv(counts.csv, row.names = "featureID"))
+count_matrix <- read.csv("counts.csv", row.names = 1)
 ```
+Si el archivo esta **delimitado por tabuladores**, usar entonces `read.delim` en lugar de `read.csv`
+
 ```bash
 count_matrix <- round(count_matrix, 0) # round numbers
 ```
@@ -47,7 +49,7 @@ TSBr3,TSB,3
 ```
 Importémoslo a una matriz de datos:
 ```bash
-coldata <- read.csv(metadata.csv, header = TRUE, row.names = 1)
+coldata <- read.csv("metadata.csv", header = TRUE, row.names = 1)
 ```
 ```bash
 coldata <- data.frame(coldata) # conversión a dataframe
@@ -76,12 +78,16 @@ dds <- DESeqDataSetFromMatrix(countData = count_matrix, colData = coldata, desig
 Construcción del `DESeqDataSet` para el análisis de DGE; se filtran (quitan) genes con valores menores a 10 lecturas (se puede cambiar).
 
 ```bash
-dds <- dds[rowSums(counts(dds)) >= 10,] # Pre-filtering helps to remove genes that have very few mapped reads, reduces memory, and increases the speed of the DESeq2 analysis
+dds <- dds[rowSums(counts(dds)) >= 10,]
 ```
-Seleccionar cual es el valor para referencia contra el cual se compararán los datos.
+*Pre-filtering helps to remove genes that have very few mapped reads, reduces memory, and increases the speed of the DESeq2 analysis*
+
+Seleccionar cual es el valor para referencia (medio TSB) contra el cual se compararán los datos.
 ```bash
-dds$Treatment <- relevel(dds$Treatment, ref = reference) # REFERENCE. Select the reference (ref parameter) level for condition comparisons. The comparisons of other conditions will be compared against this reference i.e, the log2 fold changes will be calculated based on ref value (infected/control). If this parameter is not set, comparisons will be based on alphabetical order of the levels
+dds$Treatment <- relevel(dds$Treatment, ref = "TSB")
 ```
+*REFERENCE. Select the reference (ref parameter) level for condition comparisons. The comparisons of other conditions will be compared against this reference i.e, the log2 fold changes will be calculated based on ref value (infected/control). If this parameter is not set, comparisons will be based on alphabetical order of the levels*
+
 **Análisis de expresión diferencial**
 ```bash
 dds <- DESeq(dds)
@@ -97,13 +103,16 @@ res
 ```
 Hagamos un ordenamiento de los resultados por el valor de *p* ajsutado (método de Benjamini-Hochberg FDR):
 ```bash
-res[order(res$padj),] # Order gene expression table by adjusted p value (Benjamini-Hochberg FDR method). Note: You may get some genes with p value set to NA. This is due to all samples have zero counts for a gene or there is extreme outlier count for a gene or that gene is subjected to independent filtering by DESeq2.
+res[order(res$padj),]
 ```
+*Order gene expression table by adjusted p value (Benjamini-Hochberg FDR method). Note: You may get some genes with p value set to NA. This is due to all samples have zero counts for a gene or there is extreme outlier count for a gene or that gene is subjected to independent filtering by DESeq2.*
+
 Salvemos los resultados DGE a una tabla (`DGE.csv):
 ```bash
-write.csv(as.data.frame(res[order(res$padj),] ), file = output.file) # Export differential gene expression analysis table to CSV file
+write.csv(as.data.frame(res[order(res$padj),] ), file = "DGE.csv")
 ```
 Obtengamos un resumen de DGE con valores de *p* ajustados y solo los que son igual o menores a 0.05:
+
 ```bash
 summary(results(dds, alpha=0.05))
 ```
@@ -112,11 +121,12 @@ Ahora obtengamos los valores normalizados:
 normalized_counts <- counts(dds, normalized=TRUE)
 head(normalized_counts)
 ```
+Listo, hemos terminado.
 ***
 ### Gráficas tipo volcán
 Proceso tomado de: https://biostatsquid.com/volcano-plots-r-tutorial/
 ```bash
-dge <- read.csv(output.file) # Import values as data frame
+dge <- read.csv("DGE.csv")
 
 dge$diffexpressed <- "NO" # Add a new column for the DGE values. NO by default.
 
@@ -126,23 +136,25 @@ dge$diffexpressed[dge$log2FoldChange < -0.6 & dge$pvalue < 0.05] <- "DOWN" # if 
 
 dge$delabel <- ifelse(dge$X %in% head(dge[order(dge$padj), "X"], 10), dge$X, NA) # Create a new column "delabel" to dge, that will contain the name of the top 10 differentially expressed genes (NA in case they are not)
 ```
+Creemos un tema para la gráfica:
 ```bash
 theme_set(theme_classic(base_size = 20) +
  theme(axis.title.y = element_text(face = "bold", margin = margin(0,20,0,0), size = rel(0.7), color = 'black'),
  axis.title.x = element_text(hjust = 0.5, face = "bold", margin = margin(20,0,0,0), size = rel(0.7), color = 'black'), plot.title = element_text(hjust = 0.5) # Biostatsquid theme
  ))
 ```
+Creemos la gráfica:
 ```bash
-volcano <- ggplot(dge, aes(x = log2FoldChange, y = -log10(pvalue), col = diffexpressed, label = delabel)) +
+ggplot(dge, aes(x = log2FoldChange, y = -log10(pvalue), col = diffexpressed, label = delabel)) +
    geom_vline(xintercept = c(-0.6, 0.6), col = "gray", linetype = 'dashed') +
    geom_hline(yintercept = -log10(0.05), col = "gray", linetype = 'dashed') +
    geom_point(size = 2) +
    scale_color_manual(values = c("#00AFBB", "grey", "#db487e"), labels = c("Downregulated", "Not signifficant", "Upregulated")) +
    labs(y= "Confidence (-Log10 adjusted p values)", x = "Log2 Ratio (Fold Change)")+
-   ggtitle("Differential expression between treatments.", subtitle = output.file) +
-   geom_text_repel(max.overlaps = Inf) # VolcanoPlot, needs chanes to scale_color and to title
-volcano
+   ggtitle("Differential expression between treatments.") +
+   geom_text_repel(max.overlaps = Inf)
 ```
+
 Shrinkage of effect size (LFC) helps to remove the low count genes (by shrinking towards zero)
 ```bash
 resLFC <- lfcShrink(dds, coef="Treatment_Seawater_vs_TSB", type="apeglm")
