@@ -110,13 +110,34 @@ Los archivos intermedios los podemos borrar:
 ```bash
 rm *.sam *.bam *.bai
 ```
-
 #### Hagamos lo mismo para cada una de las muestras.
 O bien, podemos crear un sencillo script para que entre en cada subdirectorio y correr FADU, ver este ejemplo: **[fadu_script.sh](fadu_script.sh)**.
 ***
+**Nota.** Como se ve en el resultado, la columna `featureID` contiene solo un número consecutivo del gen pero no información de quién es. Podemos sustituir esa primer columna con el nombre del gen. Esta información está en el archivo `.gff` en la última columna (ver arriba). Por ejemplo, para el primer gen (primera linea del `.gff`) `ID=M0904_ChII-1;Name=DUF3346 domain-containing protein` sustituiremos `M0904_ChII-1` por `1-DUF3346 domain-containing protein` eliminando de paso `Name=` que ya no lo necesitamos.
+
+Los featuresID de las 3 primeras líneas del archivo quedarían así:
+
+| Original | Nuevo nombre |
+| --- | --- |
+|ID=M0904_ChII-1;Name=DUF3346 domain-containing protein|ID=1-DUF3346 domain-containing protein|
+|ID=M0904_ChII-2;Name=hypothetical protein|ID=2-hypothetical protein|
+|ID=M0904_ChII-3;Name=transcriptional regulator|ID=3-transcriptional regulator|
+
+Es importante mantener un numero consecutivo (`1-`) antes del nombre por si ha varios genes con el mismo nombre (p.ej. *hypothetical protein*).
+
+Esto lo podemos hacer automáticamente con el script en python [gff_ID_renaming.py](gff_ID_renaming.py) que nos generará un nuevo archivo con los nombre ya correctos.
+
+```bash
+gff_ID_renaming.py M0904_ChII.gff
+```
+El archivo `M0904_ChII_mod.gff` generado lo podemos usar al principio con FADU para generar todo el análisis de nuevo (sorry) usando el script **[fadu_script.sh](fadu_script.sh)**:
+```bash
+fadu_script.sh M0904_ChII_mod.gff
+```
+***
 
 ### Compilación de datos
-Teniendo todos los archivos de salida de FADU para cada muestra, podemos unirlos (compilarlos); vayamos a la carpeta superior donde están los archivos `*_counts.tsv`
+Teniendo todos los archivos de salida de FADU para cada muestra, podemos unirlos (compilarlos); vayamos a la carpeta superior donde están los archivos `*_counts`
 
 ```bash
 awk_compiler *.counts > counts.temp
