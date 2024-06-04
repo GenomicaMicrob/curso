@@ -1,5 +1,5 @@
 ### Gráficas de DGE
-Con los datos obtenidos del [análisis con DESeq2](Transcriptómica/DESeq2.md), podemos generar varias gráficas.
+Con los datos obtenidos del [análisis con DESeq2](DESeq2.md), podemos generar varias gráficas.
 
 ***
 #### Gráfica PCoA
@@ -39,7 +39,7 @@ pheatmap(rld_cor, color = heat.colors, border_color="darkgrey", fontsize = 14, f
 #### Gráficas tipo volcán
 Proceso tomado de: https://biostatsquid.com/volcano-plots-r-tutorial/
 
-Podemos cargar en RStudio el script [Volcano_plot.R](Transcriptómica/Volcano_plot.R) para correrlo desde ahí.
+Podemos cargar en RStudio el script [Volcano_plot.R](Volcano_plot.R) para correrlo desde ahí.
 
 ```bash
 dge <- read.csv("DGE.csv")

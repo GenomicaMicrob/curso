@@ -10,9 +10,9 @@ Estas instrucciones están dirigidos a realizarse con la imagen virtual [MGlinux
 
 Los análisis que tenemos descritos aquí son y próximamente se agregarán nuevos:
 #### Genómica
-- [Ensamble de un genoma de SARS-CoV2](Genómica/SARS-CoV_analysis.md)
-- [Ensamble de un genoma de *E. coli*](Genómica/Ecoli_assembly.md)
-- [Pangenoma de *E.coli*](Genómica/Pangenoma_Ecoli.md)
+- [Ensamble de un genoma de SARS-CoV2](Genomica/SARS-CoV_analysis.md)
+- [Ensamble de un genoma de *E. coli*](Genomica/Ecoli_assembly.md)
+- [Pangenoma de *E.coli*](Genóomica/Pangenoma_Ecoli.md)
 
 #### Metagenómica
 - [Análisis metagenómico con Anvio](Metagenómica/Shotgun_analysis.md)

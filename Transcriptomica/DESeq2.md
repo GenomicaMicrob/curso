@@ -72,7 +72,7 @@ all(rownames(coldata) == colnames(count_matrix))
 **Ambos** deben ser verdadero (`TRUE`). Si alguno de los resultados anteriores es `FALSE`,  debemos ver porque hay una discrepancia; normalmente los metadatos no están bien capturados.
 ***
 ### Análisis DGE
-**Tip.** Podemos importar el script [DESeq2_script.R](Transcriptómica/DESeq2_script.R) a RStudio y desde ahí irlo corriendo.
+**Tip.** Podemos importar el script [DESeq2_script.R](DESeq2_script.R) a RStudio y desde ahí irlo corriendo.
 
 ```bash
 dds <- DESeqDataSetFromMatrix(countData = count_matrix, colData = coldata, design = ~ Treatment)
@@ -123,5 +123,5 @@ Ahora obtengamos los valores normalizados:
 normalized_counts <- counts(dds, normalized=TRUE)
 head(normalized_counts)
 ```
-Listo, hemos terminado, ahora podemos **graficar** los datos siguiendo la guía [DESeq2_graficas](Transcriptómica/DESeq2_graficas.md).
+Listo, hemos terminado, ahora podemos **graficar** los datos siguiendo la guía [DESeq2_graficas](DESeq2_graficas.md).
 ***
