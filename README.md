@@ -12,7 +12,7 @@ Los análisis que tenemos descritos aquí son y próximamente se agregarán nuev
 #### Genómica
 - [Ensamble de un genoma de SARS-CoV2](Genomica/SARS-CoV_analysis.md)
 - [Ensamble de un genoma de *E. coli*](Genomica/Ecoli_assembly.md)
-- [Pangenoma de *E.coli*](Genóomica/Pangenoma_Ecoli.md)
+- [Pangenoma de *E.coli*](Genomica/Pangenoma_Ecoli.md)
 
 #### Metagenómica
 - [Análisis metagenómico con Anvio](Metagenómica/Shotgun_analysis.md)

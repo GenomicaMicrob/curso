@@ -2,7 +2,7 @@
 
 ### Limpieza y ensamble
 
-Lo primero que tenemos que hacer es limpiar y ensamblas las secuencias, para esto usaremos el pipeline del laboratorio [mg_pipeline](about:blank), pero antes de eso hay que descomprimir las secuencias que se encuentran en `Documents`:
+Lo primero que tenemos que hacer es limpiar y ensamblas las secuencias, para esto usaremos el pipeline del laboratorio [mg_pipeline](https://github.com/GenomicaMicrob/metagenomic_pipeline), pero antes de eso hay que descomprimir las secuencias que se encuentran en `Documents`:
 
 ```bash
 tar xzf MiSeqSOP.tar.gz
