@@ -2,7 +2,7 @@
 
 Procedimiento tomado de: https://www.reneshbedre.com/blog/deseq2.html
 ***
-A partir del análisis de transcritos realizado [anteriormente con FADU](Transcriptomica/Transcriptomica.md), podemos calcular los DEG a partir del archivo `counts.csv` generado. DESeq2 es un **paquete de R** y por lo tanto, si no lo tenemos instalado en R, hay que hacerlo en **RStudio**.
+A partir del análisis de transcritos realizado [anteriormente con FADU](Transcriptomica.md), podemos calcular los DEG a partir del archivo `counts.csv` generado. DESeq2 es un **paquete de R** y por lo tanto, si no lo tenemos instalado en R, hay que hacerlo en **RStudio**.
 
 Creemos un nuevo proyecto de **RStudio** en la carpeta donde tengamos los datos de FADU e instalemos *DESeq2*.
 

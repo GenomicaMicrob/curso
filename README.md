@@ -20,8 +20,8 @@ Los análisis que tenemos descritos aquí son y próximamente se agregarán nuev
 - [Clasificación taxonómica de metagenomas](Metagenómica/Taxonomic_metaclassification.md)
 
 #### Transcriptómica
-- [Análisis transcriptómico de *Vibrio parahaemolyticus*](Transcriptómica/Transcriptomica.md)
-- [Estimación de genes diferencialmente expresados con DESeq2](Transcriptómica/DESeq2.md)
+- [Análisis transcriptómico de *Vibrio parahaemolyticus*](Transcriptomica/Transcriptomica.md)
+- [Estimación de genes diferencialmente expresados con DESeq2](Transcriptomica/DESeq2.md)
 ***
 
 ### Datasets
