@@ -205,5 +205,5 @@ anvi-interactive -c contigs.db -p SAMPLES-MERGED/PROFILE.db --taxonomic-level t_
 ***
 Si todo salió bien, debemos ver una imagen semejante a la siguiente:
 
-![Dietas](anvio_dietas.png)
+![Dietas](Metagenómica/anvio_dietas.png)
 ***

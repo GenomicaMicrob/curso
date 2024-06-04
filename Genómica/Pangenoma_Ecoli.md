@@ -154,5 +154,5 @@ anvi-display-pan -p PANGENOME/PANGENOME-PAN.db -g PANGENOME-GENOMES.db
 ***
 Si todo salió bien, debemos ver una imagen semejante a la siguiente:
 
-![Pangenoma](ecoli_pangenome.png)
+![Pangenoma](Genómica/ecoli_pangenome.png)
 ***

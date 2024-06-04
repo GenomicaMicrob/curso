@@ -1,9 +1,9 @@
 ### Instalación de fadu
 
-Fadu es un programa para analizar transcriptómica de procariontes únicamente. Si se tiene la imagen virtual MGlinux 18.2 o anteriores, es necesario instalarlo en ella.
+[Fadu](https://github.com/IGS/FADU) es un programa para analizar transcriptómica de procariontes únicamente. Si se tiene la imagen virtual MGlinux 18.2 o anteriores, es necesario instalarlo en ella.
 ***
 ### Instalación del lenguaje Julia
-Ya que FADU corre en Julia, seránecesario descargar el lenguaje e instalarlo:
+Ya que FADU corre en Julia, será necesario descargar el lenguaje e instalarlo:
 
 ```bash
 wget https://julialang-s3.julialang.org/bin/linux/x64/1.10/julia-1.10.3-linux-x86_64.tar.gz

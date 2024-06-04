@@ -10,17 +10,18 @@ Estas instrucciones están dirigidos a realizarse con la imagen virtual [MGlinux
 
 Los análisis que tenemos descritos aquí son y próximamente se agregarán nuevos:
 #### Genómica
-- [Ensamble de un genoma de SARS-CoV2](SARS-CoV_analysis.md)
-- [Ensamble de un genoma de *E. coli*](Ecoli_assembly.md)
-- [Pangenoma de *E.coli*](Pangenoma_Ecoli.md)
+- [Ensamble de un genoma de SARS-CoV2](Genómica/SARS-CoV_analysis.md)
+- [Ensamble de un genoma de *E. coli*](Genómica/Ecoli_assembly.md)
+- [Pangenoma de *E.coli*](Genómica/Pangenoma_Ecoli.md)
 
 #### Metagenómica
-- [Análisis metagenómico con Anvio](Shotgun_analysis.md)
-- [Análisis de amplicones 16-V4](16S-V4_analysis.md)
-- [Clasificación taxonómica de metagenomas](Taxonomic_metaclassification.md)
+- [Análisis metagenómico con Anvio](Metagenómica/Shotgun_analysis.md)
+- [Análisis de amplicones 16-V4](Metagenómica/16S-V4_analysis.md)
+- [Clasificación taxonómica de metagenomas](Metagenómica/Taxonomic_metaclassification.md)
 
 #### Transcriptómica
-- [Análisis transcriptómico de *Vibrio parahaemolyticus*](Transcriptomica.md)
+- [Análisis transcriptómico de *Vibrio parahaemolyticus*](Transcriptómica/Transcriptomica.md)
+- [Estimación de genes diferencialmente expresados con DESeq2](Transcriptómica/DESeq2.md)
 ***
 
 ### Datasets

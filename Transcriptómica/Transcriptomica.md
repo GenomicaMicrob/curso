@@ -58,7 +58,7 @@ Repetir lo mismo para cada muestra.
 
 ***
 ### Análisis de transcritos
-**Importante!** Si no tenemos instalado FADU, por favor seguir las instrucciones para su instalación [aquí](/Users/bruno/Documents/GitHub/curso/FADU.md).
+**Importante!** Si no tenemos instalado FADU, por favor seguir las instrucciones para su instalación [aquí](Transcriptómica/Instalación_FADU.md).
 ***
 Ahora ya podremos hacer el análisis de los transcritos con FADU, para esto necesitamos el archivo GFF que tiene esta estructura; más info del formato [aquí](https://www.biobam.com/differences-between-gtf-and-gff-files-in-genomic-data-analysis/#:~:text=The%20General%20Feature%20Format%20(GFF,Sequence%20Ontology%20Project%20(v3).
 
@@ -112,7 +112,7 @@ rm *.sam *.bam *.bai
 ```
 
 #### Hagamos lo mismo para cada una de las muestras.
-O bien, podemos crear un sencillo script para que entre en cada subdirectorio y correr FADU, ver este ejemplo: **[fadu_script.sh](fadu_script.sh)**.
+O bien, podemos crear un sencillo script para que entre en cada subdirectorio y correr FADU, ver este ejemplo: **[fadu_script.sh](Transcriptómica/fadu_script.sh)**.
 ***
 
 ### Compilación de datos
@@ -121,7 +121,7 @@ Teniendo todos los archivos de salida de FADU para cada muestra, podemos unirlos
 ```bash
 awk_compiler *.counts > counts.temp
 ```
-**[awk_compiler](awk_compiler.md)** es un script para compilar tablas de datos con la misma información pero diferentes datos.
+**[awk_compiler](Transcriptómica/awk_compiler.md)** es un script para compilar tablas de datos con la misma información pero diferentes datos.
 
 Al terminar de compilar, tendremos probablemente genes con cero transcritos, por lo que debemos borrar las líneas que tengan solo ceros.
 
@@ -138,5 +138,5 @@ Podemos borrar los temporales
 ```bash
 rm *.temp
 ```
-Podemos ahora proceder a calcular con el archivo `counts.csv` los genes diferencialmente expresados con [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) en RStudio siguiendo [esta guía](DESeq2.md).
+Podemos ahora proceder a calcular con el archivo `counts.csv` los genes diferencialmente expresados con [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) en RStudio siguiendo [esta guía](Transcriptómica/DESeq2.md).
 ***
