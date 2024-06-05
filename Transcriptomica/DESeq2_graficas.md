@@ -2,18 +2,18 @@
 Con los datos obtenidos del [análisis con DESeq2](DESeq2.md), podemos generar varias gráficas.
 
 ***
-#### Gráfica PCoA
-Primeros debemos transformar los datos logarítmicamente:
+#### Gráfica de componentes principales (PCoA)
+Primeros debemos transformar los datos en la matriz `dds` logarítmicamente:
 ```bash
 rld <- rlog(dds, blind=TRUE)
 ```
-Ahora creemos la gráfica:
+Ahora creemos la gráfica separando por tratamiento:
 ```bash
 plotPCA(rld, intgroup="Treatment")
 ```
 ***
 #### Heatmap
-**Nota.** Asegurarnos de haber creado el objeto *rld* como se especifica arriba.
+**Nota.** Asegurarnos de haber creado el objeto `rld` como se especifica arriba.
 
 Primero debemos cargar la librería y hacer unos análisis previos:
 ```bash
