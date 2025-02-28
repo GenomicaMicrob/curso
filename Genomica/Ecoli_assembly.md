@@ -75,7 +75,7 @@ Quast genera los resultados de la evaluación en un nuevo directorio (`quast_res
 Como ultimo paso del proceso, podemos anotar el genoma obtenido del mejor ensamble realizado anteriormente. Este proceso implica obtener CDS y RNAs y compararlos con bases de datos por lo que no podemos hacerlo fácil y rápidamente en una imagen virtual.
 Si podemos hacerlo en el servido *Biobacter* que tiene el software necesario y las bases de datos instaladas.
 
-El programa que usaremos es [PROKKA](https://github.com/tseemann/prokka) y, como para muchos programas, el nombre de las secuencias (headers) debe ser corto y sencillo. Para recortar los nombre de las secuencias usemos `awk`:
+El programa que usaremos es [bakta](https://github.com/oschwengers/bakta) y, como para muchos programas, el nombre de las secuencias (headers) debe ser corto y sencillo. Para recortar los nombre de las secuencias usemos `awk`:
 ```bash
 awk '/^>/{print ">'K12'_"++i; next}{print}' scaffolds.fasta > K12.fasta
 ```
@@ -92,11 +92,11 @@ ssh usuario@187.141.151.196
 
 Ya en el servidor *Biobacter* podremos correr PROKKA pero antes debemos activar el ambiente `conda` apropiado:
 ```bash
-conda activate prokka
+conda activate bakta
 ```
 
 ```bash
-prokka --genus Escherichia --species coli --strain K12 --cpus 4 K12.fasta
+bakta --db /dbs/bakta/db/ --genus Escherichia --species coli --strain K12 -t 4 K12.fasta
 ```
-PROKKA genera una carpeta con archivos en diferentes formatos.
+bakta genera una carpeta con archivos en diferentes formatos, el más importante es tipo GenBank con extensión .gff
 ***

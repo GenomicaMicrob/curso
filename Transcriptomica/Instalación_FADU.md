@@ -1,6 +1,8 @@
 ### Instalación de fadu
 
-[Fadu](https://github.com/IGS/FADU) es un programa para analizar transcriptómica de procariontes únicamente. Si se tiene la imagen virtual MGlinux 18.2 o anteriores, es necesario instalarlo en ella.
+**[Fadu](https://github.com/IGS/FADU)** es un programa para analizar transcriptómica de procariontes únicamente. Si se tiene la imagen virtual MGlinux 18.2 o anteriores, es necesario instalarlo.
+
+En la imagen virtual **MGlinux 18.3** ya está instalado FADU 1.9.0
 ***
 ### Instalación del lenguaje Julia
 Ya que FADU corre en Julia, será necesario descargar el lenguaje e instalarlo:
@@ -54,10 +56,10 @@ sudo tar xzf v1.9.0.tar.gz -C /opt/
 Ya descargado y descomprimido, necesitamos cambiar al dueño del paquete para poderlo ejecutar ya que esta como `root` por default:
 
 ```bash
-sudo chown -R user /opt/FADU/1.9.0/*
+sudo chown -R user /opt/FADU-1.9.0/*
 ```
 Hagámoslo ejecutable
 ```bash
-sudo chmod +x /opt/FADU/1.9.0/fadu.jl
+sudo chmod +x /opt/FADU-1.9.0/fadu.jl
 ```
 ***

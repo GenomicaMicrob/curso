@@ -63,7 +63,8 @@ du -h megahit/
 Ahora si borrémoslo:
 ```bash
 rm -fr megahit/
-````
+```
+***
 ### Mapeo de contigs
 
 Teniendo un archivo de contigs formado con todos los metagenomas, debemos ahora mapear cada metagenoma a ese esos contigs, esto nos dirá cuantas y cuales secuencias de cada metagenoma contribuyeron a cada contig, primero tenemos que crear un índice:
@@ -75,7 +76,9 @@ Ahora si mapeamos los metagenomas usando ese índice (contigs):
 bowtie2 --threads 2 -x contigs -f sample1.fna -S sample1.sam
 ```
 
-Esto tenemos que hacer para cada uno de las cinco metagenomas:
+Esto tenemos que hacer para cada uno de las cinco metagenomas. Como estos pasos siguientes hay que hacerlos para cada una de las cinco carpetas y se vuelve tedioso, podemos hacer una sencillo script para que vaya entrando a las carpetas y mapeando, cambiando formato e inicializando los archivos bam; el script **[mapper.sh](mapper.sh)** hace esto. Bajemos el script, hagámoslo ejecutable (`chmod +x mapper.sh`)y corrámoslo en la carpeta donde tengamos los archivos `contigs.bt2`. Si corremos el script, al final podemos saltarnos lo siguiente e ir a **Creación de base de datos**.
+***
+Si se prefiere, hagamos paso a paso cada mapeo:
 ```bash
 bowtie2 --threads 2 -x contigs -1 C08/C08.R1.fastq -2 C08/C08.R2.fastq -S C08.sam
 ```
@@ -118,7 +121,7 @@ Los archivos bai:
 rename 's/.sam.raw.bam.bai/.bai/' *.bai
 ```
 Ahora tendremos nombre mas cortos para los archivos `.bam` y `.bai`
-
+***
 ### Creación de base de datos
 ```bash
 anvi-gen-contigs-database -f contigs.fa -o contigs.db
