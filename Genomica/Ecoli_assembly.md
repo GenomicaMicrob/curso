@@ -100,3 +100,30 @@ bakta --db /dbs/bakta/db/ --genus Escherichia --species coli --strain K12 -t 4 K
 ```
 bakta genera una carpeta con archivos en diferentes formatos, el más importante es tipo GenBank con extensión .gff
 ***
+**Resultados de anotación con bakta**:
+
+Genome statistics:
+	Genome size: 4,714,068 bp
+	Contigs/replicons: 261
+	GC: 50.7 %
+	N50: 133,063
+	N90: 35,227
+	N ratio: 0.0 %
+	coding density: 88.2 %
+
+annotation summary:
+	tRNAs: 102
+	tmRNAs: 1
+	rRNAs: 6
+	ncRNAs: 237
+	ncRNA regions: 59
+	CRISPR arrays: 2
+	CDSs: 4363
+		hypotheticals: 41
+		pseudogenes: 7
+	sORFs: 85
+	gaps: 24
+	oriCs/oriVs: 3
+	oriTs: 1
+
+[K12_bakta.tar.gz](https://drive.google.com/file/d/1_W-vO_Shv9dLQVOs_0ltwgxBr9E9jPw_/view?usp=sharing)
