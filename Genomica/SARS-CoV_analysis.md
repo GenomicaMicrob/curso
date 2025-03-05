@@ -20,35 +20,53 @@ Usaremos este genoma de referencia para crear un índice con `bwa`:
 Ahora mapeemos las secuencias a la referencia y hagamos algunos formateos:
 
 	bwa mem -t 4 NC_045512.fasta alpha.R1.fq alpha.R2.fq | samtools sort -O BAM - > assembly.sorted.bam
+
+Cambiemos formatos con `samtools`:
+
 	samtools index assembly.sorted.bam
+
+Otro cambio:
+
 	samtools faidx NC_045512.fasta
+
 #### Secuencia consenso
 Teniendo ya mapeadas las secuencias calculemos una secuencia consenso de nuestro nuevo genoma *alpha*:
 
-	samtools mpileup -d 50000 --reference NC_045512.fasta -a -Q 30
-
-	assembly.sorted.bam | ivar consensus -t 0 -m 2 -n N -p alpha-consensus.fa
+	samtools mpileup -d 50000 --reference NC_045512.fasta -a -Q 30 assembly.sorted.bam | ivar consensus -t 0 -m 2 -n N -p alpha-consensus.fa
 
 Así tenemos ya nuestra secuencia del genoma de la muestra llamado `alpha-consensus.fa`
+
 #### Cobertura
 Podemos también calcular la cobertura a todo lo largo del genoma que tuvimos con las secuencias así como aquellas zonas donde hubo una baja profundidad de secuenciación.
 
 	bedtools genomecov -bga -ibam assembly.sorted.bam | grep -w '0$\|1$\|2$\|3$' > alpha-lowcoverage.bed
+
+Creemos un archivo de delimitado por comas con la cobertura:
+
 	bedtools genomecov -d -split -ibam assembly.sorted.bam | cut -f2,3 | sed 's/\t/,/' | sed '1 i\position,coverage' > alpha-coverage.csv
+
 #### Variaciones
 Por último podemos obtener las variaciones de nuestra muestra contra el genoma de referencia.
 
 	samtools mpileup -A -d 0 --reference NC_045512.fasta -B -Q 0 assembly.sorted.bam | ivar variants -p variants -q 20 -t 0.25 -r NC_045512.fasta -g /opt/COVID/REF/NC_045512.gff
+
 #### Limpieza de archivos
 	rm *.fasta.* fastp.json *.txt
 Para hacer un **análisis completo online** del genoma obtenido podemos subir el archivo `alpha-consensus.fa` a [Nextclade](https://clades.nextstrain.org/)
 
-
+***
 ## Graficas
 Para ver una gráfica de la cobertura podemos importar el archivo `assembly.sorted.bam` a **R**.
-Abramos `RStudio`, carguemos ggplot e importemos el archivo.
+Abramos `RStudio`, creemos un nuevo proyecto en la carpeta en donde hemos estado trabajando y carguemos la librería `ggplot` e importemos el archivo. A veces al crear el proyecto con RStudio automáticamente se cargan ya estos dos archivos (`alpha.coverage` y `df`).
 
 	library(ggplot2)
+
+Si no se cargó automáticamente, creemos el dataframe:
+
 	df <- alpha.coverage
-	ggplot(data = df, aes(position, coverage)) +
-	ggtitle("alpha") + scale_y_continuous(trans = 'log10', name = "Profundidad (X)") + scale_x_continuous(name = "Genoma SARS-CoV-2") + geom_line(colour="grey50") + geom_area(fill="grey", alpha=0.6) + geom_hline(yintercept = 10, colour = "grey60", size = 0.5
+
+Grafiquemos con `ggplot` el dataframe `df`:
+
+	ggplot(data = df, aes(position, coverage)) + ggtitle("alpha") + scale_y_continuous(trans = 'log10', name = "Profundidad (X)") + scale_x_continuous(name = "Genoma SARS-CoV-2") + geom_line(colour="grey50") + geom_area(fill="grey", alpha=0.6) + geom_hline(yintercept = 10, colour = "grey60", size = 0.5)
+***
+FIN
