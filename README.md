@@ -14,6 +14,11 @@ Los análisis que tenemos descritos aquí son y próximamente se agregarán nuev
 - [Ensamble de un genoma de *E. coli*](Genomica/Ecoli_assembly.md)
 - [Pangenoma de *E.coli*](Genomica/Pangenoma_Ecoli.md)
 
+#### 16S
+- [Limpieza de secuencias](16S/Limpieza.md)
+- [Eliminación de secuencias quiméricas](16S/Quimeras.md)
+- [Clasificación taxonómica](16S/Clasificacion.md)
+
 #### Metagenómica
 - [Análisis metagenómico con Anvio](Metagenómica/Shotgun_analysis.md)
 - [Análisis de amplicones 16-V4](Metagenómica/16S-V4_analysis.md)

@@ -9,6 +9,7 @@ Tenemos tres genomas:
 - DH1.fasta
 - Ec0157.fasta
 ***
+
 ### Preparación de archivos
 Es importante que los archivos fasta cumplan los siguientes requisitos:
 - La terminación del archivo **debe ser** `.fa`.
@@ -36,6 +37,7 @@ anvi-script-reformat-fasta DH1.fasta --seq-type NT --simplify-names -o DH1.fa
 anvi-script-reformat-fasta Ec0157.fasta --seq-type NT --simplify-names -o Ec0157.fa
 ```
 ***
+
 ### Análisis
 #### Creación de bases de datos
 Ya que tenemos los archivos limpios y con terminación .fa, podemos crear una base de datos para cada genoma:
@@ -52,6 +54,7 @@ anvi-gen-contigs-database -f Ec0157.fa -o Ec0157.db
 
 Al terminar el paso anterior habrá que generar un listado de los genomas para usar con los siguientes pasos de anvio.
 ***
+
 #### Listado de genomas
 
 Generar un archivo con los nombres de los genomas y la ruta a los archivos de la base de datos a la que pertenecen. El archivo de salida (`genome.list`) debe tener la siguiente estructura:
@@ -73,27 +76,22 @@ ls -1 *.fa > names.tmp
 ls -1 *.db > dbs.tmp
 ```
 ```bash
-paste names.tmp dbs.tmp > genome.list
+paste names.tmp dbs.tmp | sed 's/.fa//g' | sed '1i name\tcontigs_db_path' > genome.list
 ```
+
 ```bash
 rm *.tmp
-```
-```bash
-sed -i 's/.fa//g' genome.list
-```
-```bash
-sed -i '1i name\tcontigs_db_path' genome.list
 ```
 
 ***
 #### Funciones
 Podemos añadirle funciones a los genes de cada genoma, para lo cual usamos la base de datos COGS de NCBI, además de otras anotaciones.
 
-**Nota.** Esta opción solo esta disponible en el servidor **Biobacter** y no en la imagen virtual **MGlinux18.2** ya que no están instaladas las bases de datos necesarias.
-
 ```bash
 anvi-run-hmms -c DH1.db --num-threads 4 --also-scan-trnas
 ```
+**Nota.** Los siguientes pasos solo están disponibles en el servidor **Biobacter** y no en la imagen virtual **MGlinux18.2** ya que no están instaladas las bases de datos necesarias.
+
 ```bash
 anvi-run-ncbi-cogs -c DH1.db --num-threads 4
 ```
@@ -108,6 +106,7 @@ anvi-run-ncbi-cogs -c $g --num-threads 4 \
 anvi-run-scg-taxonomy -c $g --num-threads 4;
 done
 ```
+
 ***
 #### Single Copy Genes
 Obtener los *Single Copy Genes* (SCG) para el análisis filogenético, checar si anvio está activado aún, si no, volver a activarlo (`conda activate anvio-8`).
@@ -115,6 +114,7 @@ Obtener los *Single Copy Genes* (SCG) para el análisis filogenético, checar si
 ```bash
 anvi-get-sequences-for-hmm-hits --external-genomes genome.list -o concatenated-proteins.fa --hmm-source Bacteria_71 --return-best-hit --get-aa-sequences --concatenate
 ```
+
 ***
 #### Arbol filogenético
 Crear un árbol filogenético con los SCG
@@ -122,6 +122,13 @@ Crear un árbol filogenético con los SCG
 ```bash
 anvi-gen-phylogenomic-tree -f concatenated-proteins.fa -o phylogenomic-tree.txt
 ```
+El árbol se puede visualizar en cualquier programa que lea dendrogramas en formato newick o bien con anvio:
+
+Para visualizar el **árbol filogenético**:
+```bash
+anvi-interactive -t phylogenomic-tree.txt -p profile.db --title 'tree 1' --manual
+```
+
 ***
 #### Pangenoma
 Para obtener el pangenoma:
@@ -133,19 +140,18 @@ anvi-pan-genome -g PANGENOME-GENOMES.db -n PANGENOME -T 4
 ```
 Si se colaron archivos con nombre no aptos, ver arriba, aquí es donde se botará el proceso con un error. El segundo comando puede tardar bastante en completarse.
 
-Opcionalmente (no disponible en la imagen virtual) podemos hacer un análisis de **Average Nucleotide Identitity** (ANI)
+Opcionalmente (no disponible en la imagen virtual) podemos hacer un análisis de **Average Nucleotide Identitity** (ANI). Podemos instalar el programa `fastANI` necesario para este análisis:
+
+```bash
+conda install -y -c bioconda fastani
+```
 
 ```bash
 anvi-compute-genome-similarity -e genome.list --program fastANI -o ANI -p PANGENOME/PANGENOME-PAN.db -T 4
 ```
+
 ***
 #### Visualización
-Para visualizar el **árbol filogenético**:
-```bash
-anvi-interactive -t phylogenomic-tree.txt -p profile.db --title 'tree 1' --manual
-```
-
-El árbol se puede visualizar en cualquier programa que lea dendrogramas en formato newick
 
 Para visualizar el **pangenoma**:
 ```bash
@@ -155,4 +161,7 @@ anvi-display-pan -p PANGENOME/PANGENOME-PAN.db -g PANGENOME-GENOMES.db
 Si todo salió bien, debemos ver una imagen semejante a la siguiente:
 
 ![Pangenoma](ecoli_pangenome.png)
+***
+
+**NOTA.** Debido a que en este ejercicio omitimos algunos pasos (funciones), podemos descargar el análisis completo: [anvio_Ecoli_pan.tar.gz](https://drive.google.com/file/d/14DvmfRZW2NORmWGMapcXIKZVbpOy2_Si/view?usp=sharing)
 ***
