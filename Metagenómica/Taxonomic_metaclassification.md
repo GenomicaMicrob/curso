@@ -79,8 +79,3 @@ focus2ampvis
 
 Este script nos generará un archivo (`OTU_table.tsv`) con el formato adecuado para analizarlo con `ampvis2`, el proceso es igual que si fuera una análisis 16S, ver el proceso [aquí](https://sites.google.com/ciad.mx/cursobioinfomicrob/visualización?authuser=0).
 ***
-
-## SUPERFOCUS
-
-También podemos **clasificar funcionalmente** con [SUPERFOCUS](https://github.com/metageni/SUPER-FOCUS), pero debido al tamaño de la base de datos y la intensidad computacional, no es factible hacerlo en una máquina virtual. El proceso es igual a FOCUS y el resultado es una hoja tipo excel que podemos ver en la subcarpeta `cooked/superfocus/` en el set de datos `dietas.v2.tar.gz`.
-***

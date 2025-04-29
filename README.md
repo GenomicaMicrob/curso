@@ -23,6 +23,7 @@ Los análisis que tenemos descritos aquí son y próximamente se agregarán nuev
 - [Análisis metagenómico con Anvio](Metagenómica/Shotgun_analysis.md)
 - [Análisis de amplicones 16-V4](Metagenómica/16S-V4_analysis.md)
 - [Clasificación taxonómica de metagenomas](Metagenómica/Taxonomic_metaclassification.md)
+- [Clasificación funcional con Superfocus](Metagenómica/Functional_classification.md)
 
 #### Transcriptómica
 - [Análisis transcriptómico de *Vibrio parahaemolyticus*](Transcriptomica/Transcriptomica.md)
