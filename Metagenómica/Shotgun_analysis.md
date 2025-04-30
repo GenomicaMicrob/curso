@@ -76,7 +76,7 @@ Ahora si mapeamos los metagenomas usando ese índice (contigs):
 bowtie2 --threads 2 -x contigs -f sample1.fna -S sample1.sam
 ```
 
-Esto tenemos que hacer para cada uno de las cinco metagenomas. Como estos pasos siguientes hay que hacerlos para cada una de las cinco carpetas y se vuelve tedioso, podemos hacer una sencillo script para que vaya entrando a las carpetas y mapeando, cambiando formato e inicializando los archivos bam; el script **[mapper.sh](mapper.sh)** hace esto. Bajemos el script, hagámoslo ejecutable (`chmod +x mapper.sh`)y corrámoslo en la carpeta donde tengamos los archivos `contigs.bt2`. Si corremos el script, al final podemos saltarnos lo siguiente e ir a **Creación de base de datos**.
+Esto tenemos que hacer para cada uno de las cinco metagenomas. Como estos pasos siguientes hay que hacerlos para cada una de las cinco carpetas y se vuelve tedioso, podemos hacer una sencillo script para que vaya entrando a las carpetas y mapeando, cambiando formato e inicializando los archivos bam; el script **[mapper.sh](scripts/mapper.sh)** hace esto. Bajemos el script, hagámoslo ejecutable (`chmod +x mapper.sh`)y corrámoslo en la carpeta donde tengamos los archivos `contigs.bt2`. Si corremos el script, al final podemos saltarnos lo siguiente e ir a **Creación de base de datos**.
 ***
 Si se prefiere, hagamos paso a paso cada mapeo:
 ```bash
@@ -208,5 +208,5 @@ anvi-interactive -c contigs.db -p SAMPLES-MERGED/PROFILE.db --taxonomic-level t_
 ***
 Si todo salió bien, debemos ver una imagen semejante a la siguiente:
 
-![Dietas](anvio_dietas.png)
+![Dietas](plots/anvio_dietas.png)
 ***
