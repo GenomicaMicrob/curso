@@ -126,14 +126,25 @@ Ahora tendremos nombre mas cortos para los archivos `.bam` y `.bai`
 ```bash
 anvi-gen-contigs-database -f contigs.fa -o contigs.db
 ```
-Posteriormente es buena idea buscar hidden Markov models (hmm) en nuestros contigs, éstos son Single Copy Genes para bacterias y nos ayudarán a saber si un genoma bacteriano encontrado está "completo" o no:
+Posteriormente es buena idea buscar hidden Markov models (hmm) en nuestros contigs, éstos son Single Copy Genes (SCG) para bacterias y nos ayudarán a saber si un genoma bacteriano encontrado está "completo" o no:
 ```bash
 anvi-run-hmms -c contigs.db -I Bacteria_71 -T 2
 ```
-También podemos extraer las secuencias de los genes existentes en la base de datos para una posterior clasificación taxonómica:
+Podemos asignarle una clasificación taxonómica a estos SCG:
+```bash
+anvi-run-scg-taxonomy -c contigs-db
+```
+En caso que marque error porque no encuentra las bases de datos, habrá que instalarlas corriendo el script:
+```bash
+run_me_first
+```
+
+También podemos extraer las secuencias de los genes existentes en la base de datos para una posterior clasificación taxonómica o funcional de éstos:
 ```bash
 anvi-get-sequences-for-gene-calls -c contigs.db -o gene-calls.fa
 ```
+***
+
 ### Perfil para cada muestra
 Teniendo ya todos los datos, debemos crear un "profile" para cada muestra, tener cuidado por que el subdirectorio va  a ser borrado y crear uno nuevo, pero de todos modos ya no necesitamos los archivos `fastq` y solo nos quitan nuestro preciado espacio.
 ```bash

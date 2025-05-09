@@ -36,6 +36,7 @@ Los **set de datos** comprimidos también se pueden descargar de los siguientes 
 | Dataset | Tamaño (MB) | Repositorios | Descripción |
 | --- | ---: | :---: | --- |
 | dietas.v2.tar.gz | 148.6 | [Figshare](https://figshare.com/s/4e700c8c9ce853e74827) [GDrive](https://drive.google.com/file/d/1FRdvMIERJJHSeo15n6vYlTtMvv3G16bZ/view?usp=sharing) | Cinco metagenomas de heces de camarón recortados a 100,000 secuencias pareadas y diversos análisis ya pre hechos. |
+| Infant-Gut-Tutorial_v8.tar.gz | 118.9 | [GDrive](https://drive.google.com/file/d/1w3Ie2eOZaIbTffg8moX-iJwMyztPgA6i/view?usp=sharing) | Análisis con Anvio de muestras metagenómicas de heces humanas |
 | MiSeqSOP.tar.gz | 33.3 | [Figshare](https://figshare.com/s/f21ca7e71285396a1020) [GDrive](https://drive.google.com/file/d/1qmUd0AYSAjj2ND15Bfi2koTAU5GWRk1n/view?usp=drive_link) | Muestras de heces de rata a diferentes tiempos, región V4 del gen ribosomal 16S, secuencias pareadas 2x150. |
 | SARSCoV2.tar.gz | 96.9 | [Figshare](https://figshare.com/s/766f0052088f2dab119c) [GDrive](https://drive.google.com/file/d/1-FMZkRvzgubmlyi2qP6J8AQJm5HeYDRC/view?usp=sharing) | Tres muestras de secuencias de SARS-CoV2 (alfa, delta y omicrón) para ensamble. |
 | ecoli-K12_Illumina.tar.gz | 81.5 | [GDrive](https://drive.google.com/file/d/1NOcflmwa6ioLDOjFVhhl5TdhJbIgpBO1/view?usp=sharing) | Secuencias pareadas de *E. coli* K12. |
