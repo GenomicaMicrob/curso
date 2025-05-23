@@ -128,11 +128,11 @@ anvi-gen-contigs-database -f contigs.fa -o contigs.db
 ```
 Posteriormente es buena idea buscar hidden Markov models (hmm) en nuestros contigs, éstos son Single Copy Genes (SCG) para bacterias y nos ayudarán a saber si un genoma bacteriano encontrado está "completo" o no:
 ```bash
-anvi-run-hmms -c contigs.db -I Bacteria_71 -T 2
+anvi-run-hmms -c contigs.db -I Bacteria_71 -T 4
 ```
 Podemos asignarle una clasificación taxonómica a estos SCG:
 ```bash
-anvi-run-scg-taxonomy -c contigs-db
+anvi-run-scg-taxonomy -c contigs.db -T 4
 ```
 En caso que marque error porque no encuentra las bases de datos, habrá que instalarlas corriendo el script:
 ```bash
@@ -188,25 +188,25 @@ En el set de datos `Dietas.v2.tar.gz` tenemos los archivos pre generados dentro 
 
 El archivo `gene-calls.tax`  con la **taxonomía** generada con Kaiju hay que incorporarlo a la base de datos `contigs.db`:
 ```bash
-anvi-import-taxonomy-for-genes -c contigs.db -i cooked/gene-calls/gene-calls.tax -p kaiju --just-do-it
+anvi-import-taxonomy-for-genes -c contigs.db -i ../cooked/gene-calls/gene-calls.tax -p kaiju --just-do-it
 ```
 Las **funciones** podemos importarlas a nuestra base de datos también desde el archivo `gene_KEGG_functions.txt`:
 ```bash
-anvi-import-functions -c contigs.db -i cooked/gene-calls/gene_KEGG_functions.txt
+anvi-import-functions -c contigs.db -i ../cooked/gene-calls/gene_KEGG_functions.txt
 ```
 También podemos generar una **gráfica taxonómica Krona** con el archivo `gene-calls.krona`:
 ```bash
-ktImportText -o kaiju_gene_taxonomy.html cooked/gene-calls/gene-calls.krona
+ktImportText -o kaiju_gene_taxonomy.html ../cooked/gene-calls/gene-calls.krona
 ```
 #### Descripción
 Tenemos también un archivo (`Dietas_descripcion.md`) con una breve descripción de los datos y métodos, podemos incluirlos en la base de datos para que sea desplegado en la visualización:
 ```bash
-anvi-update-db-description --description Dietas_descripcion.md SAMPLES-MERGED/PROFILE.db
+anvi-update-db-description --description ../Dietas_descripcion.md SAMPLES-MERGED/PROFILE.db
 ```
 #### Metadatos
 Por último podemos importar los metadatos a Anvio:
 ```bash
-anvi-import-misc-data metadata.txt -p SAMPLES-MERGED/PROFILE.db --target-data-table layers
+anvi-import-misc-data ../metadata.txt -p SAMPLES-MERGED/PROFILE.db --target-data-table layers
 ```
 ***
 

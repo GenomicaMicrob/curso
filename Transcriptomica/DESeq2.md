@@ -31,15 +31,19 @@ count_matrix <- read.csv("counts.csv", row.names = 1)
 ```
 Si el archivo esta **delimitado por tabuladores**, usar entonces `read.delim` en lugar de `read.csv`
 
+**Importante**. Si anteriormente no habíamos redondeado los valores, debemos hacerlo ahora:
+
 ```bash
 count_matrix <- round(count_matrix, 0) # redondeo de decimales
 ```
+Revisemos que los datos están redondeados sin cifras decimales.
+
 ```bash
 head(count_matrix, 2)
 ```
 **Metadata**
 
-El archivo de metadatos [metadata.csv](metadata.csv) tiene los siguientes datos delimitados por comas:
+El archivo de metadatos [metadata.csv](data/metadata.csv) tiene los siguientes datos delimitados por comas:
  ```
 Sample,Treatment,Replicate
 MM9r1,MM9,1
@@ -53,15 +57,22 @@ Importémoslo a una matriz de datos:
 ```bash
 coldata <- read.csv("metadata.csv", header = TRUE, row.names = 1)
 ```
+Conversión a dataframe
+
 ```bash
-coldata <- data.frame(coldata) # conversión a dataframe
+coldata <- data.frame(coldata)
 ```
+Conversión de la columna `Treatment` a un factor
+
 ```bash
-coldata$Treatment <- as.factor(coldata$Treatment) # conversión de la columna Treatment a un factor
+coldata$Treatment <- as.factor(coldata$Treatment)
 ```
+Veamos los metadatos
+
 ```bash
-coldata # veamos los metadatos
+coldata
 ```
+**Validación**
 
 Revisemos si tenemos el **mismo nombre y número** de las columnas (muestras) en los datos que en las lineas de los metadatos:
 
@@ -73,8 +84,9 @@ all(rownames(coldata) == colnames(count_matrix))
 ```
 **Ambos** deben ser verdadero (`TRUE`)! Si alguno de los resultados anteriores es `FALSE`,  debemos ver porque hay una discrepancia; normalmente los metadatos no están bien capturados. No podremos continuar si hay discrepancias.
 ***
+
 ### Análisis DGE
-**Tip.** Podemos importar el script [DESeq2_script.R](DESeq2_script.R) a RStudio y desde ahí ir corriendo todos los pasos.
+**Tip.** Podemos importar el script [DESeq2_script.R](scripts/DESeq2_script.R) a RStudio y desde ahí ir corriendo todos los pasos.
 
 ```bash
 dds <- DESeqDataSetFromMatrix(countData = count_matrix, colData = coldata, design = ~ Treatment)
@@ -103,15 +115,16 @@ resultsNames(dds)
 Mandemos los resultados a una nueva tabla (`res`); por default hay una filtración de genes con baja expresión (se puede quitar el filtro con `independentFiltering=FALSE`); podemos añadir el nombre del análisis también:
 ```bash
 res <- results(dds, name="Treatment_MM9_vs_TSB")
-res
 ```
-Hagamos un ordenamiento de los resultados por el valor de *p* ajsutado (método de Benjamini-Hochberg FDR):
+Hagamos un **ordenamiento** de los resultados por el valor de *p* ajustado (método de Benjamini-Hochberg FDR):
+
 ```bash
 res[order(res$padj),]
 ```
 *Order gene expression table by adjusted p value (Benjamini-Hochberg FDR method). Note: You may get some genes with p value set to NA. This is due to all samples have zero counts for a gene or there is extreme outlier count for a gene or that gene is subjected to independent filtering by DESeq2.*
 
 Salvemos los resultados DGE a una tabla (`DGE.csv`) en la carpeta:
+
 ```bash
 write.csv(as.data.frame(res[order(res$padj),] ), file = "DGE.csv")
 ```

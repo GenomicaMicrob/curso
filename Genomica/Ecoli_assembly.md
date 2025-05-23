@@ -24,7 +24,9 @@ Revisar la calidad de las secuencias con `FastQC` como se muestra en la página 
 Con los datos obtenidos del análisis con `FastQC`, hacer es limpiar las secuencias con [cutadapt](https://cutadapt.readthedocs.io/en/stable/guide.html#):
 
 ```bash
-cutadapt -u 15 -U 15 -a CAAGCAGAAGACGGCATACGAGAT -a CTGTCTCTTATACACATCT -A AATGATACGGCGACCACCGAGATCTACAC -A CTGTCTCTTATACACATCT --times 2 -q 30,30 --trim-n -o ecoli.R1.fastq -p ecoli.R2.fastq --json=ecoli.cutadapt.json SRR6436961_1.fastq SRR6436961_2.fastq
+cutadapt -u 15 -U 15 -a CAAGCAGAAGACGGCATACGAGAT -a CTGTCTCTTATACACATCT -A AATGATACGGCGACCACCGAGATCTACAC -A CTGTCTCTTATACACATCT \
+--times 2 -q 30,30 --trim-n -o ecoli.R1.fastq -p ecoli.R2.fastq \
+--json=ecoli.cutadapt.json SRR6436961_1.fastq SRR6436961_2.fastq
 ```
 Qué le estamos pidiendo a `cutadapt` que haga? Veamos:
 - `-u 15` le decimos que corte 15 bases al principio de cada secuencia.
@@ -38,12 +40,21 @@ Qué le estamos pidiendo a `cutadapt` que haga? Veamos:
 - Y por último, se ponen los archivos de entrada, los que queremos limpiar.
 
 Este proceso genera dos archivos ya limpios (`ecoli.R1.fastq` y `ecoli.R2.fastq`), podemos volver a correr `FastQC` para verificar la calidad de las secuencias.
+
+```bash
+fastqc *.fasta
+```
+Una vez analizados con fastq, podemos unir todos los resultados de éste programa con MultiQC
+
+```bash
+multiqc .
+```
 ***
 ### Ensamble de las secuencias
 Existen varios programas para ensamblar secuencias en contigs, algunos son más adecuados para cierto tipo de plataforma de secuenciación y otros se pueden adaptar a casi cualquier tipo. Dos cosas son importantes para una buena cobertura, **suficiente cantidad de lecturas** (secuencias) y que sean de **buena calidad**. La primera nos la da generalmente el equipo de secuenciación pero la segunda no siempre.
 
 #### Spades
-Probaremos ensamblar los archivos limpios con [SPAdes](https://cab.spbu.ru/software/spades/). Debido a que este programa consume muchos recursos y tarda tiempo en ejecutarse se puede correr en el servidor Biobacter o bien en la imagen virtual **MGlinux18.2** pero obviamente tardará más.
+Probaremos ensamblar los archivos limpios con [SPAdes](https://cab.spbu.ru/software/spades/). Debido a que este programa consume muchos recursos y tarda tiempo en ejecutarse se puede correr en el servidor Biobacter o bien en la imagen virtual **MGlinux18.3** pero obviamente tardará más.
 
 ```bash
 spades -k 21,33,55,77 --careful -1 ecoli.R1.fastq -2 ecoli.R2.fastq -o spades
@@ -70,16 +81,27 @@ hagamos la evaluación:
 quast contigs.fasta scaffolds.fasta
 ```
 Quast genera los resultados de la evaluación en un nuevo directorio (`quast_results`) y dentro del cual hay un archivo `html` para ser visualizado por cualquier navegador.
-***
-### Anotación del ensamble
-Como ultimo paso del proceso, podemos anotar el genoma obtenido del mejor ensamble realizado anteriormente. Este proceso implica obtener CDS y RNAs y compararlos con bases de datos por lo que no podemos hacerlo fácil y rápidamente en una imagen virtual.
-Si podemos hacerlo en el servido *Biobacter* que tiene el software necesario y las bases de datos instaladas.
 
-El programa que usaremos es [bakta](https://github.com/oschwengers/bakta) y, como para muchos programas, el nombre de las secuencias (headers) debe ser corto y sencillo. Para recortar los nombre de las secuencias usemos `awk`:
+***
+### Anotación del ensamble con bakta
+
+Como ultimo paso del proceso, podemos anotar el genoma obtenido del mejor ensamble realizado anteriormente. Este proceso implica obtener CDS y RNAs y compararlos con bases de datos por lo que no podemos hacerlo fácil y rápidamente en una imagen virtual.
+
+Podemos anotar el ensamble con bakta en la [página web](https://bakta.computational.bio/).
+
+Siempre es recomendable tener las secuencias (headers) con nombres cortos y sencillos. Para recortar los nombre de las secuencias usemos `awk`:
+
 ```bash
 awk '/^>/{print ">'K12'_"++i; next}{print}' scaffolds.fasta > K12.fasta
 ```
-Ahora podemos subir (con `scp`) el ensamble renombrado a nuestro `home` en el servidor y allí correr la anotación:
+Subamos el archivo `K12.fasta` a la página de [bakta](https://bakta.computational.bio/).
+
+***
+### Anotación en el servidor Biobacter
+
+Alternativamente podemos anotar en el servido *Biobacter* que tiene el software necesario y las bases de datos instaladas.
+
+Podemos subir (con `scp`) el ensamble renombrado a nuestro `home` en el servidor y allí correr la anotación:
 ```bash
 scp K12.fasta usuario@187.141.151.196:
 ```
@@ -103,6 +125,7 @@ bakta genera una carpeta con archivos en diferentes formatos, el más importante
 **Resultados de anotación con bakta**:
 
 Genome statistics:
+
 	Genome size: 4,714,068 bp
 	Contigs/replicons: 261
 	GC: 50.7 %
@@ -112,6 +135,7 @@ Genome statistics:
 	coding density: 88.2 %
 
 annotation summary:
+
 	tRNAs: 102
 	tmRNAs: 1
 	rRNAs: 6

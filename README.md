@@ -2,9 +2,9 @@
 
 *Bruno Gómez-Gil*
 
-Instrucciones para los diferentes ejercicios en el curso de [Bioinformática microbiana](https://bioinformatica.ciad.mx/) del CIAD Mazatlán.
+Instrucciones para los diferentes ejercicios en el curso de [Bioinformática microbiana](https://bioinformatica.ciad.mx/) en el [postgrado](https://www.ciad.mx/posgrados/) del CIAD Mazatlán.
 
-Estas instrucciones están dirigidos a realizarse con la imagen virtual [MGlinux18.2](https://bioinformatica.ciad.mx/programas/virtualizacion/mglinux) pues allí se tienen ya los sets de datos, programas y scripts para ello.
+Estas instrucciones están dirigidos a realizarse con la imagen virtual [MGlinux18.3](https://bioinformatica.ciad.mx/mglinux) pues allí se tienen ya los sets de datos, programas y scripts para ello.
 ***
 ### Ejercicios
 
@@ -21,7 +21,6 @@ Los análisis que tenemos descritos aquí son y próximamente se agregarán nuev
 
 #### Metagenómica
 - [Análisis metagenómico con Anvio](Metagenómica/Shotgun_analysis.md)
-- [Análisis de amplicones 16-V4](Metagenómica/16S-V4_analysis.md)
 - [Clasificación taxonómica de metagenomas](Metagenómica/Taxonomic_metaclassification.md)
 - [Clasificación funcional con Superfocus](Metagenómica/Functional_classification.md)
 

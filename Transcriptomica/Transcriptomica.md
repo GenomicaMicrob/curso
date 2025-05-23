@@ -54,7 +54,7 @@ samtools sort --threads 4 MM9r1.bam -o MM9r1.sorted.bam
 ```bash
 samtools index MM9r1.sorted.bam
 ```
-Repetir lo mismo para cada muestra.
+Repetir lo mismo para cada muestra, o bien correr el script [mapper4FADU.sh](Transcriptomica/scripts/mapper4FADU.sh)
 
 ***
 ### Análisis de transcritos
@@ -101,17 +101,14 @@ Para análisis posteriores solo necesitaremos el número de transcritos y los tp
 cut -f1,4 ../MM9r1.sorted.counts.txt | sed "s/counts/MM9r1/" > ../MM9r1.counts
 cut -f1,5 ../MM9r1.sorted.counts.txt | sed "s/tpm/MM9r1/" > ../MM9r1.tpm
 ```
-Ya que el programa para calcular los genes diferencialmente expresados no acepta decimales, redondeemos el archivo `counts`:
-```bash
-sed -i 's/\b0\.0\b/0/g; s/\b0\.00\b/0/g' ../MM9r1.counts
-```
 
 Los archivos intermedios los podemos borrar:
 ```bash
 rm *.sam *.bam *.bai
 ```
 #### Hagamos lo mismo para cada una de las muestras.
-O bien, podemos crear un sencillo script para que entre en cada subdirectorio y correr FADU, ver este ejemplo: **[fadu_script.sh](fadu_script.sh)**.
+O bien, podemos crear un sencillo script para que entre en cada subdirectorio y correr FADU, ver este ejemplo: **[fadu_script.sh](Transcriptomica/scripts/fadu_script.sh)**.
+
 ***
 **Nota.** Como se ve en el resultado, la columna `featureID` contiene solo un número consecutivo del gen pero no información de quién es. Podemos sustituir esa primer columna con el nombre del gen. Esta información está en el archivo `.gff` en la última columna (ver arriba). Por ejemplo, para el primer gen (primera linea del `.gff`) `ID=M0904_ChII-1;Name=DUF3346 domain-containing protein` sustituiremos `M0904_ChII-1` por `1-DUF3346 domain-containing protein` eliminando de paso `Name=` que ya no lo necesitamos.
 
@@ -125,12 +122,12 @@ Los featuresID de las 3 primeras líneas del archivo quedarían así:
 
 Es importante mantener un numero consecutivo (`1-`) antes del nombre por si ha varios genes con el mismo nombre (p.ej. *hypothetical protein*).
 
-Esto lo podemos hacer automáticamente con el script en python [gff_ID_renaming.py](gff_ID_renaming.py) que nos generará un nuevo archivo con los nombre ya correctos.
+Esto lo podemos hacer automáticamente con el script en python [gff_ID_renaming.py](Transcriptomica/scripts/gff_ID_renaming.py) que nos generará un nuevo archivo con los nombre ya correctos.
 
 ```bash
 gff_ID_renaming.py M0904_ChII.gff
 ```
-El archivo `M0904_ChII_mod.gff` generado lo podemos usar al principio con FADU para generar todo el análisis de nuevo (sorry) usando el script **[fadu_script.sh](fadu_script.sh)**:
+El archivo `M0904_ChII_mod.gff` generado lo podemos usar al principio con FADU para generar todo el análisis de nuevo (sorry) usando el script **[fadu_script.sh](Transcriptomica/scripts/fadu_script.sh)**:
 ```bash
 fadu_script.sh M0904_ChII_mod.gff
 ```
@@ -140,24 +137,35 @@ fadu_script.sh M0904_ChII_mod.gff
 Teniendo todos los archivos de salida de FADU para cada muestra, podemos unirlos (compilarlos); vayamos a la carpeta superior donde están los archivos `*_counts`
 
 ```bash
-awk_compiler *.counts > counts.temp
+awk_compiler *.counts > counts_raw.temp
 ```
-**[awk_compiler](awk_compiler.md)** es un script para compilar tablas de datos con la misma información pero diferentes datos.
+**[awk_compiler](Transcriptomica/scripts/awk_compiler.md)** es un script para compilar tablas de datos con la misma información pero diferentes datos.
 
-Al terminar de compilar, tendremos probablemente genes con cero transcritos, por lo que debemos borrar las líneas que tengan solo ceros.
+#### Redondeo de decimales
+Para los siguientes análisis con DESeq2 debemos redondear los números:
+```bash
+awk 'NR==1 {print; next} {printf "%s", $1; for(i=2;i<=NF;i++) printf " %d", int($i+0.5); print ""}' counts_raw.temp > counts.temp
+```
+#### Elimnación de CDS no transcritas
+Probablemente tendremos genes con cero transcritos en todas las muestras, por lo que debemos borrar las líneas que tengan solo ceros.
 
+1. obtener solo la primer línea del archivos:
 ```bash
-head -1 counts.temp > header.temp # obtener solo la primer línea del archivos
+head -1 counts.temp > header.temp
 ```
+2. eliminar lineas con solo ceros:
 ```bash
-sed 's/ /_/g' counts.temp | awk 'NR > 1{s=0; for (i=2;i<=NF;i++) s+=$i; if (s!=0)print}' | sed 's/_/ /g' > clean_counts.temp # elimina las lineas que tengan puros ceros
+sed 's/ /_/g' counts.temp | awk 'NR > 1{s=0; for (i=2;i<=NF;i++) s+=$i; if (s!=0)print}' | sed 's/_/ /g' > clean_counts.temp
 ```
+3. Unir headers con tabla y convertirla a delimitada por comas (.csv):
 ```bash
-cat header.temp clean_counts.temp | sed 's/\t/,/g' > counts.csv # une los archivos
+cat header.temp clean_counts.temp | sed 's/\t/,/g' > counts.csv
 ```
+
 Podemos borrar los temporales
 ```bash
 rm *.temp
 ```
+***
 Podemos ahora proceder a calcular con el archivo `counts.csv` los genes diferencialmente expresados con [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) en RStudio siguiendo [esta guía](DESeq2.md).
 ***

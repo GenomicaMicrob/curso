@@ -16,9 +16,9 @@ vsearch --usearch_global Mock.centroid --threads 2 --db /opt/mg_pipeline/databas
 ```
 
 Tendremos ahora el archivo `Mock.blast` con tres columnas:
-1. el nombre de la secuencia centroide
-2. la taxonomía más cercana
-3. el porcentaje de similitud
+1. El nombre de la secuencia centroide
+2. La taxonomía más cercana
+3. El porcentaje de similitud
 
 Tendríamos que hacer esto mismo para todas las muestras, lo que podemos hacerlo con un `for loop` o bien utilizar el script [mg_classifier](https://github.com/GenomicaMicrob/mg_classifier).
 ***
@@ -84,4 +84,7 @@ mg_classifier.EzBioCloud.2025-05-06_13:13/
 6 directories, 26 files
 ```
 ***
-Teniendo ya las secuencias clasificadas, quizá lo primero que tenemos que hacer es graficar estos resultados. Veamos como hacer esto en la siguiente [página]().
+#### Graficado
+Teniendo ya las secuencias clasificadas, quizá lo primero que tenemos que hacer es graficar estos resultados. Veamos como hacer esto en la siguiente [página](https://bioinformatica.ciad.mx/home/metagenomica/visualizacion/ampvis2).
+***
+FIN

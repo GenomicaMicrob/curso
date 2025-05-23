@@ -160,7 +160,7 @@ anvi-display-pan -p PANGENOME/PANGENOME-PAN.db -g PANGENOME-GENOMES.db
 ***
 Si todo salió bien, debemos ver una imagen semejante a la siguiente:
 
-![Pangenoma](ecoli_pangenome.png)
+![Pangenoma](plots/ecoli_pangenome.png)
 ***
 
 **NOTA.** Debido a que en este ejercicio omitimos algunos pasos (funciones), podemos descargar el análisis completo: [anvio_Ecoli_pan.tar.gz](https://drive.google.com/file/d/14DvmfRZW2NORmWGMapcXIKZVbpOy2_Si/view?usp=sharing)
