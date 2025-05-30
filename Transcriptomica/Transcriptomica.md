@@ -3,28 +3,19 @@ Haremos un análisis transcriptómico de la expresión de una cepa bacteriana de
 
 #### Archivo y scripts necesarios para este ejercicio
 
-- transcritos.tar.gz (176.3 MB)
+- [transcritos.tar.gz (176.3 MB)](https://drive.google.com/file/d/1hHg_qHgwy7fPg5aPLimKPfNfZpRiBG85/view?usp=sharing)
 - [bowtie2](https://bowtie-bio.sourceforge.net/bowtie2/index.shtml) v2.5.2
 - [samtools](https://www.htslib.org/) 1.18
 - [FADU](https://github.com/IGS/FADU) v1.9.0
 
-Primero descarguemos el **set de datos** del servidor **Biobacter** a la carpeta de `Documents`, entremos a ella y descarguemos:
-
-```bash
-scp usuario@187.141.151.196:/raid1/datasets/transcritos.tar.gz .
-```
-decomprimamos el archivos
-
-```bash
-tar xzf transcritos.tar.gz
-```
 
 El set de datos tiene secuencias de transcritos (ADN) de tres réplicas para cada uno de los medios TSB y MM9 (recortados a un máximo de 500,000 secuencias por archivo pareado); en total 12 archivos tipo fasta pareado todos en subcarpetas. Éstos se mapearán sólo al cromosoma II (por simplicidad) de la cepa M0904 de *Vibrio parahaemolyticus*.
 En el archivo comprimido también viene el archivo fasta del cromosoma II (`M0904_ChII.fasta`) y un archivo gff con las anotaciones de las CDS encontradas en ese cromosoma (`M0904_ChII.gff`).
 ***
+
 ### Creación de genoma de referencia
 
-Primero debemos crear una base de datos del cromosoma II a partir de la secuencia completa del mismo, esto lo haremos con bowtie2.
+Primero debemos crear una base de datos del cromosoma II a partir de la secuencia completa del mismo, esto lo haremos con `bowtie2`.
 
 Entremos a la carpeta `transcritos` y empecemos.
 
@@ -54,7 +45,7 @@ samtools sort --threads 4 MM9r1.bam -o MM9r1.sorted.bam
 ```bash
 samtools index MM9r1.sorted.bam
 ```
-Repetir lo mismo para cada muestra, o bien correr el script [mapper4FADU.sh](Transcriptomica/scripts/mapper4FADU.sh)
+Repetir lo mismo para cada muestra, o bien correr el script [mapper4FADU.sh](scripts/mapper4FADU.sh)
 
 ***
 ### Análisis de transcritos
@@ -68,11 +59,13 @@ M0904_ChII	Geneious	CDS	3410	3877	.	-	0	ID=M0904_ChII-2;Name=hypothetical protei
 M0904_ChII	Geneious	CDS	3410	3877	.	-	0	ID=M0904_ChII-3;Name=transcriptional regulator
 ```
 ***
-Corramos el análisis con la **primer muestra**:
+Corramos el análisis con la **primer muestra**, tener en cuenta en donde estamos situados, idealmente en la carpeta *transcritos*.
 
 ```bash
-/opt/FADU-1.9.0/fadu.jl -M -p -g ../M0904_ChII.gff -b MM9r1.sorted.bam -o ../ -f "CDS" -a "ID"
+/opt/FADU-1.9.0/fadu.jl -M -p -g M0904_ChII.gff -b MM9r1.sorted.bam -o . -f "CDS" -a "ID"
 ```
+**Nota**. Revisar si FADU está en `/opt/FADU-1.9.0/fadu.jl` o en `/opt/FADU-1.9.1/fadu.jl` y correr el comando anterior acorde a la versión.
+
 ```
 -M, --remove_multimapped If enabled, remove any reads or fragments that
                         are mapped to multiple regions of the genome
@@ -82,13 +75,12 @@ Corramos el análisis con la **primer muestra**:
 -f, --feature_type FEATURE_TYPE Which GFF3 feature type (column 3)
 -a, --attribute_type ATTRIBUTE_TYPE   Which GFF3 feature type (column 9)
 ```
-El resultado de `FADU` se encuentra en un archivo delimitado por tabuladores en el directorio superior llamado `MM9r1.sorted.counts.txt` y contiene cinco columnas:
+El resultado de `FADU` se encuentra en un archivo delimitado por tabuladores en el **directorio superior** llamado `MM9r1.sorted.counts.txt`
 
-1. El CDS (featureID)
-2. Número de bases que solo alinean con la CDS (uniq_len)
-3. El número de alineamientos (num_alignments)
-4. El conteo de transcritos (counts)
-5. Los transcritos por cada millón de kilobases (tpm)
+```bash
+cd ..
+```
+El archivo contiene 5 columnas:
 
 ```
 featureID       uniq_len num_alignments counts   tpm
@@ -96,18 +88,27 @@ M0904_ChII-1    1971     7.0	          6.66   407.96
 M0904_ChII-10   210      9.0	          5.95   3416.15
 M0904_ChII-100  1137     0.0	          0.00   0.00
 ```
-Para análisis posteriores solo necesitaremos el número de transcritos y los tpm:
-```bash
-cut -f1,4 ../MM9r1.sorted.counts.txt | sed "s/counts/MM9r1/" > ../MM9r1.counts
-cut -f1,5 ../MM9r1.sorted.counts.txt | sed "s/tpm/MM9r1/" > ../MM9r1.tpm
-```
 
+1. El CDS (featureID)
+2. Número de bases que solo alinean con la CDS (uniq_len)
+3. El número de alineamientos (num_alignments)
+4. El conteo de transcritos (counts)
+5. Los transcritos por cada millón de bases (tpm)
+
+Para análisis posteriores solo necesitaremos el número de transcritos y los tpm en dos archivos diferentes, por lo que procederemos a extraer los datos del archivo MM9r1.sorted.counts.txt:
+```bash
+cut -f1,4 MM9r1.sorted.counts.txt | sed "s/counts/MM9r1/" > MM9r1.counts
+```
+Y ahora para los TPMs:
+```bash
+cut -f1,5 MM9r1.sorted.counts.txt | sed "s/tpm/MM9r1/" > MM9r1.tpm
+```
 Los archivos intermedios los podemos borrar:
 ```bash
 rm *.sam *.bam *.bai
 ```
 #### Hagamos lo mismo para cada una de las muestras.
-O bien, podemos crear un sencillo script para que entre en cada subdirectorio y correr FADU, ver este ejemplo: **[fadu_script.sh](Transcriptomica/scripts/fadu_script.sh)**.
+O bien, podemos crear un sencillo script para que entre en cada subdirectorio y correr FADU, ver este ejemplo: **[fadu_script.sh](scripts/fadu_script.sh)**.
 
 ***
 **Nota.** Como se ve en el resultado, la columna `featureID` contiene solo un número consecutivo del gen pero no información de quién es. Podemos sustituir esa primer columna con el nombre del gen. Esta información está en el archivo `.gff` en la última columna (ver arriba). Por ejemplo, para el primer gen (primera linea del `.gff`) `ID=M0904_ChII-1;Name=DUF3346 domain-containing protein` sustituiremos `M0904_ChII-1` por `1-DUF3346 domain-containing protein` eliminando de paso `Name=` que ya no lo necesitamos.
@@ -122,12 +123,12 @@ Los featuresID de las 3 primeras líneas del archivo quedarían así:
 
 Es importante mantener un numero consecutivo (`1-`) antes del nombre por si ha varios genes con el mismo nombre (p.ej. *hypothetical protein*).
 
-Esto lo podemos hacer automáticamente con el script en python [gff_ID_renaming.py](Transcriptomica/scripts/gff_ID_renaming.py) que nos generará un nuevo archivo con los nombre ya correctos.
+Esto lo podemos hacer automáticamente con el script en python [gff_ID_renaming.py](scripts/gff_ID_renaming.py) que nos generará un nuevo archivo con los nombre ya correctos.
 
 ```bash
 gff_ID_renaming.py M0904_ChII.gff
 ```
-El archivo `M0904_ChII_mod.gff` generado lo podemos usar al principio con FADU para generar todo el análisis de nuevo (sorry) usando el script **[fadu_script.sh](Transcriptomica/scripts/fadu_script.sh)**:
+El archivo `M0904_ChII_mod.gff` generado lo podemos usar al principio con FADU para generar todo el análisis de nuevo (sorry) usando el script **[fadu_script.sh](scripts/fadu_script.sh)**:
 ```bash
 fadu_script.sh M0904_ChII_mod.gff
 ```
@@ -139,7 +140,7 @@ Teniendo todos los archivos de salida de FADU para cada muestra, podemos unirlos
 ```bash
 awk_compiler *.counts > counts_raw.temp
 ```
-**[awk_compiler](Transcriptomica/scripts/awk_compiler.md)** es un script para compilar tablas de datos con la misma información pero diferentes datos.
+**[awk_compiler](scripts/awk_compiler.md)** es un script para compilar tablas de datos con la misma información pero diferentes datos.
 
 #### Redondeo de decimales
 Para los siguientes análisis con DESeq2 debemos redondear los números:
