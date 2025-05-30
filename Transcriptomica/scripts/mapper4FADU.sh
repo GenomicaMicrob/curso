@@ -31,13 +31,13 @@ for D in ./*; do
 		R2=$(ls *.R2.fasta)
 		echo "
 Procesando muestra $NAME"
-		bowtie2 --no-unal --threads 4 -x ../refgenome -f -1 $R1 -2 $R2 -S $NAME.sam
+		bowtie2 --no-unal --threads 4 -x ../refgenome -f -1 $R1 -2 $R2 -S "$NAME.sam"
  		echo "
 Convirtiendo archivos sam a bam"
 		samtools view -F 4 -@ 4 -bS "$NAME.sam" > "$NAME.bam"
 		samtools sort --threads 4 "$NAME.bam" -o $NAME.sorted.bam
-		samtools index $NAME.sorted.bam
-		mv $NAME.sorted.bam ../
+		samtools index "$NAME.sorted.bam"
+		mv "$NAME.sorted.bam" "$NAME.sorted.bam.bai" ../
 		echo "
 Listo
 -------------------------"
