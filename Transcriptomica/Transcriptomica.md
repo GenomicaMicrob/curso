@@ -51,7 +51,7 @@ Repetir lo mismo para cada muestra, o bien correr el script [mapper4FADU.sh](scr
 ### Análisis de transcritos
 **Importante!** Si no tenemos instalado FADU, por favor seguir las instrucciones para su instalación [aquí](Instalación_FADU.md).
 ***
-Ahora ya podremos hacer el análisis de los transcritos con FADU, para esto necesitamos el archivo GFF que tiene esta estructura; más info del formato [aquí](https://www.biobam.com/differences-between-gtf-and-gff-files-in-genomic-data-analysis/#:~:text=The%20General%20Feature%20Format%20(GFF,Sequence%20Ontology%20Project%20(v3).
+Ahora ya podremos hacer el análisis de los transcritos con FADU, para esto necesitamos el archivo GFF que tiene esta estructura; más info del formato [aquí](https://www.biobam.com/differences-between-gtf-and-gff-files-in-genomic-data-analysis/#:~:text=The%20General%20Feature%20Format%20(GFF,Sequence%20Ontology%20Project%20(v3))).
 
 ```
 M0904_ChII	Geneious	CDS	1151	3121	.	+	0	ID=M0904_ChII-1;Name=DUF3346 domain-containing protein
