@@ -8,7 +8,7 @@ ____________________ mapper4FADU ____________________________________
 
 A simple script to map clean sequences in subdirectories for use later
 with FADU.
-Sequences must be clean and in fastq format (.R1.fastq and .R2.fastq).
+Sequences must be clean and in fasta format (.R1.fasta and .R2.fasta).
 A reference genome/contig must first be referenced with bowtie2-build
 and named "refgenome".
 
