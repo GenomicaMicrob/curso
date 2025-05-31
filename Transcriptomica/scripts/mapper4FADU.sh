@@ -37,7 +37,7 @@ Convirtiendo archivos sam a bam"
 		samtools view -F 4 -@ 4 -bS "$NAME.sam" > "$NAME.bam"
 		samtools sort --threads 4 "$NAME.bam" -o $NAME.sorted.bam
 		samtools index "$NAME.sorted.bam"
-		mv "$NAME.sorted.bam" "$NAME.sorted.bam.bai" ../
+		#mv "$NAME.sorted.bam" "$NAME.sorted.bam.bai" ../
 		echo "
 Listo
 -------------------------"
