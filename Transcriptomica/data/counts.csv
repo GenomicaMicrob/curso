@@ -1,0 +1,1502 @@
+﻿﻿featureID,MM9r1,MM9r2,MM9r3,TSBr1,TSBr2,TSBr3
+1-DUF3346 domain-containing protein,7,2,40,32,4,9
+10-DUF3283 family protein,6,4,15,25,7,3
+100-MBL fold metallo-hydrolase,0,0,1,1,0,0
+1000-rssB 2,5,2,56,17,1,0
+1001-DUF3069 domain-containing protein,7,0,6,5,2,0
+1002-modC,6,3,13,6,3,4
+1003-modB,2,0,3,3,1,0
+1004-modA,7,1,32,14,1,0
+1005-cobQ,10,4,29,19,0,1
+1006-NirD/YgiW/YdeI family stress tolerance protein,1,0,7,1,0,0
+1007-hypothetical protein,3,0,15,3,0,0
+1008-ATP-dependent Zn protease,46,67,127,35,13,4
+1009-tyrB,51,9,75,59,11,0
+101-transcriptional regulator,0,0,1,2,0,0
+1011-yeeO 2,1,0,1,0,0,0
+1012-nrdG,0,0,6,4,0,0
+1013-nrdD,8,4,21,72,9,0
+1015-hypothetical protein,2,5,15,2,0,0
+1016-mdtE,0,1,2,2,0,0
+1017-mexB,3,2,13,2,2,0
+1018-YeeE/YedE family protein,0,1,1,0,0,0
+1019-YeeE/YedE family protein,1,0,0,0,0,0
+102-ygjK,1,0,5,2,1,0
+1020-bigR,0,0,1,3,0,0
+1021-hypothetical protein,0,0,0,1,0,0
+1022-cdr,5,1,22,34,8,1
+1023-ydeP,25,22,111,58,11,2
+1024-oxyR 3,3,6,18,7,2,0
+1025-fdhD 2,0,0,3,1,0,0
+1026-uhpT,0,0,0,1,0,0
+1027-uhpA,0,0,1,1,0,0
+1028-uhpB,0,0,1,4,0,0
+1029-uhpC 2,0,0,4,2,0,0
+103-ymdB,7,1,19,3,1,0
+1031-hypothetical protein,0,0,1,5,0,0
+1032-hypothetical protein,3,0,12,1,1,0
+1033-hypothetical protein,2,0,9,0,1,0
+1034-fabH2,6,2,16,11,1,0
+1035-trxC,5,9,11,3,1,0
+1036-ycaD,4,6,20,0,0,0
+1037-rhaR 5,0,0,1,1,0,0
+1038-yeeO 3,2,3,6,1,0,0
+1039-nitrous oxide-stimulated promoter family protein,2,0,3,2,1,0
+104-hypothetical protein,0,0,1,1,0,0
+1040-GNAT family N-acetyltransferase,2,0,5,1,1,0
+1042-iutA,33,12,141,0,0,0
+1043-Hypothetical protein in aerobactin uptake cluster,3,0,29,0,0,0
+1044-dcuB,1,0,6,51,8,1
+1045-hypothetical protein,0,3,3,2,1,0
+1046-hypothetical protein,1,1,7,0,0,0
+1047-cysG 2,6,0,2,0,0,0
+1048-focA 2,17,10,29,1,0,0
+1049-nirD 1,9,2,6,0,0,0
+1050-nasD 1,63,12,89,4,0,0
+1051-rnk,8,0,24,5,1,0
+1052-hypothetical protein,0,0,1,0,0,0
+1053-RTX toxins and related Ca2+-binding proteins,1,0,3,1,0,0
+1055-Cna protein B-type domain protein,1,0,5,2,1,0
+1056-RTX toxins and related Ca2+-binding proteins,1,0,4,1,0,0
+106-hypothetical protein,1,0,3,1,0,0
+1060-hypothetical protein,1,0,0,1,0,0
+1061-amyS,0,0,2,0,0,0
+1062-mcpQ 6,2,0,5,14,4,0
+1065-ygaZ 2,4,0,4,1,0,0
+1066-hypothetical protein,0,1,1,0,0,0
+1067-dld,10,2,29,54,6,0
+1068-dmlR 10,0,0,3,3,0,0
+1069-viaA,2,5,8,10,0,0
+107-argP 2,1,0,2,3,1,0
+1070-ravA,3,9,8,32,1,0
+1071-nudF 2,3,2,10,4,1,0
+1072-ltaE,8,1,23,14,1,0
+1073-hypothetical protein,1,0,2,7,1,0
+1074-Putative S-transferase,0,0,3,8,1,4
+1075-doeB 2,7,1,15,5,1,0
+1077-nimR 3,0,0,2,0,0,0
+1078-blc,0,0,7,1,0,0
+1079-hypothetical protein,0,0,1,0,0,0
+108-Lactoylglutathione lyase,0,0,0,2,0,0
+1080-hypothetical protein,0,0,1,2,0,0
+1081-hypothetical protein,1,0,3,1,0,0
+1082-hypothetical protein,0,0,1,1,0,0
+1085-sbcD,4,1,13,11,0,0
+1086-NAD/NADP transhydrogenase beta subunit,1,0,2,0,0,0
+109-hypothetical protein,1,0,1,2,0,0
+11-yeeN,20,19,58,69,14,2
+110-gph 2,0,0,4,5,1,0
+1107-tssB,1,0,7,4,1,0
+111-hypothetical protein,0,0,10,8,0,0
+1111-prpC 1,5,1,20,15,3,0
+1116-tssL,0,0,1,0,1,0
+112-M3 family oligoendopeptidase,17,5,47,81,10,2
+1125-pknD 3,4,0,29,10,2,0
+1126-Response regulator with TPR repeat,2,0,22,6,0,0
+1127-HPT domain containing protein,0,0,5,1,0,0
+1128-hypothetical protein,2,0,4,0,1,0
+1129-spoIIAB,0,0,3,1,1,0
+113-hypothetical protein,1,1,2,6,0,0
+1130-rssB 3,6,3,17,0,0,0
+1131-hypothetical protein,4,0,8,0,0,0
+1132-dcmA,2,4,21,7,6,0
+1133-Transcriptional regulator 2C AcrR family,1,0,4,2,0,0
+1134-Predicted DNA-binding protein,1,2,5,2,1,0
+114-hypothetical protein,4,1,3,1,0,0
+1141-cmpC,0,0,1,0,0,0
+1142-hypothetical protein,0,0,1,0,0,0
+1143-clcD,2,1,6,2,2,0
+1144-hypothetical protein,0,0,2,3,0,0
+1145-trpD,3,1,10,7,1,0
+1146-cysG 3,0,0,2,0,0,0
+1147-nasA,1,0,1,0,0,0
+1148-mshD,0,0,1,1,0,0
+1149-sdaC 1,1,0,1,2,0,0
+115-cdaR,0,0,1,0,0,0
+1151-pleD 4,5,0,10,8,5,0
+1152-hypothetical protein,2,0,9,3,2,0
+1153-aspA 1,1,2,1,0,1,0
+1154-hypothetical protein,2,0,2,1,1,0
+1155-phoB 2,8,4,15,7,0,0
+1156-hypothetical protein,11,14,28,8,0,0
+1157-two-component system sensor protein,0,0,9,3,0,0
+1158-mprA 2,3,0,8,3,0,0
+1159-Putative lipoprotein,0,0,3,0,0,0
+116-dsdX,0,0,2,0,0,0
+1160-hypothetical protein,1,10,5,1,0,0
+1161-hypothetical protein,1,0,1,1,0,0
+1162-udp 2,1,0,5,2,0,0
+1163-pnuC,0,0,4,1,0,0
+1164-hypothetical protein,3,0,3,1,0,0
+1165-rbsR,4,2,4,9,2,0
+1166-rbsK,2,2,2,1,0,0
+1167-rbsB,1,0,1,0,0,0
+1168-rbsC,0,0,0,1,0,0
+117-glxK,1,0,6,4,2,0
+1170-rbsD,1,0,0,0,0,0
+1171-putative signaling protein,1,1,8,5,0,0
+1172-pfs,1,0,7,14,3,0
+1173-murein L 2CD-transpeptidase catalytic domain family protein,3,0,6,0,0,0
+1174-hypothetical protein,1,0,12,3,0,0
+1175-hypothetical protein,0,0,3,1,0,0
+1176-yghB,5,1,8,3,0,0
+1177-hypothetical protein,1,0,8,0,0,0
+1178-DUF4136 domain-containing protein,7,0,15,0,0,0
+1179-sterol desaturase family protein,0,0,1,0,0,0
+118-norG 1,2,0,3,0,1,0
+1181-OsmC family peroxiredoxin,0,2,0,2,0,0
+1182-rcsC 7,2,0,7,0,0,0
+1183-ccpA,1,0,6,0,0,0
+1185-Sensory box/GGDEF family protein,5,1,17,10,2,0
+1186-nodulation protein NfeD,3,4,8,1,0,0
+1187-slipin family protein,2,2,20,1,0,0
+1188-globin,1,2,3,0,1,0
+1189-Major NAD(P)H-flavin oxidoreductase,1,0,7,3,0,0
+119-Permease of the drug/metabolite transporter (DMT) superfamily,2,0,0,1,0,0
+1190-opuAA,1,0,0,1,0,0
+1191-opuAB,0,0,0,1,0,0
+1192-choline ABC transporter substrate-binding protein,0,0,1,0,0,0
+1194-betB,0,0,1,3,1,0
+1195-betI,0,0,2,2,0,0
+1196-dgcQ 2,6,1,12,14,3,0
+1197-fabG 4,1,0,1,0,0,0
+1198-mmsB 2,0,0,1,0,0,0
+1199-menB 2,0,0,1,1,0,0
+12-mrdB 2,2,0,4,5,0,0
+120-hypothetical protein,0,0,0,1,0,0
+1200-paaF 3,0,0,1,1,0,0
+1201-acdA 2,1,0,2,0,0,0
+1202-mmsA 2,0,4,4,1,0,0
+1204-zntR 3,0,1,5,2,0,0
+1205-mmgC 2,4,1,1,1,0,0
+1206-Methylmalonyl-CoA carboxyltransferase 12S subunit,0,0,2,0,0,0
+1207-menB 3,0,1,2,0,0,0
+1208-accA1,0,0,1,1,0,0
+1209-liuE 2,1,0,1,1,0,0
+121-Prepilin-type N-terminal cleavage/methylation domain-containing protein,0,0,3,0,0,0
+1210-rcsC 8,4,2,14,0,0,0
+1211-phnD2,1,0,8,0,0,0
+1212-hypothetical protein,3,0,12,2,0,0
+1213-hypothetical protein,3,0,1,0,0,0
+1214-maa 2,2,0,0,3,0,0
+1215-norG 2,0,0,5,3,0,0
+1216-cydA 2,0,0,2,0,0,0
+1219-yddE,4,0,8,6,0,0
+122-hypothetical protein,0,0,1,0,0,0
+1220-hypothetical protein,1,0,0,2,0,0
+1221-adhR,2,0,4,1,0,0
+1222-msrP,3,6,1,0,1,0
+1223-hypothetical protein,1,0,0,0,0,0
+1224-korB,1,4,4,1,0,0
+1225-korA,0,3,3,3,1,0
+1226-dmlR 11,1,0,0,1,0,0
+1227-tpm 2,0,0,1,0,0,0
+1228-paaK,1,0,1,2,0,0
+1229-livF,0,0,0,1,0,0
+123-hypothetical protein,0,2,2,0,0,0
+1231-hypothetical protein,0,0,1,0,0,0
+1233-Long-chain-fatty-acid--CoA ligase FadD15,0,0,3,0,1,0
+1235-Electron transfer flavoprotein-ubiquinone oxidoreductase,0,0,1,1,1,0
+1236-etfB,1,1,2,0,1,0
+1237-etfA,0,0,0,1,1,0
+1238-acs 2,0,0,2,0,0,0
+1239-guaC,6,7,16,26,6,4
+124-GNAT family N-acetyltransferase,0,2,1,3,0,0
+1240-nnr,3,0,10,9,1,0
+1241-hypothetical protein,1,0,5,5,0,0
+1242-putative HTH-type transcriptional regulator,16,0,67,31,3,0
+1243-hypothetical protein,0,0,2,2,0,0
+1244-hypothetical protein,0,2,0,7,0,0
+1245-AAA family ATPase,2,2,2,9,1,0
+1246-hypothetical protein,0,0,3,4,0,0
+1247-hypothetical protein,0,0,1,3,0,0
+1248-hypothetical protein,0,0,1,2,0,0
+1249-ANR family transcriptional regulator,0,0,1,3,0,0
+125-ygfF,0,0,2,2,1,0
+1250-hypothetical protein,1,0,1,5,0,0
+1251-DUF2786 domain-containing protein,0,0,2,9,0,0
+1252-DUF3164 family protein,0,0,7,8,0,0
+1253-hypothetical protein,0,0,1,3,1,0
+1254-hypothetical protein,0,0,1,3,1,0
+1255-hypothetical protein,0,0,1,8,0,0
+1256-hypothetical protein,1,0,1,6,3,0
+1257-hypothetical protein,1,0,5,1,0,0
+1258-hypothetical protein,1,0,2,2,0,0
+1259-hypothetical protein,11,0,14,18,0,0
+126-GNAT family N-acetyltransferase,1,0,1,2,2,0
+1260-hypothetical protein,11,0,38,55,3,0
+1261-regulatory protein GemA,3,4,5,2,1,0
+1262-hypothetical protein,3,1,2,1,1,0
+1263-hypothetical protein,0,0,1,0,0,0
+1264-hypothetical protein,0,0,4,0,0,0
+1265-hypothetical protein,0,2,1,2,0,0
+1266-hypothetical protein,1,0,0,0,0,0
+1267-phage baseplate protein,0,0,2,0,1,0
+1268-hypothetical protein,0,0,2,2,0,0
+1269-hypothetical protein,0,0,0,0,1,0
+127-torY,30,9,52,43,6,0
+1270-hypothetical protein,0,1,1,1,0,0
+1276-phage baseplate assembly protein V,1,0,1,0,0,0
+128-torZ,68,118,176,84,32,2
+1280-hypothetical protein,0,0,1,0,0,0
+1281-hypothetical protein,0,0,4,0,0,0
+1282-hypothetical protein,0,0,1,1,0,0
+1283-hypothetical protein,0,1,4,2,0,0
+1284-major capsid protein E,0,0,3,1,0,0
+1286-DUF935 family protein,3,0,2,1,0,0
+1287-phage head morphogenesis protein,0,0,1,0,0,0
+1288-hypothetical protein,0,0,0,1,0,0
+1289-hypothetical protein,2,0,15,4,0,0
+129-phosphatase PAP2 family protein,1,0,2,2,0,0
+1290-hypothetical protein,20,1,61,35,6,0
+1292-dpnA 1,1,0,4,3,0,0
+1293-hypothetical protein,1,2,6,0,1,0
+1294-hypothetical protein,0,0,1,0,0,0
+1295-hypothetical protein,0,0,1,1,0,0
+1296-Tail fiber protein,0,0,7,1,0,0
+1297-nnr 2,1,0,0,0,0,0
+1298-hypothetical protein,1,0,1,3,1,0
+1299-cheB 2,6,3,9,11,6,0
+13-FIG01200001: hypothetical protein,0,0,1,1,0,0
+130-thiE 2,0,1,0,0,0,0
+1300-ydhF,23,4,32,59,8,0
+1301-hypothetical protein,1,1,1,3,0,0
+1302-hypothetical protein,1,0,5,3,1,0
+1303-clcA,1,2,5,15,2,0
+1304-TDT family transporter,0,0,5,5,2,0
+1305-divalent metal cation transporter,7,2,23,3,2,0
+1306-folE,2,1,5,12,3,0
+1307-moeA,5,9,5,21,6,2
+1308-moeB,4,2,7,11,6,2
+1309-LruC domain-containing protein,1,0,1,1,0,0
+131-thiM,13,2,12,0,0,0
+1311-sseA,1,0,9,7,0,0
+1312-diguanylate cyclase/phosphodiesterase (GGDEF  26 EAL domains) with PAS/PAC sensor(s),3,3,11,8,1,0
+1313-chiA 1,1,0,0,0,0,0
+1314-deoR,2,0,0,0,0,0
+1315-talB,8,0,11,10,0,0
+1316-tktA 1,41,47,186,136,44,0
+1317-aer 1,0,1,6,12,2,0
+1318-rfnT,11,3,22,1,0,0
+1319-aroG,66,54,195,13,2,0
+132-tenA,7,2,11,1,0,0
+1320-ompA 4,357,93,1142,243,37,0
+1321-yqaB,2,3,3,5,0,0
+1322-arfB,0,0,4,2,0,0
+1323-Methyl-accepting chemotaxis sensor/transducer protein,3,3,6,10,1,0
+1324-bepG,0,1,2,4,1,0
+1325-bepF 1,0,0,3,2,1,0
+1326-hypothetical protein,5,0,0,3,1,0
+1327-pepT 2,39,13,45,38,8,1
+1328-hypothetical protein,1,0,2,0,1,0
+1329-hypothetical protein,0,0,6,1,1,0
+133-Putative thiamine biosynthesis protein,4,1,57,1,0,0
+1330-narL 1,14,2,15,9,0,0
+1331-narQ,5,0,11,6,0,0
+1332-napF 2,2,3,1,0,1,0
+1333-napD,8,3,40,0,0,0
+1334-napA 2,71,67,117,6,1,0
+1335-Nitrate reductase cytochrome c550-type subunit,11,1,45,0,0,0
+1336-napC 2,13,5,32,2,0,0
+1337-hypothetical protein,0,0,4,0,0,0
+1338-phaC,11,1,68,7,2,1
+1339-hypothetical protein,13,4,56,12,1,0
+134-ribX,0,0,4,0,0,0
+1340-phaA,4,15,81,16,3,0
+1341-phaB,8,1,26,7,2,0
+1342-rhtB 3,1,1,1,0,0,0
+1344-secF 2,25,27,38,12,0,0
+1345-secD 2,35,21,117,25,4,0
+1346-hypothetical protein,8,2,33,16,6,0
+1347-SH3 domain-containing protein,4,6,7,6,1,7
+1348-ATPase,1,0,2,0,0,0
+1349-class I SAM-dependent methyltransferase,1,0,5,1,0,0
+135-ssuB,2,2,7,0,0,0
+1350-lrp 3,2,1,0,1,0,0
+1351-DMT family transporter,0,0,2,0,0,0
+1352-flagellar brake protein,1,1,1,1,1,0
+1353-DUF2955 domain-containing protein,0,0,3,4,1,0
+1354-mdtN,0,0,1,4,1,0
+1355-slyA 2,1,0,0,1,0,0
+1356-luxQ,5,8,6,25,4,0
+1357-luxP,4,5,31,23,4,1
+1358-GIY-YIG nuclease family protein,1,6,5,13,1,0
+1359-DUF480 domain-containing protein,8,16,30,37,4,0
+136-thiD,3,1,9,0,0,0
+1360-FIG01200784: hypothetical protein,3,1,8,9,4,0
+1361-DUF496 family protein,73,20,500,151,38,3
+1362-ISL3 family transposase ISPcc2,5,0,12,9,1,0
+1363-mepA 2,2,0,2,6,1,0
+1364-iolU,6,0,15,8,0,0
+1365-rcsC 3,7,0,17,0,0,0
+1366-gap2,1,0,18,5,0,0
+1367-hypothetical protein,0,0,10,0,0,0
+1368-rhtC 2,2,1,2,3,0,0
+1369-yidZ 3,1,0,6,0,0,0
+137-tldD 1,6,7,17,15,4,0
+1370-lrp 4,0,2,9,1,0,0
+1371-yjeH,9,3,18,1,0,0
+1372-gabR,3,0,5,0,0,0
+1375-sasA 5,0,0,6,2,2,0
+1376-walR 1,0,0,2,2,0,0
+1377-hypothetical protein,0,0,1,1,0,0
+1378-hypothetical protein,5,3,23,10,0,0
+1379-IS4 family transposase ISVa18,3,5,25,2,1,0
+138-pmbA 1,6,3,18,9,3,0
+1380-AraC family transcriptional regulator,4,2,5,0,0,0
+1381-MFS transporter,0,0,1,0,0,0
+1382-yiaV 1,0,0,2,0,0,0
+1383-ubiB 2,0,2,9,4,1,0
+1384-mgtE 1,4,6,14,15,4,0
+1385-codB,1,3,12,1,1,0
+1386-codA,4,6,26,3,0,0
+1387-hypothetical protein,0,0,4,6,1,0
+139-Putative pseudouridine methyltransferase,7,5,12,18,4,0
+1391-aas,1,0,1,2,0,0
+1392-triacylglycerol lipase,2,0,10,3,0,0
+1393-ribB,2,2,16,6,3,0
+1394-btuE,0,0,2,1,0,0
+1395-DUF3429 domain-containing protein,2,0,2,0,0,0
+1396-hypothetical protein,0,0,0,2,0,0
+1397-dsbA 2,15,0,7,6,1,0
+1398-hypothetical protein,4,0,7,4,1,0
+1399-hypothetical protein,14,5,52,27,4,0
+140-DUF3087 domain-containing protein,1,0,2,4,0,0
+1400-putative oxidoreductase,0,7,1,2,1,0
+1401-rstA,4,1,11,7,0,0
+1402-rcsC 4,2,3,9,3,1,0
+1403-hypothetical protein,4,1,49,8,0,0
+1404-dgkA 2,2,1,2,5,0,0
+1405-eptA,11,0,28,10,5,2
+1406-yceM,0,0,0,0,1,0
+1408-yhjX,1,1,1,0,0,0
+1409-yccF,7,2,12,5,2,0
+141-yibL,2,0,38,7,1,0
+1410-hypothetical protein,0,0,1,0,0,0
+1412-hypothetical protein,0,0,3,0,0,0
+1413-czcD,1,0,0,0,0,0
+1414-patatin family protein,1,0,1,3,0,0
+1415-pirin family protein,0,2,6,0,0,0
+1418-hypothetical protein,1,0,3,1,0,0
+142-ldhA,13,2,25,20,2,1
+1421-Adenine deaminase,3,0,15,0,0,0
+1422-PGdx 1,36,50,124,4,1,0
+1423-serine protease,5,0,15,0,0,0
+1424-putative DamX-related protein,0,0,2,0,0,0
+1425-dacA 2,0,1,3,3,1,0
+1427-yghU,19,11,30,143,22,0
+1428-hypothetical protein,1,0,0,4,0,0
+1429-yyaP,2,2,0,0,0,0
+1430-argP 1,0,0,10,2,0,0
+1431-hypothetical protein,0,0,3,2,0,0
+1432-chromosome partitioning protein ParA,0,0,2,0,0,0
+1433-fabG 2,7,5,7,1,0,0
+1440-cupin,1,0,5,1,0,0
+1441-acyl-CoA thioesterase,4,0,9,4,0,0
+1442-hypothetical protein,0,0,1,1,0,0
+1443-malG 1,12,1,15,17,1,0
+1444-malF,11,1,55,23,6,0
+1445-malE,51,26,168,71,8,11
+1446-malK 1,6,2,48,24,4,0
+1447-wcaJ,2,0,11,1,0,0
+1448-outer membrane beta-barrel protein,2,1,6,0,0,0
+1449-polysaccharide export protein,1,0,3,0,0,0
+145-ugpQ,3,0,10,4,0,0
+1450-polysaccharide biosynthesis tyrosine autokinase,1,0,17,1,0,0
+1451-capsular biosynthesis protein,1,0,6,1,0,0
+1452-mshA 3,2,0,9,0,0,0
+1453-ligase,1,0,4,0,0,0
+1454-capsular biosynthesis protein,0,0,8,0,0,0
+1455-glycosyltransferase family 4 protein,1,0,4,0,0,0
+1456-oligosaccharide flippase family protein,2,0,0,1,0,0
+1457-VanZ family protein,0,0,2,0,0,0
+1458-ASCH domain-containing protein,0,0,12,1,0,0
+1459-nemR,3,0,27,4,0,0
+146-ldh,8,1,10,3,2,0
+1460-curA,1,0,1,1,0,0
+1461-hypothetical protein,2,0,3,5,0,0
+1462-katA,1,0,8,3,1,0
+1463-garR,14,13,29,31,8,0
+1464-hypothetical protein,3,4,13,38,11,0
+1465-frwD,0,0,0,5,1,0
+1466-hypothetical protein,0,0,2,6,2,0
+1467-rhaR 3,0,0,1,4,1,0
+1468-fruA 1,0,0,0,74,13,0
+1469-manA 2,0,3,0,24,9,0
+147-cpxR 1,4,1,12,0,0,0
+1470-hypothetical protein,0,0,0,0,1,0
+1471-ppaX,1,0,1,9,0,0
+1472-Azurin,8,0,50,3,0,0
+1473-PTS sugar transporter subunit IIC/EAL domain-containing protein,1,0,2,1,0,0
+1474-ktrB 2,0,0,2,15,3,0
+1475-ktrA 2,1,0,0,8,1,0
+1476-kdpE,0,0,1,1,2,0
+1477-kdpD,1,2,6,2,0,0
+1478-Putative multidrug export ATP-binding/permease protein,4,5,16,1,0,0
+1479-fhuA,59,22,130,3,0,0
+148-sasA 8,4,3,14,3,0,0
+1480-fhuC,5,0,13,0,0,0
+1481-fpuA,3,1,11,0,0,0
+1482-fhuB,5,0,11,0,0,0
+1483-hypothetical protein,0,2,4,4,1,0
+1484-pal 4,0,0,6,3,1,0
+1487-putative hemagglutinin/hemolysin-related protein,2,2,8,4,1,2
+1488-prsE 1,6,1,6,0,1,0
+1489-prsD,2,1,14,2,0,0
+149-cntO 2,53,22,152,4,0,0
+1490-STRUCTURAL ELEMENTS 3B Cell Exterior 3B surface polysaccharides/antigens,1,1,12,1,0,0
+1491-malT 1,6,0,49,5,0,0
+1494-hypothetical protein,1,0,9,9,1,0
+1495-mcpH,6,8,17,14,3,0
+1496-MoxR family ATPase,6,2,9,8,0,0
+1497-DUF58 domain-containing protein,1,0,6,6,1,0
+1498-DUF4381 domain-containing protein,1,2,4,0,0,0
+1499-VWA domain-containing protein,0,2,11,2,0,0
+15-macB 1,0,0,1,0,0,0
+150-TonB system biopolymer transport component 3B Chromosome segregation ATPase,16,6,40,4,1,0
+1500-VWA domain-containing protein,2,3,13,5,0,1
+1501-protein BatD,7,4,19,9,2,0
+1502-GGDEF domain-containing protein,1,0,0,3,1,0
+1503-pstB3,1,0,0,0,0,0
+1507-methyl-accepting chemotaxis protein,0,0,4,1,0,0
+1508-DUF1566 domain-containing protein,7,0,13,1,0,0
+151-tolQ 3,25,17,141,0,2,0
+1515-ptrB 1,8,2,2,0,0,0
+1516-srmB 3,21,20,41,20,1,1
+1517-lpp,54,3,305,215,13,3
+1518-ycfS,3,4,7,8,1,0
+1519-phrA,1,1,17,5,1,0
+152-MotA/TolQ/ExbB proton channel family protein,25,17,141,0,2,0
+1520-Transcriptional regulator 2C MerR family 2C associated with photolyase,4,8,8,1,0,0
+1521-COG1683: Uncharacterized conserved protein / FIG143828: Hypothetical protein YbgA,7,0,4,2,0,0
+1522-deoD,7,0,9,8,0,3
+1523-hypothetical protein,4,0,1,2,0,0
+1524-hypothetical protein,12,0,20,15,3,0
+1525-hypothetical protein,3,2,15,5,0,0
+1526-yiaW,4,2,11,5,0,0
+1527-yiaV 2,3,4,8,5,0,0
+1528-Substrate-specific component MtsA of methionine-regulated ECF transporter,0,0,1,1,1,0
+1529-ykoD,2,2,7,10,2,0
+153-flagellar motor protein MotA,25,17,141,0,2,0
+1530-ecfT,0,0,1,4,0,0
+1531-MFS transporter,7,2,21,0,0,0
+1532-napH,1,1,0,1,0,0
+1533-napG,0,0,4,0,0,0
+1534-aaaT 1,6,4,8,2,0,0
+1535-phosphotransferase,0,0,7,3,2,0
+1536-hypothetical protein,7,0,7,3,0,0
+1537-Cyclic di-GMP binding protein,1,0,3,1,0,0
+1538-methyl-accepting chemotaxis protein,3,0,6,5,1,0
+1539-AAA family ATPase,31,23,73,45,7,6
+1540-hypothetical protein,23,0,14,1,0,0
+1541-yejF,28,15,79,2,0,0
+1542-Prolyl endopeptidase,15,3,58,16,2,0
+1543-dmlR 2,0,0,7,2,0,0
+1544-lutP,2,0,10,7,0,0
+1545-lldD,1,0,3,13,1,0
+1546-hypothetical protein,4,1,6,2,0,0
+1547-ynaI,1,0,7,5,0,0
+1548-cah 1,1,0,1,11,1,0
+1549-Sigma-fimbriae tip adhesin,2,0,1,0,0,0
+1550-Sigma-fimbriae usher protein,1,0,12,1,0,0
+1551-Sigma-fimbriae chaperone protein,3,0,4,0,0,0
+1552-Sigma-fimbriae uncharacterized paralogous subunit,0,0,10,0,0,0
+1553-Sigma-fimbriae uncharacterized paralogous subunit,3,0,28,1,0,0
+1554-tdh,3,3,20,38,7,0
+1555-kbl,4,0,11,35,12,0
+1556-Sensory box/GGDEF family protein ScrC (involved in swarmer cell regulation),8,3,10,2,1,0
+1557-mltF 3,0,1,8,2,0,0
+1558-cefD,6,15,42,11,2,0
+1559-sodC,2,4,11,0,0,0
+1560-sasA 6,0,0,9,0,0,0
+1562-hypothetical protein,0,0,0,1,0,0
+1563-hypothetical protein,0,0,0,0,1,0
+1565-hypothetical protein,1,0,3,1,0,0
+1566-dmlR 3,0,0,3,4,0,0
+1567-hypothetical protein,0,0,0,0,1,0
+1568-hypothetical protein,4,3,3,3,0,0
+1569-Soluble cytochrome b562,5,7,15,4,4,0
+1570-ycdX 1,2,0,6,4,2,0
+1571-2-oxoglutarate dehydrogenase complex 2C dehydrogenase component,3,0,7,1,0,0
+1572-Permease of the drug/metabolite transporter (DMT) superfamily,0,0,2,0,0,0
+1573-gcvA 4,0,0,5,0,0,0
+1574-Secreted trypsin-like serine protease,2,2,9,2,0,0
+1575-Flagellar protein FliJ,0,0,1,0,0,0
+1576-fliI 1,1,2,3,2,1,0
+1577-Flagellar assembly protein FliH,0,0,2,1,0,0
+1578-fliG 1,1,0,0,2,0,0
+1579-Flagellar M-ring protein FliF,0,0,3,0,0,0
+158-putative TonB-dependent receptor,10,3,21,1,1,0
+1580-fliE 1,0,0,1,0,0,0
+1581-atoC 2,0,0,0,0,1,0
+1585-fliP,0,0,2,0,0,0
+1586-fliQ 1,1,0,1,0,0,0
+1589-flhA 1,0,0,4,1,0,0
+1590-EAL domain-containing protein,0,0,1,5,0,0
+1593-fliD,0,0,1,0,0,0
+1598-lafS,2,1,0,0,0,0
+1599-lafT,0,0,1,0,0,0
+1600-lafU,3,1,3,4,0,0
+1601-hypothetical protein,2,1,6,1,0,0
+1604-hypothetical protein,0,0,4,0,0,0
+1605-hypothetical protein,1,0,1,0,0,0
+1606-hypothetical protein,3,0,15,4,1,0
+1607-cueR 1,0,0,2,0,0,0
+1609-Integral membrane protein,1,0,4,0,1,0
+1610-cutC 2,1,0,2,1,0,0
+1611-hpdA,0,0,2,1,0,0
+1612-fsaA,1,0,0,1,0,0
+1613-ATPase involved in DNA repair,0,0,1,4,1,0
+1614-ysnE,1,3,3,3,0,0
+1615-Histone acetyltransferase HPA2 and related acetyltransferases,1,0,2,3,0,0
+1616-mdtL 2,2,0,0,0,0,0
+1617-yidZ 4,4,0,1,4,0,0
+1618-Permease of the drug/metabolite transporter (DMT) superfamily,1,0,3,1,0,0
+1619-fusaric acid resistance family protein,5,2,23,2,0,0
+1620-ttgF,4,5,11,2,0,0
+1621-hypothetical protein,0,0,3,1,0,0
+1622-aaeA 2,4,0,5,2,0,0
+1623-Potassium channel protein,1,3,12,1,0,0
+1624-ydiK 1,10,22,27,3,0,0
+1625-hypothetical protein,21,5,24,31,1,0
+1626-RDD family protein,0,1,1,0,0,0
+1627-fpr,1,0,1,1,0,0
+163-Uncharacterized protein CC 3060,0,0,2,0,0,0
+1630-dmlR 4,1,0,3,3,0,0
+1631-hypothetical protein,1,0,5,3,1,0
+1632-nfsB,5,1,8,17,0,5
+1633-2 2C3-butanediol dehydrogenase 2C R-alcohol forming 2C (R)- and (S)-acetoin-specific (EC 1.1.1.4),0,0,0,4,0,0
+1634-Neopullulanase (EC 3.2.1.135),1,0,0,0,0,0
+1635-dacA 3,8,5,31,2,0,0
+1636-pip,5,2,11,5,2,0
+1637-hypothetical protein,0,0,8,0,1,0
+1638-glpE 2,9,0,4,1,0,0
+1639-gbpA 1,2,2,8,0,0,0
+164-Uncharacterized protein CC 3061,0,0,2,0,0,0
+1640-patatin family protein,0,0,0,2,0,0
+1641-MarC family integral membrane protein,0,1,1,5,0,0
+1642-frp,2,0,17,12,0,0
+1643-polysaccharide export protein,2,0,30,41,2,0
+1644-amsI,2,2,5,7,1,0
+1645-wzc,9,3,34,36,11,2
+1646-hypothetical protein,0,1,0,0,0,0
+1647-ydhR,0,0,3,0,0,0
+1648-yhaJ 1,1,1,6,0,0,0
+1649-hypothetical protein,3,1,13,6,1,2
+1650-TetR/AcrR family transcriptional regulator,1,0,2,2,1,0
+1651-TonB-dependent receptor,0,0,1,1,2,0
+1652-BamA/TamA family outer membrane protein,0,0,1,2,1,0
+1653-DUF4056 domain-containing protein,0,2,2,1,0,0
+1654-gltP 2,6,2,7,9,1,0
+1655-hypothetical protein,2,0,2,2,0,0
+1656-cpg2,5,4,6,45,20,0
+1657-yjiG,1,0,1,20,4,0
+1658-YjiH family protein,1,0,9,28,8,0
+1659-Suppression of copper sensitivity: putative copper binding protein ScsA,0,0,1,0,0,0
+166-hypothetical protein,0,1,1,0,0,0
+1660-Secreted protein 2C suppressor for copper-sensitivity ScsC,0,1,5,2,0,0
+1661-malS 3,3,8,8,5,1,0
+1662-mtgA,4,0,6,4,0,0
+1663-glgB,18,36,55,36,12,0
+1664-malQ,23,18,118,14,1,2
+1665-malP,41,42,246,40,3,0
+1666-malT 2,7,2,26,17,6,0
+1667-Membrane protein,3,1,4,7,2,0
+1668-hypothetical protein,0,3,5,0,1,0
+1669-Cytochrome oxidase biogenesis protein Sco1/SenC/PrrC 2C thiol-disulfide reductase involved in Cu(I) insertion into CoxII Cu(A) center,2,0,8,3,0,0
+167-zinc ABC transporter substrate-binding protein,0,0,0,2,0,0
+1670-Copper metallochaperone PCu(A)C 2C inserts Cu(I) into cytochrome oxidase subunit II,2,5,23,10,1,0
+1671-nagE 2,0,0,3,2,0,0
+1672-rsgA 1,2,1,43,7,4,0
+1673-sstT,2,1,18,13,0,0
+1675-pdxY 2,14,10,25,15,4,0
+1676-hypothetical protein,0,0,1,1,0,0
+1677-potE 2,0,0,0,1,1,0
+1678-speF,0,0,0,1,0,0
+1679-helix-turn-helix transcriptional regulator,0,0,1,1,0,0
+168-mntB,1,0,1,0,0,0
+1680-FOG: TPR repeat protein 2C SEL1 subfamily,3,1,8,5,2,0
+1681-pulA,2,3,11,4,2,0
+1682-hypothetical protein,0,1,2,3,1,0
+1683-nplT,0,2,7,1,0,0
+1684-Glycosidase,1,0,8,1,1,0
+1685-Maltose operon periplasmic protein MalM,5,2,25,16,3,0
+1686-Maltoporin (maltose/maltodextrin high-affinity receptor 2C phage lambda receptor protein),105,20,459,230,38,0
+1687-glgX,9,5,42,16,1,2
+1688-Resolvase/integrase Bin,0,0,1,1,0,0
+1689-bcr 2,0,0,1,0,0,0
+1690-hypothetical protein,7,1,25,40,12,3
+1692-polymer-forming cytoskeletal protein,0,2,1,0,0,0
+1693-Zinc protease 2C insulinase family,52,52,95,42,7,0
+1694-pctB 2,12,2,36,68,14,0
+1695-fecE,5,1,24,1,0,0
+1696-fecD,2,5,4,0,0,0
+1697-fecC,6,1,4,0,0,0
+1698-fecB,6,2,9,0,0,0
+1699-fecA,72,26,103,2,0,0
+17-FIG01201672: hypothetical protein,0,0,1,0,0,0
+170-ABC transporter substrate-binding protein,0,0,0,3,0,0
+1702-Vibrioferrin ligase/carboxylase protein PvsA,16,4,42,1,0,0
+1703-Vibrioferrin amide bond forming protein PvsB @ Siderophore synthetase superfamily 2C group B,17,3,38,1,0,0
+1704-mdtG,0,0,1,0,0,0
+1705-Vibrioferrin membrane-spanning transport protein PvsC,0,0,1,0,0,0
+1706-Vibrioferrin amide bond forming protein PvsD @ Siderophore synthetase superfamily 2C group A,17,21,38,0,0,0
+1709-putative sugar-binding periplasmic protein,0,1,1,4,1,0
+171-porin,427,293,1239,544,53,0
+1710-sasA 7,2,0,3,3,0,0
+1711-ompR 2,1,1,1,2,0,0
+1712-ptsG 1,0,0,0,1,0,0
+1713-putative inner membrane or exported protein,1,0,0,0,0,0
+1714-Putative protease,1,1,3,8,0,0
+1715-araH,0,0,1,0,0,0
+1716-araG,0,0,1,0,0,0
+1718-araB,0,0,1,0,0,0
+1719-ulaF,0,0,0,1,1,0
+172-ptrB 2,7,3,35,15,4,0
+1720-araA,0,0,5,5,1,0
+1722-araC,0,1,5,2,0,0
+1723-hypothetical protein,2,0,2,2,0,0
+1724-hypothetical protein,1,0,2,5,2,0
+1727-ahpC 2,0,0,4,10,1,0
+1728-ahpF,0,1,3,2,1,0
+1729-hypothetical protein,0,0,11,6,0,0
+173-emrD 1,0,0,3,23,4,2
+1730-hypothetical protein,3,0,10,11,0,0
+1732-hypothetical protein,0,1,0,1,0,0
+1733-dmlR 5,0,0,2,2,0,0
+1734-inhA,1,0,0,1,0,0
+1735-sigE 1,0,0,1,0,0,0
+1736-MFS transporter,2,0,5,2,2,0
+1737-chemotaxis protein,0,1,4,6,0,0
+1738-dsdC,0,0,1,1,0,0
+1739-licH 1,3,0,4,8,1,0
+1740-zinc-dependent alcohol dehydrogenase family protein,0,0,0,3,0,0
+1741-nimR 1,0,0,0,3,0,0
+1742-yiiM,0,0,4,1,0,0
+1743-rhlE 2,1,0,2,2,0,0
+1744-uxuA,2,1,0,2,0,0
+1745-nanR,12,8,8,16,5,0
+1747-siaQ,0,0,1,0,0,0
+175-speB,23,18,65,8,1,0
+1750-uxaC,0,0,2,0,0,0
+1751-kdgK 1,0,0,0,1,0,0
+1753-ygjV 1,0,0,1,0,0,0
+1757-rhaS 2,1,0,2,0,0,0
+1758-amidinotransferase,1,0,1,2,0,0
+1759-btuD 4,15,15,25,11,2,0
+176-speA,60,44,183,25,2,0
+1761-hypothetical protein,1,0,5,6,1,0
+1762-lrp 5,1,0,5,0,0,0
+1763-hypothetical protein,0,0,0,3,1,0
+1764-hypothetical protein,1,1,0,1,0,0
+1765-GNAT family N-acetyltransferase,1,0,3,1,1,0
+1766-hypothetical protein,0,0,1,2,2,0
+1767-RNA-binding protein,3,0,1,6,0,0
+1768-ydaF 2,3,0,4,4,0,0
+1769-putP,17,9,20,22,6,0
+177-hypothetical protein,0,1,6,0,0,0
+1770-1-pyrroline-5-carboxylate dehydrogenase,2,1,6,3,2,0
+1771-putA,8,10,16,19,4,0
+1772-melR 1,1,0,3,3,0,0
+1773-Transcriptional regulator 2C LuxR family,2,0,10,4,1,0
+1774-pdxH,16,2,23,63,9,0
+1775-dctB 2,0,0,2,7,0,0
+1776-dctD 3,2,0,2,2,0,0
+1777-prsE 2,3,2,14,6,1,0
+1778-T1SS associated transglutaminase-like cysteine proteinase LapP,3,1,4,3,0,0
+1779-putative signaling protein,1,3,63,20,7,0
+178-hypothetical protein,0,0,3,1,0,0
+1780-apxIB,6,6,17,18,2,4
+1782-Small-conductance mechanosensitive channel,0,0,2,3,0,0
+1783-NAD(P)H dehydrogenase (quinone),1,0,1,0,0,0
+1784-oppA 2,4,0,10,7,3,0
+1785-mpaA,1,1,1,3,0,0
+1786-murR,0,1,1,1,1,0
+1787-murQ 2,0,0,0,1,0,0
+1788-murP,0,0,1,0,0,0
+1789-porin,0,0,5,0,0,0
+179-rimK,10,2,12,0,0,0
+1790-Peptidase E (EC 3.4.11.2),0,0,7,0,0,0
+1791-dmlR 6,0,5,1,1,0,0
+1792-cat 1,0,0,4,1,0,0
+1793-Predicted polymerase 2C ortholog to Borrelia burgdorferi BB0267,1,0,11,13,1,0
+1794-tmcA,1,0,2,2,0,0
+1795-Chromosome (plasmid) partitioning protein ParB,15,27,17,26,3,7
+18-Autolysin sensor kinase (EC 2.7.3.-),0,1,2,0,0,0
+180-hdfR 3,0,0,3,2,0,0
+182-rhaR 4,1,0,1,0,0,0
+183-hypothetical protein,0,0,1,7,0,0
+184-PhoX family phosphatase,0,1,5,3,0,0
+185-bglB,6,1,17,5,2,0
+186-sasA 9,1,0,3,2,0,0
+187-dctD 4,1,1,2,4,0,0
+188-Two-component system sensor histidine kinase,2,0,7,3,1,0
+189-brnQ 2,0,0,2,1,0,0
+19-btsR 2,0,2,0,1,0,0
+191-TRAP transporter solute receptor 2C TAXI family precursor,0,2,1,1,1,0
+192-TRAP-type uncharacterized transport system 2C fused permease component,2,0,3,2,0,0
+193-lhgD,0,1,1,5,0,0
+194-Pyruvate/2-oxoglutarate dehydrogenase complex 2C dihydrolipoamide dehydrogenase component,3,0,9,2,0,0
+195-hypothetical protein,0,0,0,2,0,0
+196-tnaA,0,0,6,10,4,0
+197-FIG01199808: hypothetical protein,2,0,1,5,0,0
+198-psuT,0,0,0,2,0,0
+199-FIG01199541: hypothetical protein,6,2,38,19,3,0
+20-DUF2268 domain-containing protein,1,0,1,4,0,0
+200-hypothetical protein,0,0,2,0,0,0
+201-hypothetical protein,1,0,4,0,0,0
+202-hypothetical protein,11,5,55,4,1,0
+203-hypothetical protein,0,1,5,1,0,0
+204-glcB,2,0,5,0,0,0
+205-vdcA,5,0,18,16,3,0
+206-cry1,1,0,1,0,0,0
+207-phrB,0,1,3,1,0,0
+209-msrAB 1,3,0,2,1,0,0
+21-ppiB 2,1,0,5,1,1,0
+210-yhfA 1,15,1,22,13,2,0
+211-maa 1,1,0,2,8,1,0
+212-hypothetical protein,0,0,0,3,0,0
+213-hypothetical protein,0,1,0,0,0,0
+214-MoxR-like ATPase,2,3,11,7,1,0
+215-hypothetical protein,0,0,5,3,0,0
+216-hypothetical protein,2,1,1,0,0,0
+217-hypothetical protein,1,3,6,2,0,0
+218-dmlR 8,1,5,1,1,1,0
+219-yjjG,3,2,0,1,1,0
+22-mcpP 2,7,10,27,4,0,0
+220-hypothetical protein,2,3,3,11,3,2
+221-hypothetical protein,5,1,6,3,0,0
+222-ytfJ 2,0,0,2,2,1,0
+223-cah 2,0,0,8,2,0,0
+224-fadL 1,0,0,0,0,1,0
+225-macA 1,1,3,7,3,0,0
+226-macB 2,4,1,8,6,0,0
+227-arpC,4,0,2,1,1,0
+228-Thermolabile hemolysin,2,0,4,1,1,0
+229-Alkaline serine protease,4,2,7,2,0,0
+230-ATPase of the AAA+ class,2,5,6,2,0,0
+231-ulaA,0,0,2,8,0,0
+232-hypothetical protein,0,0,0,2,0,0
+234-gntR 2,1,0,8,4,0,0
+235-phnX,0,0,1,0,0,0
+236-Isoleucine 2-epimerase,0,0,0,1,0,1
+239-hypothetical protein,0,0,4,1,0,0
+242-2-aminoethylphosphonate ABC transporter permease protein,0,0,1,2,1,0
+245-Permease of the drug/metabolite transporter (DMT) superfamily,1,0,2,0,0,0
+246-OmpA-like transmembrane domain protein,5,1,8,8,1,0
+247-Virulence factor VirK,7,2,47,24,1,1
+248-puuB 1,1,0,1,2,0,0
+249-hypothetical protein,12,3,22,17,5,0
+25-hypothetical protein,3,0,7,1,0,0
+250-ompA 5,133,14,262,226,27,0
+251-gcvA 5,1,0,1,0,0,0
+252-hypothetical protein,0,0,1,0,0,0
+253-yidZ 5,1,0,1,0,0,0
+254-hypothetical protein,0,0,1,2,0,0
+255-dtpA,1,0,5,11,2,0
+256-sdaB,5,4,7,5,0,0
+257-hypothetical protein,4,0,10,2,0,0
+258-hypothetical protein,5,1,3,16,2,0
+259-hypothetical protein,4,0,24,12,0,0
+26-cat 2,2,0,2,2,0,0
+260-hypothetical protein,1,2,4,4,0,0
+261-hypothetical protein,0,0,0,1,0,0
+262-hypothetical protein,1,0,1,2,0,0
+263-hypothetical protein,0,0,1,2,0,0
+264-hypothetical protein,3,1,4,2,0,0
+268-flgE 2,0,0,1,0,0,0
+27-gltS 1,5,44,23,33,13,5
+272-flgI 2,1,0,0,0,0,0
+273-hypothetical protein,0,0,2,0,0,0
+274-Flagellar hook-associated protein FlgK,0,2,1,0,0,0
+275-flgL,0,1,2,1,0,0
+276-putative flagellin,2,0,1,1,0,0
+277-hypothetical protein,8,8,16,9,1,0
+278-hypothetical protein,1,0,0,0,0,0
+279-nhaP2 1,3,1,9,6,1,0
+28-hypothetical protein,2,0,8,7,2,0
+280-hypothetical protein,0,0,1,0,0,0
+281-fni,0,1,3,1,0,0
+282-hypothetical protein,1,5,15,5,1,0
+284-hypothetical protein,1,0,3,20,1,0
+285-hypothetical protein,1,0,0,1,2,0
+286-hypothetical protein,0,0,1,0,0,0
+287-glpE 3,1,0,12,7,0,0
+289-groL 1,3,0,9,2,0,0
+29-ytrB,3,0,3,3,1,0
+290-hypothetical protein,1,1,5,3,3,0
+291-Cytolytic pore-forming protein  3D> Cytotoxin K,0,0,1,0,1,0
+292-leuE 1,0,0,3,0,0,0
+293-trpI,0,0,3,1,1,0
+294-hypothetical protein,0,0,5,0,0,0
+295-hypothetical protein,0,0,1,0,0,0
+296-hypothetical protein,1,3,2,2,1,0
+297-hypothetical protein,1,0,3,1,0,0
+298-mggB,0,0,2,1,0,0
+30-GntR family transcriptional regulator,1,1,7,2,0,0
+300-Alpha-1 2C2-mannosidase,1,0,0,12,1,0
+301-Alpha-1 2C2-mannosidase,0,0,2,10,1,0
+302-Alpha-1 2C2-mannosidase,1,0,0,5,1,0
+303-Alpha-1 2C2-mannosidase,0,0,0,3,0,0
+304-Alpha-1 2C2-mannosidase,0,0,0,7,0,0
+305-Alpha-1 2C2-mannosidase,3,0,0,14,0,0
+306-PTS system 2C fructose-specific IIBC component,2,0,4,40,4,0
+307-manP,0,0,0,18,0,0
+308-msrAB 2,0,0,2,7,0,0
+31-gltS 2,2,1,1,1,0,0
+310-srlR 2,1,1,7,7,2,0
+311-hypothetical protein,3,2,2,2,1,0
+312-katB,0,0,2,1,0,0
+314-hypothetical protein,0,1,4,4,0,0
+315-hypothetical protein,0,1,0,5,2,0
+316-pncB,2,0,2,3,0,0
+317-hypothetical protein,8,0,14,0,0,0
+318-hypothetical protein,3,3,7,3,3,0
+319-hypothetical protein,0,0,4,4,0,0
+32-glycerol kinase,4,1,4,5,1,0
+320-cntI 1,3,0,0,16,3,0
+321-gcvA 6,0,0,4,2,0,0
+323-sgrR 1,5,0,3,7,0,0
+324-ompV,22,6,151,17,3,0
+325-copper resistance protein NlpE,14,6,17,12,6,0
+326-DUF134 domain-containing protein,3,0,4,5,1,0
+327-dinitrogenase iron-molybdenum cofactor,13,1,5,8,7,0
+328-nqrM,2,0,11,6,0,0
+329-phosphotransferase,1,1,9,1,0,0
+33-nagB,6,0,27,6,4,0
+330-hypothetical protein,0,0,1,0,0,0
+332-ISL3 family transposase ISAba43,2,0,15,3,0,0
+333-fusA 1,0,5,7,9,0,0
+334-ycjG,0,0,0,1,1,0
+335-hypothetical protein,0,1,0,0,0,0
+336-Protein often near L-alanine-DL-glutamate epimerase (cell wall recycling),1,0,0,0,0,0
+337-hdfR 4,1,0,2,2,0,0
+338-Uncharacterized MFS-type transporter,1,0,0,2,0,0
+339-soxR,1,0,1,0,0,0
+34-DUF3081 domain-containing protein,3,2,6,0,0,0
+340-hypothetical protein,2,0,0,4,0,0
+341-TPR-repeat-containing protein,5,3,22,8,4,0
+342-hypothetical protein,1,0,2,4,0,0
+343-SAM-dependent methyltransferase,0,1,2,1,0,0
+344-clsC,6,2,23,4,0,0
+345-mdtA 3,0,0,8,1,0,0
+346-czcA 2,6,1,14,3,0,0
+347-hypothetical protein,0,0,0,2,0,0
+349-hypothetical protein,0,0,2,2,0,0
+35-DUF413 domain-containing protein,13,1,35,1,0,0
+351-transposase,0,0,1,1,0,0
+352-hypothetical protein,1,0,0,0,0,0
+353-hypothetical protein,1,0,9,70,5,0
+354-hypothetical protein,1,0,3,28,1,0
+359-ABC transporter 2C permease protein 2 (cluster 1 2C maltose/g3p/polyamine/iron),0,0,1,0,0,0
+36-hdfR 2,4,2,6,36,1,0
+360-ABC transporter 2C permease protein 1 (cluster 1 2C maltose/g3p/polyamine/iron),0,0,2,0,0,0
+361-FIG01199621: hypothetical protein,0,0,1,1,0,0
+363-phnR 2,0,0,1,0,0,0
+364-Glycine betaine transporter 2,1,0,1,5,5,0
+369-helix-turn-helix transcriptional regulator,0,0,3,0,0,0
+37-yhhW,1,0,5,0,0,0
+372-hypothetical protein,0,0,9,1,0,0
+373-ttgI,0,0,1,0,0,0
+374-czcA 3,0,1,0,1,0,0
+375-bepF 2,0,0,1,0,0,0
+376-pgrR 2,1,0,9,3,3,0
+377-hypothetical protein,2,0,1,0,0,0
+378-potD 3,166,163,732,1,0,0
+379-tyrS 1,0,0,6,7,1,0
+38-mhqP,2,0,3,0,0,0
+380-hypothetical protein,0,1,4,1,1,0
+381-hypothetical protein,0,0,2,0,0,0
+382-ppsA,15,11,49,142,34,13
+383-ppsR,2,2,3,15,2,0
+384-ansB,0,0,4,2,1,0
+385-purA 1,27,13,50,150,17,8
+386-hdfR 5,2,1,0,2,0,0
+388-leuE 2,0,0,0,3,0,0
+389-hypothetical protein,0,0,1,0,0,1
+39-hypothetical protein,9,0,38,2,0,0
+390-putative nucleoprotein/polynucleotide-associated enzyme,5,3,29,9,1,0
+391-virS,0,2,0,0,0,0
+394-eltD,0,0,0,1,1,0
+395-nemA 1,0,0,0,1,0,0
+397-dmlR 9,0,0,1,1,0,0
+398-hdfR 6,1,0,4,2,0,0
+399-Six-hairpin glycosidase-like protein,3,11,18,4,0,0
+4-oppF 3,2,0,1,0,0,0
+40-alkA,2,1,7,6,0,0
+400-rhlE 3,3,7,21,2,5,0
+401-hypothetical protein,0,0,2,0,0,0
+402-hypothetical protein,3,0,6,0,0,0
+403-icaA,1,0,6,1,0,0
+404-IS5 family transposase ISVa2,2,1,9,8,1,0
+406-HlyD family efflux transporter periplasmic adaptor subunit,0,1,5,1,0,0
+407-lipoate--protein ligase,1,0,3,0,0,0
+408-DUF4156 domain-containing protein,1,0,6,0,0,0
+409-hypothetical protein,1,0,3,1,0,0
+41-ogt,1,0,6,4,0,0
+410-lysN,7,11,19,2,1,0
+411-rhaS 3,0,0,1,3,0,0
+412-hypothetical protein,2,1,13,2,0,0
+413-YdcH family protein,0,0,3,0,0,0
+414-DMT family transporter,1,1,15,4,1,0
+415-nimR 2,2,0,2,4,1,0
+416-M14 family metallocarboxypeptidase,6,1,13,4,2,0
+417-yedI,2,0,10,12,1,0
+418-pyrC,7,13,87,48,11,0
+419-hypothetical protein,1,0,3,2,0,0
+42-hypothetical protein,2,2,8,6,2,0
+420-hmp 1,4,2,13,5,1,0
+421-nadE,10,3,28,23,5,0
+422-nadD,3,0,11,5,0,0
+423-hypothetical protein,3,0,2,3,1,0
+424-hypothetical protein,1,1,4,1,0,0
+425-hypothetical protein,1,0,5,7,3,0
+426-hypothetical protein,1,0,3,1,2,0
+427-hypothetical protein,1,0,4,4,0,0
+428-hypothetical protein,7,0,7,13,1,0
+429-Transcriptional regulator LuxT,2,0,6,2,0,0
+43-hypothetical protein,2,0,5,24,1,0
+430-hmuV,5,3,24,1,0,0
+431-hmuU,6,0,20,1,0,0
+432-hmuT,17,2,40,3,0,0
+433-tolR 4,5,0,43,1,0,0
+434-tolQ 4,12,2,31,0,0,0
+435-hypothetical protein,11,17,68,1,0,0
+436-chuW,43,34,99,0,0,0
+437-hutX,35,15,98,0,0,0
+438-hutZ,39,26,66,0,0,0
+439-hypothetical protein,5,3,5,2,0,0
+44-hypothetical protein,0,0,0,1,0,0
+440-cheV 2,3,1,7,6,1,0
+441-ppiC,1,2,7,6,0,1
+442-putative site-specific recombinase,1,0,1,1,0,0
+443-yidZ 6,1,0,3,2,0,0
+444-mdtL 3,1,0,1,1,0,0
+446-hypothetical protein,7,0,24,5,0,0
+447-NERD domain-containing protein,6,0,37,14,3,0
+45-nhaD,1,0,1,6,0,0
+450-VPA0450 family T3SS effector inositol phosphatase,1,0,1,0,0,0
+451-ati1,0,0,2,0,0,0
+452-yodB,0,0,2,0,0,0
+453-katG 1,2,0,14,2,0,0
+454-DNA starvation/stationary phase protection protein,0,0,2,0,0,0
+455-oxyR 2,2,0,2,0,0,0
+456-hypothetical protein,0,0,2,1,0,0
+457-hypothetical protein,0,0,5,1,0,0
+458-prt 1,0,0,3,1,1,0
+459-hypothetical protein,0,2,2,2,3,0
+46-hypothetical protein,0,0,1,1,0,0
+460-tam,1,0,12,3,1,0
+461-hypothetical protein,2,0,4,1,1,0
+462-hypothetical protein,13,12,26,1,0,0
+463-kefC 1,6,6,7,10,0,0
+464-kefG,2,1,7,1,1,1
+465-uspA 2,17,0,345,17,3,0
+466-uup,1,3,4,2,0,0
+467-Prolyl endopeptidase,11,0,30,10,2,0
+47-Fucose 4-O-acetylase,0,0,0,2,0,0
+470-bepF 3,0,0,1,0,0,0
+471-bepE 3,0,0,1,1,0,0
+472-ompP1,1,0,4,0,0,0
+473-hypothetical protein,0,0,1,0,0,0
+474-speG,11,1,27,6,1,0
+475-hypothetical protein,0,0,8,0,0,0
+476-hypothetical protein,2,0,17,1,0,0
+477-pse4,0,0,1,0,0,1
+478-hmp 2,0,0,1,0,0,0
+479-hypothetical protein,42,37,201,1,3,0
+482-Copper/silver efflux RND transporter 2C membrane fusion protein CusB,53,26,53,1,3,0
+483-Copper/silver efflux RND transporter 2C outer membrane protein CusC,57,9,71,0,1,0
+484-hypothetical protein,5,1,19,4,3,0
+485-napA 3,5,2,3,11,1,0
+486-hypothetical protein,1,0,0,0,0,0
+487-hypothetical protein,2,0,5,0,0,0
+494-hypothetical protein,0,0,0,11,7,0
+495-pgl 1,3,2,6,6,3,0
+496-hypothetical protein,10,3,37,9,2,0
+497-hypothetical protein,0,0,1,0,0,0
+498-rhaS 4,1,0,4,2,0,0
+499-acr3,0,1,0,3,0,0
+5-oppD 3,2,1,2,0,0,0
+50-menH 3,3,1,14,3,1,0
+500-hypothetical protein,1,0,1,2,0,0
+501-sgrR 2,0,0,7,4,1,0
+502-ulaC 2,0,0,1,0,0,0
+503-mtlA 2,0,0,0,1,0,0
+504-yggP,1,0,0,0,1,0
+505-fumE,1,0,8,0,1,0
+507-ycdX 2,0,1,1,1,0,0
+508-hypothetical protein,2,0,9,3,0,0
+51-chiA 2,2,0,4,0,0,0
+510-hypothetical protein,0,0,2,0,0,0
+511-tyrP 2,8,10,22,2,0,0
+512-hypothetical protein,1,0,0,0,0,0
+513-pctB 3,3,0,9,0,1,0
+516-hypothetical protein,2,1,6,3,0,0
+517-Gfa-like protein,0,0,3,0,0,0
+518-hypothetical protein,2,0,7,8,0,0
+519-mepM 1,9,6,20,21,3,0
+52-FIG01200132: hypothetical protein,0,0,0,1,1,0
+520-GGDEF domain protein,9,4,38,1,0,0
+521-pgrR 3,1,0,1,3,0,0
+522-emrD 2,3,0,1,1,0,0
+523-hypothetical protein,4,7,26,9,2,0
+524-hypothetical protein,1,0,1,1,1,0
+525-Glutaredoxin,5,0,12,1,2,0
+526-ribN,2,6,1,1,0,0
+527-ompL,1,0,0,0,0,0
+528-phoE,0,2,4,15,5,0
+529-ycgM,0,0,1,0,0,0
+53-ppnP,21,5,61,12,1,0
+530-hypothetical protein,2,0,2,2,0,0
+531-ygaZ,1,0,1,2,1,0
+532-rhaS 5,0,0,5,4,0,0
+533-leuE 3,0,0,0,2,0,0
+534-hypothetical protein,1,2,2,7,1,0
+535-pgcA,61,12,107,3,0,0
+536-coxB,1,0,0,0,0,0
+537-ctaD,0,0,1,0,0,0
+539-ctaE,0,0,1,0,0,0
+54-hypothetical protein,4,0,15,2,1,0
+540-Cytochrome oxidase biogenesis protein Surf1 2C facilitates heme A insertion,0,0,2,0,1,0
+541-cytochrome oxidase biogenesis cluster protein,0,1,0,0,0,0
+542-ctaA,0,1,0,0,0,0
+543-ctaB,0,0,1,0,0,0
+544-hypothetical protein,1,0,5,11,1,0
+545-hypothetical protein,3,0,20,19,2,0
+546-pal 6,8,0,17,7,0,0
+547-hypothetical protein,1,0,3,2,1,0
+548-hypothetical protein,0,0,8,4,1,0
+549-yaeQ,2,0,10,3,1,0
+55-GGDEF domain protein,4,0,2,3,1,0
+550-cspG,134,13,428,401,34,2
+551-hypothetical protein,0,0,0,1,0,0
+552-bdlA 1,0,1,6,2,0,0
+553-hypothetical protein,0,0,0,1,0,0
+554-hypothetical protein,1,0,6,1,0,0
+555-hypothetical protein,2,0,10,1,0,0
+556-hypothetical protein,0,0,1,0,0,0
+557-ytrF,1,0,1,0,0,0
+558-yknY 2,0,0,1,0,1,0
+559-hypothetical protein,0,0,2,2,0,0
+56-yeeO 1,3,0,3,0,0,0
+560-hypothetical protein,3,2,14,0,0,0
+561-DNA starvation/stationary phase protection protein,0,0,9,29,7,0
+562-gph 3,1,0,6,1,1,0
+563-yliI,1,1,1,0,0,0
+564-adhB,25,5,72,25,7,0
+565-elbB,2,0,4,4,1,0
+566-hypothetical protein,0,0,1,2,0,0
+567-yddG,1,4,1,3,0,0
+568-hypothetical protein,0,1,6,3,0,0
+569-hypothetical protein,0,0,1,0,0,0
+570-hypothetical protein,1,0,1,1,0,0
+571-hypothetical protein,1,2,2,15,3,0
+572-hypothetical protein,2,4,4,4,2,0
+573-COQ3,6,2,6,21,3,0
+574-acs 1,2,1,8,2,1,0
+576-Putative pterin-4-alpha-carbinolamine dehydratase,0,1,0,0,0,0
+577-Alkaline phosphatase (EC 3.1.3.1),0,0,3,1,0,0
+578-hypothetical protein,0,1,10,6,0,0
+579-hypothetical protein,0,0,0,1,0,0
+580-hypothetical protein,1,0,1,0,0,0
+581-rhlE 4,1,0,0,2,0,0
+582-hypothetical protein,2,0,4,5,2,0
+583-trpB 1,10,1,51,3,0,0
+584-hypothetical protein,0,0,3,1,0,0
+585-pcp,1,0,2,2,0,0
+586-hypothetical protein,1,0,3,5,2,0
+587-yeiR,1,1,5,7,2,0
+588-rhlE 5,6,2,7,11,3,0
+589-MSHA biogenesis protein MshQ,0,0,4,5,0,0
+590-hutG 2,13,2,20,1,0,0
+591-iclR,19,10,70,2,1,0
+592-pdeN,0,0,7,3,0,0
+593-modF,8,2,32,1,2,0
+594-aer 2,0,0,12,1,1,0
+595-hypothetical protein,0,0,0,1,0,0
+596-cold-shock protein,19,4,83,35,2,1
+597-hypothetical protein,0,0,2,3,0,0
+598-hypothetical protein,0,0,3,1,0,0
+599-hypothetical protein,0,3,1,1,1,0
+6-hypothetical protein,9,10,5,4,1,0
+600-Integrase,2,0,6,2,0,0
+601-hypothetical protein,1,2,1,2,0,0
+602-Integrase,1,0,10,0,0,0
+603-Acyl dehydratase,5,1,9,18,2,0
+604-pstS1 2,0,0,2,0,0,0
+605-hypothetical protein,3,2,6,1,0,0
+606-rhaS 6,1,0,16,4,1,0
+607-rnb,12,13,72,26,7,0
+608-deaD 1,89,129,98,119,33,10
+609-putative signaling protein,1,2,1,0,0,0
+610-ackA 1,15,3,34,144,29,1
+611-recombinase family protein,3,1,21,11,2,0
+612-chromosome partitioning protein ParA,1,0,1,1,0,0
+613-relaxase/mobilization nuclease domain-containing protein,1,0,2,1,0,0
+614-hypothetical protein,0,0,3,1,0,0
+615-hypothetical protein,0,0,1,2,0,0
+616-transcriptional regulator,1,0,1,0,0,0
+617-hypothetical protein,3,0,16,5,0,0
+618-ATPase involved in DNA repair,16,1,39,11,3,0
+619-hypothetical protein,6,0,16,15,2,2
+620-hypothetical protein,0,0,2,4,0,0
+621-hypothetical protein,2,0,1,2,0,0
+622-IS5 family transposase,1,0,3,0,0,0
+623-ganB 1,2,0,6,23,5,0
+624-melR 2,4,0,26,21,2,1
+625-malK 2,16,1,101,195,27,0
+626-cycB,6,0,15,158,31,0
+627-hypothetical protein,1,0,19,63,12,3
+628-malG 2,1,0,8,44,5,1
+629-ganB 2,5,6,26,261,60,33
+63-dmlR 7,1,0,1,3,0,0
+630-bglY,9,3,30,369,96,8
+631-lamB 2,1,2,9,214,40,3
+632-hypothetical protein,0,0,7,71,12,2
+633-galE 1,2,0,10,143,21,9
+634-galT 1,3,2,8,148,26,6
+635-galK 1,4,1,5,67,7,0
+636-hypothetical protein,4,0,9,9,1,2
+637-hypothetical protein,1,0,2,4,1,0
+638-Phage-related protein,2,0,16,14,0,7
+639-hypothetical protein,7,0,19,8,1,0
+64-ybiV,1,1,4,7,1,0
+640-hypothetical protein,1,0,7,1,2,6
+641-hypothetical protein,0,0,2,0,0,0
+642-addA,0,1,27,5,1,2
+643-recF 2,3,0,16,16,2,0
+644-hipA,1,1,26,5,2,0
+645-hypothetical protein,0,0,1,0,0,0
+647-CHASE2 domain-containing protein,1,0,10,8,1,0
+648-hypothetical protein,1,0,14,12,0,0
+649-M48 family metalloprotease,5,0,29,15,0,0
+65-hypothetical protein,0,1,7,2,2,0
+650-era 1,51,20,160,87,15,0
+651-hypothetical protein,19,7,68,27,6,0
+654-ackA 1  partial,0,0,0,2,0,0
+655-bdlA 2,2,2,6,1,0,0
+656-hypothetical protein,3,1,2,2,0,0
+657-hypothetical protein,0,0,1,0,0,0
+658-liuE 1,0,0,1,0,0,0
+659-paaF 1,0,0,2,1,0,0
+660-Methylmalonyl-CoA carboxyltransferase 12S subunit,1,0,2,0,1,0
+661-mmgC 1,0,2,0,0,0,0
+662-zntR 2,2,0,7,1,0,0
+663-thlA 1,3,1,6,1,1,0
+664-mmsA 1,5,8,12,0,0,0
+665-acdA 1,2,0,6,2,1,0
+666-paaF 2,2,0,1,1,0,0
+667-caiD,4,7,10,0,0,0
+668-mmsB 1,4,3,11,0,0,0
+669-fabG 3,1,1,1,0,0,0
+670-cyoA,53,64,162,6,0,0
+671-cyoB,98,98,189,17,2,0
+672-cyoC,30,20,23,2,1,0
+673-cyoD,12,2,39,1,1,0
+674-cyoE,32,8,38,3,0,0
+675-NADH oxidase,2,0,6,6,0,0
+676-6-hydroxy-D-nicotine oxidase,1,0,2,1,0,0
+679-DUF1254 domain-containing protein,2,0,0,2,1,0
+68-oxidoreductase,1,0,10,0,0,0
+680-DUF1254 domain-containing protein,0,0,4,2,1,0
+681-ybdO,0,1,0,0,0,0
+682-LysR family transcriptional regulator,0,1,0,0,0,0
+683-hypothetical protein,0,2,0,0,0,0
+684-artP,38,41,142,0,0,0
+685-artI,75,18,134,1,0,0
+686-artQ,28,2,51,0,0,0
+687-artM,9,1,17,1,0,0
+688-hypothetical protein,0,3,9,0,0,0
+689-hdfR 7,1,0,10,2,0,0
+69-yeiG,1,3,5,4,1,1
+690-sspA 2,2,3,8,0,1,0
+691-Electron transfer flavoprotein-ubiquinone oxidoreductase,2,0,8,1,0,0
+692-bkdB,0,0,0,2,0,0
+693-pdhB,0,1,1,1,0,0
+695-hypothetical protein,1,0,2,1,0,0
+696-hypothetical protein,1,0,2,0,0,0
+697-dnaK 2,3,2,6,1,1,0
+7-Riboflavin biosynthesis protein,2,3,13,0,0,0
+70-frmA,6,7,13,11,0,0
+700-hypothetical protein,0,0,1,1,0,0
+701-Preprotein translocase subunit SecY,1,0,3,1,0,0
+705-yclN,26,6,28,1,0,0
+706-yclO,12,3,16,1,0,0
+707-yclP,11,15,25,1,0,0
+708-cueR 2,3,2,12,5,1,0
+709-hypothetical protein,0,1,4,1,0,0
+71-nhoA,2,0,4,3,0,0
+710-rhaS 7,3,0,4,0,0,0
+711-bhuA,2,0,4,0,0,0
+713-YgjV family protein,8,0,6,2,0,0
+714-hypothetical protein,1,0,5,0,0,0
+715-prtG,119,127,391,95,24,0
+716-hypothetical protein,3,0,15,1,0,0
+717-hypothetical protein,4,0,5,2,0,0
+718-yccS,8,1,16,14,1,0
+719-helD,3,6,17,12,4,2
+72-pgrR 1,1,2,1,0,0,0
+720-mgsA,5,17,26,7,0,0
+721-torT,4,0,6,3,1,0
+722-torS,10,5,9,8,5,1
+723-hypothetical protein,0,1,1,1,0,0
+724-Fatty acid cis/trans isomerase,7,2,11,9,2,0
+725-Two-component transcriptional response regulator 2C LuxR family,1,0,2,0,0,0
+726-N-acetylgalactosamine-6-O-sulfatase,0,0,2,2,0,0
+727-N-acetylgalactosamine-6-O-sulfatase,21,17,97,1,1,0
+728-probable deca-heme c-type cytochrome,4,0,26,0,0,0
+729-leuO 3,2,5,4,1,0,0
+73-polC 1,1,0,0,2,0,0
+730-N-acetylgalactosamine-6-O-sulfatase,0,0,4,0,0,0
+731-chuR 1,1,1,5,0,0,0
+732-MoxR-like ATPase in aerotolerance operon,3,1,6,0,0,0
+733-hypothetical protein,2,0,3,1,0,0
+734-hypothetical protein,0,0,3,0,0,0
+735-Aerotolerance protein BatA,1,2,3,2,0,0
+736-Aerotolerance protein BatB / Aerotolerance protein BatC,1,0,7,3,0,0
+737-Aerotolerance protein BatD,0,1,7,1,1,0
+738-ribD 2,4,0,4,2,0,0
+739-leuO 4,1,0,12,4,1,0
+74-Predicted signal-transduction protein containing cAMP-binding and CBS domains,1,0,4,2,1,0
+740-yegS 2,1,2,2,2,0,0
+741-ygiW,1,0,4,0,0,0
+742-hypothetical protein,1,0,3,0,0,0
+743-hypothetical protein,4,0,15,1,0,0
+744-chuR 2,0,0,1,0,0,0
+745-hypothetical protein,2,0,3,3,1,0
+746-fan1,1,2,16,2,0,0
+747-L-lactate transporter,2,2,15,1,0,0
+748-hypothetical protein,10,6,27,2,1,0
+749-htpX 2,2,1,11,10,1,0
+75-kdgR,2,10,10,14,4,0
+750-lemA,3,0,4,4,0,0
+751-dcuD,35,6,36,27,7,0
+752-Fatty acid desaturase (EC 1.14.19.1) 3B Delta-9 fatty acid desaturase (EC 1.14.19.1),5,6,25,9,0,0
+753-Histone acetyltransferase HPA2 and related acetyltransferases,6,8,82,27,5,0
+754-HAD superfamily hydrolase,6,0,11,4,1,0
+755-cqsS,6,0,33,9,0,0
+756-cqsA,1,0,7,3,0,0
+757-rbgA,8,0,24,17,5,0
+758-hypothetical protein,0,0,2,0,0,0
+759-prt 2,0,0,1,1,0,0
+76-kduD,0,0,1,1,0,0
+760-M6 family metalloprotease domain-containing protein,1,0,5,2,1,0
+761-cdhR,0,0,2,0,0,0
+762-hdfR 8,2,0,1,0,0,0
+764-Flp pilus assembly protein 2C pilin Flp,0,0,1,0,0,0
+768-hypothetical protein,0,0,2,0,0,0
+769-Type II/IV secretion system ATPase TadZ/CpaE 2C associated with Flp pilus assembly,0,0,1,1,0,0
+77-ygjV 2,0,0,1,0,0,0
+770-Type II/IV secretion system ATP hydrolase TadA/VirB11/CpaF 2C TadA subfamily,1,0,1,0,0,0
+771-Flp pilus assembly protein TadB,1,0,0,0,0,0
+776-Flp pilus assembly surface protein TadF 2C ATP/GTP-binding motif,0,0,1,0,0,0
+777-Protein TadG 2C associated with Flp pilus assembly,0,0,2,1,0,0
+78-cupin domain-containing protein,0,0,1,0,0,0
+781-hypothetical protein,0,0,1,0,1,0
+782-rcsC 6,0,0,0,0,1,0
+784-evgA,0,0,1,1,0,0
+785-Putative two-component response regulator and GGDEF family protein YeaJ,0,0,3,1,0,0
+786-yidZ 8,1,0,7,2,0,0
+787-bvgA,0,0,1,0,0,0
+788-Response regulator VieB,2,0,1,0,0,0
+789-hypothetical protein,0,0,1,0,0,0
+79-RpiB/LacA/LacB family sugar-phosphate isomerase,1,2,6,3,0,0
+790-cheV 3,13,2,11,14,5,0
+791-MSHA pilin protein MshA,3,0,1,0,0,0
+792-hypothetical protein,5,0,10,1,1,0
+793-rarD 2,1,0,10,2,1,0
+794-yecN,0,0,2,2,1,0
+795-Membrane-associated phospholipid phosphatase,0,0,2,2,1,0
+796-Succinyl-CoA synthetase 2C alpha subunit,2,0,9,4,1,0
+797-empA,1,1,0,0,0,0
+798-gdx,0,0,1,0,0,0
+799-cntI 2,1,0,2,6,0,0
+8-ABC-type amino acid transport/signal transduction system 2C periplasmic component/domain,3,0,18,0,0,0
+80-Endo-1 2C4-beta-xylanase (EC 3.2.1.8),0,0,3,0,0,0
+800-NUDIX domain-containing protein,2,0,11,5,0,0
+801-GNAT family N-acetyltransferase,5,3,14,6,2,0
+802-GNAT family N-acetyltransferase,2,0,5,2,1,0
+803-calB,5,0,9,3,0,0
+804-yflS,0,0,2,1,0,0
+805-dpiB 1,2,0,5,1,1,0
+806-dpiA,0,0,2,1,0,0
+807-YbaK/EbsC family protein,6,0,1,1,0,0
+808-glutamate synthase,4,0,6,1,0,0
+809-katG 2,32,48,83,20,5,1
+810-DUF2384 domain-containing protein,6,4,12,1,1,0
+811-RES family NAD+ phosphorylase,3,3,3,2,0,0
+813-nitrogen fixation protein NifW,0,2,3,0,0,0
+814-nemA 2,1,1,2,3,0,0
+815-gloA 1,0,0,2,0,1,0
+816-PaaI family thioesterase,0,0,3,2,0,0
+819-universal stress protein,11,0,12,5,0,0
+82-eda 3,0,0,1,1,0,0
+820-Mg/Co/Ni transporter MgtE 2C CBS domain-containing,3,0,2,1,0,0
+821-Predicted ATPase,0,0,1,0,0,0
+822-N-acylglucosamine 2-epimerase,2,0,11,20,3,0
+823-hypothetical protein,1,0,1,2,0,0
+824-hypothetical protein,0,0,4,4,0,0
+825-hypothetical protein,0,0,1,7,0,0
+826-def2,1,1,4,5,3,0
+827-cueR 3,4,0,8,6,1,0
+830-pldA 2,1,0,3,0,1,0
+831-hypothetical protein,1,1,1,3,0,0
+832-metal-dependent hydrolase,1,0,2,0,0,0
+833-hypothetical protein,0,0,1,2,0,0
+834-Putative multidrug export ATP-binding/permease protein,0,0,6,5,1,0
+835-polC 2,1,0,2,0,0,0
+836-pgrR 4,0,2,5,2,0,0
+838-ltaA,3,0,14,5,1,0
+839-hypothetical protein,6,3,12,5,1,0
+840-YcxB family protein,0,0,0,0,2,0
+841-hxsD,0,0,4,1,0,0
+842-hypothetical protein,0,0,1,1,1,0
+843-hxsB,5,4,12,7,2,0
+846-His-Xaa-Ser repeat protein,2,0,27,13,2,0
+847-gcvP,22,9,49,132,42,0
+848-gcvH,9,7,20,41,5,0
+849-glyA2,1,2,13,32,7,0
+85-pelX,0,0,1,1,0,0
+850-hypothetical protein,4,1,12,9,0,0
+851-gcvT,5,1,12,9,6,0
+852-hypothetical protein,4,2,25,5,2,0
+853-mdtA 4,0,0,1,3,0,0
+854-ttgG,1,0,0,1,2,0
+855-czcA 4,1,2,4,3,0,0
+856-ompA 7,11,0,9,26,5,0
+857-fruA 2,3,0,3,183,42,3
+858-lacC,0,0,2,104,11,4
+859-fruB,2,6,6,139,27,0
+86-sodium-solute symporter 2C putative,0,0,5,2,0,0
+860-cra,5,4,3,10,3,0
+861-hypothetical protein,3,0,9,11,1,0
+862-hypothetical protein,3,0,9,4,0,0
+863-pdeC,4,0,11,7,2,0
+864-hypothetical protein,0,1,4,1,0,0
+865-fliY,6,4,20,15,3,0
+866-hypothetical protein,2,0,6,6,2,0
+867-glnQ,3,1,4,1,0,0
+868-pykA 1,0,0,1,0,0,0
+869-uhpC 1,0,0,0,1,0,0
+87-ogl,3,1,6,2,1,0
+870-ABC transporter substrate-binding protein,0,0,2,0,3,0
+871-sasA 10,0,1,2,2,0,0
+872-dctD 5,2,1,2,1,0,0
+873-hypothetical protein,1,0,1,1,0,0
+874-yqhD,12,4,15,26,10,0
+875-rhaS 8,0,0,10,2,0,0
+876-endo I,7,8,10,8,2,0
+877-glgC 2,3,1,16,1,0,0
+878-fhs,6,6,16,15,4,0
+879-gsk 2,7,3,14,13,2,0
+880-hypothetical protein,7,0,23,31,4,0
+881-hypothetical protein,2,3,16,5,1,0
+882-hypothetical protein,8,3,35,7,0,0
+883-yieH,1,0,3,2,0,0
+884-hypothetical protein,1,0,23,3,0,5
+885-hypothetical protein,1,1,10,7,1,0
+886-hypothetical protein,2,0,5,1,0,0
+887-acpH,0,0,2,1,0,0
+888-rhlE 6,2,0,8,8,1,0
+889-pdeD,0,0,2,0,0,0
+890-hypothetical protein,2,1,7,2,2,0
+891-hypothetical protein,0,0,2,1,0,0
+892-yceJ,10,1,36,1,0,0
+893-yceI,17,1,54,3,2,0
+894-hypothetical protein,409,97,870,257,29,14
+895-cysL,9,7,10,27,4,0
+896-ycdZ,0,1,4,4,2,0
+897-hypothetical protein,3,0,15,14,0,0
+898-NAD 5'-nucleotidase,18,5,49,21,3,0
+899-alx,0,0,2,3,0,0
+9-rcsC 5,10,0,8,1,0,0
+90-LysE family translocator,0,0,0,1,0,0
+900-hypothetical protein,1,0,3,4,0,0
+901-hypothetical protein,7,1,36,66,18,0
+902-volA,6,0,22,8,1,0
+903-47 kDa outer membrane protein,2,0,11,2,1,0
+904-Zn-dependent protease,1,0,1,4,0,0
+905-Zn-dependent protease with chaperone function PA4632,14,0,34,15,2,0
+906-menI,2,0,6,4,0,0
+907-PTS system 2C IIA component,0,0,3,1,0,0
+908-sgrR 3,5,0,14,6,1,0
+909-Conserved protein containing a Zn-ribbon motif,1,0,1,0,0,0
+91-lrp 6,1,1,2,2,0,0
+910-cutA,3,0,3,1,0,0
+911-yjdF,3,0,3,5,0,0
+912-Isopenicillin N synthase,3,3,11,6,1,0
+913-DnaJ-related protein,1,0,0,0,1,0
+914-Isopentenyl-diphosphate Delta-isomerase (EC 5.3.3.2),4,0,17,10,0,0
+915-GGDEF domain protein,8,3,54,6,1,0
+916-fabV 2,31,12,86,26,1,0
+917-Arylesterase,4,2,13,1,0,0
+918-lolD 2,2,0,11,3,3,0
+919-hypothetical protein,7,5,20,6,1,0
+92-gbpA 2,0,0,1,0,0,0
+920-hypothetical protein,6,1,25,13,1,0
+921-pxpC,3,1,7,2,1,0
+922-pxpB,4,0,9,1,0,0
+923-pxpA3,5,0,7,0,0,0
+924-hypothetical protein,4,1,21,6,2,0
+925-galE 2,21,4,165,74,13,0
+926-btuB 3,111,9,373,3,1,0
+927-yhaJ 2,2,0,9,2,0,0
+928-hypothetical protein,0,0,1,0,0,0
+929-patZ,10,1,24,7,1,0
+93-Phosphoserine phosphatase (EC 3.1.3.3),0,0,2,1,0,0
+930-damX 1,10,10,28,19,5,0
+931-ddl,11,0,63,44,4,0
+932-hypothetical protein,8,0,60,11,2,0
+933-Translation initiation factor SUI1-related protein,10,3,9,9,1,0
+935-hypothetical protein,1,0,0,0,0,0
+936-zot 1,3,0,13,3,0,0
+937-hypothetical protein,0,0,1,1,0,0
+938-hypothetical protein,0,0,7,3,0,0
+939-hypothetical protein,2,1,6,5,0,0
+94-hypothetical protein,0,0,2,1,1,0
+940-hypothetical protein,0,0,3,5,0,0
+941-hypothetical protein,0,0,0,1,0,0
+942-hypothetical protein,1,0,1,3,0,0
+943-phage replication protein Cri,2,0,8,5,0,0
+944-hypothetical protein,8,1,53,19,0,0
+945-S-adenosylhomocysteine hydrolase,0,0,2,0,0,0
+946-hypothetical protein,5,0,26,59,5,0
+947-hypothetical protein,2,0,8,1,1,0
+949-hypothetical protein,0,0,0,1,0,0
+95-Pentapeptide repeat protein,1,0,3,2,0,0
+957-Outer membrane receptor protein,0,0,0,1,0,0
+959-FIG01201474: hypothetical protein,0,0,1,0,0,0
+96-ompW,0,3,8,21,4,0
+960-hypothetical protein,0,0,0,1,0,0
+963-hypothetical protein,0,0,0,1,0,0
+964-putative replication initiation protein 2C phage-related,1,0,0,1,0,0
+966-hypothetical protein,0,0,1,0,0,0
+967-Predicted transcriptional regulator,1,0,8,0,0,0
+968-bacteriophage f237 ORF10,0,1,14,4,0,0
+969-dinG 3,1,0,0,0,0,0
+97-emrA 1,2,0,13,58,8,0
+973-bacteriophage f237 ORF3,0,0,1,0,0,0
+974-bacteriophage f237 ORF4,0,0,1,0,0,0
+975-bacteriophage f237 ORF5,0,0,1,0,0,0
+977-zot 2,1,1,2,0,0,0
+978-hypothetical protein,0,1,0,0,0,0
+979-ATP-binding protein,20,3,28,34,0,6
+98-farB,5,1,1,50,10,0
+980-hypothetical protein,8,2,10,16,1,0
+981-bacteriophage f237 ORF9,0,0,2,0,0,0
+982-hypothetical protein,0,0,1,0,0,0
+985-putative transcriptional regulator,2,0,5,5,0,0
+986-hypothetical protein,1,0,3,5,0,0
+987-uspA 3,1,0,3,1,0,0
+988-hypothetical protein,1,0,2,0,0,0
+99-transcriptional regulator,5,0,5,2,0,0
+991-Uncharacterized protein VCA0567,12,6,27,15,3,0
+992-walR 2,14,5,59,14,0,0
+993-Signal transduction histidine kinase,9,9,60,21,3,0
+994-pntB,102,33,146,108,19,1
+995-pntA,142,48,404,155,27,2
+996-transcriptional regulator,6,1,14,3,2,0
+997-late competence development ComFB family protein,3,1,4,1,1,0
+998-GGDEF domain protein,2,0,3,4,1,0
+999-Solitary outer membrane autotransporter beta-barrel domain,4,1,21,9,2,0
