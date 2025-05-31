@@ -45,7 +45,6 @@ samtools sort --threads 4 MM9r1.bam -o MM9r1.sorted.bam
 ```bash
 samtools index MM9r1.sorted.bam
 ```
-Repetir lo mismo para cada muestra, o bien correr el script [mapper4FADU.sh](scripts/mapper4FADU.sh)
 
 ***
 ### Análisis de transcritos
@@ -59,10 +58,10 @@ M0904_ChII	Geneious	CDS	3410	3877	.	-	0	ID=M0904_ChII-2;Name=hypothetical protei
 M0904_ChII	Geneious	CDS	3410	3877	.	-	0	ID=M0904_ChII-3;Name=transcriptional regulator
 ```
 ***
-Corramos el análisis con la **primer muestra**, tener en cuenta en donde estamos situados, idealmente en la carpeta *transcritos*.
+Corramos el análisis con la **primer muestra**  (tener en cuenta en donde estamos situados)
 
 ```bash
-/opt/FADU-1.9.0/fadu.jl -M -p -g M0904_ChII.gff -b MM9r1.sorted.bam -o . -f "CDS" -a "ID"
+/opt/FADU-1.9.0/fadu.jl -M -p -g ../M0904_ChII.gff -b MM9r1.sorted.bam -o . -f "CDS" -a "ID"
 ```
 **Nota**. Revisar si FADU está en `/opt/FADU-1.9.0/fadu.jl` o en `/opt/FADU-1.9.1/fadu.jl` y correr el comando anterior acorde a la versión.
 
@@ -75,11 +74,7 @@ Corramos el análisis con la **primer muestra**, tener en cuenta en donde estamo
 -f, --feature_type FEATURE_TYPE Which GFF3 feature type (column 3)
 -a, --attribute_type ATTRIBUTE_TYPE   Which GFF3 feature type (column 9)
 ```
-El resultado de `FADU` se encuentra en un archivo delimitado por tabuladores en el **directorio superior** llamado `MM9r1.sorted.counts.txt`
 
-```bash
-cd ..
-```
 El archivo contiene 5 columnas:
 
 ```
@@ -96,6 +91,7 @@ M0904_ChII-100  1137     0.0	          0.00   0.00
 5. Los transcritos por cada millón de bases (tpm)
 
 Para análisis posteriores solo necesitaremos el número de transcritos y los tpm en dos archivos diferentes, por lo que procederemos a extraer los datos del archivo MM9r1.sorted.counts.txt:
+
 ```bash
 cut -f1,4 MM9r1.sorted.counts.txt | sed "s/counts/MM9r1/" > MM9r1.counts
 ```
@@ -107,10 +103,16 @@ Los archivos intermedios los podemos borrar:
 ```bash
 rm *.sam *.bam *.bai
 ```
+
 #### Hagamos lo mismo para cada una de las muestras.
-O bien, podemos crear un sencillo script para que entre en cada subdirectorio y correr FADU, ver este ejemplo: **[fadu_script.sh](scripts/fadu_script.sh)**.
+O bien, podemos correr dos sencillos scripts para que mapee todas las muestras en cada subdiretorio y luego que calcule los transcritos de cada una.
+
+- Script para mapeo: [mapper4FADU.sh](scripts/mapper4FADU.sh)
+- Script para calculo de transcritos: [fadu_script.sh](scripts/fadu_script.sh)
 
 ***
+### Corrección del nombre de las CDS
+
 **Nota.** Como se ve en el resultado, la columna `featureID` contiene solo un número consecutivo del gen pero no información de quién es. Podemos sustituir esa primer columna con el nombre del gen. Esta información está en el archivo `.gff` en la última columna (ver arriba). Por ejemplo, para el primer gen (primera linea del `.gff`) `ID=M0904_ChII-1;Name=DUF3346 domain-containing protein` sustituiremos `M0904_ChII-1` por `1-DUF3346 domain-containing protein` eliminando de paso `Name=` que ya no lo necesitamos.
 
 Los featuresID de las 3 primeras líneas del archivo quedarían así:
