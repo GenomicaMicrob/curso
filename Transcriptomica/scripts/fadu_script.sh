@@ -47,9 +47,9 @@ for D in ./*; do
         echo "
 Procesando muestra $NAME"
 
-        /opt/FADU-1.9.0/fadu.jl -M -p -g ../$REFGFF -b $NAME.sorted.bam -o ../ -f "CDS" -a "ID"
-        cut -f1,4 ../$NAME.sorted.counts.txt | sed "s/counts/$NAME/" > ../$NAME.counts # cortar solo las columnas 1 y 4 (Counts)
-        cut -f1,5 ../$NAME.sorted.counts.txt | sed "s/tpm/$NAME/" > ../$NAME.tpm # cortar solo las columnas 1 y 5 (TPM)
+        /opt/FADU-1.9.0/fadu.jl -M -p -g ../$REFGFF -b $NAME.sorted.bam -o . -f "CDS" -a "ID"
+        cut -f1,4 $NAME.sorted.counts.txt | sed "s/counts/$NAME/" > ../$NAME.counts # cortar solo las columnas 1 y 4 (Counts)
+        cut -f1,5 $NAME.sorted.counts.txt | sed "s/tpm/$NAME/" > ../$NAME.tpm # cortar solo las columnas 1 y 5 (TPM)
         #rm *.sam *.bam *.bai # borrar archivos ya usados
 
         echo "
